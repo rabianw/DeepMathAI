@@ -611,4 +611,14 @@ export const groupPublications: GroupPublication[] = [
     status: "Published",
     category: "Applied Math",
   },
+  {
+    id: "pub-8",
+    title: "Multi-view Laplacian twin support vector machine with pinball loss function",
+    authors: "Damminsed, V., & Wangkeeree, R.",
+    journal: "Carpathian Journal of Mathematics",
+    year: 2026,
+    url: "https://www.carpathian.cunbm.utcluj.ro/all-issues-archive/",
+    status: "Accepted",
+    category: "Optimization",
+  },
 ];
