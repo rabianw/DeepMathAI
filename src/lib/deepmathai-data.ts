@@ -168,7 +168,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "tm-kotchaporn",
     name: "ผู้ช่วยศาสตราจารย์ ดร.กชพร การุณ",
-    nameEn: "Asst. Prof. Dr. Kotchaporn Karun",
+    nameEn: "Asst. Prof. Dr. Kotchaporn Karoon",
     title: "Assistant Professor",
     department: "Department of Mathematics",
     faculty: "Faculty of Science",
@@ -177,8 +177,8 @@ export const teamMembers: TeamMember[] = [
     expertise: [
       "Statistical Process Control", "Time Series Analysis", "Fixed Point Theory"
     ],
-    hIndexGoogle: 5,
-    hIndexScopus: 6,
+    hIndexGoogle: 7,
+    hIndexScopus: 7,
     citationScopus: 66,
     role: "Co-PI",
     responsibility: "14%",
