@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Brain, Users, Microscope, BookOpen, Newspaper, Map as MapIcon, Menu, X } from "lucide-react";
+import { Brain, Users, Microscope, BookOpen, Newspaper, Map as MapIcon, Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { getImageUrl } from "../lib/cloudinary";
 
@@ -13,6 +13,7 @@ const navItems = [
   { href: "/publications", label: "Publications", icon: BookOpen },
   { href: "/activities", label: "Activities", icon: Newspaper },
   { href: "/roadmap", label: "Roadmap", icon: MapIcon },
+  { href: "https://rabian-wangkeeree.vercel.app", label: "Prof. Rabian", icon: User },
 ];
 
 export default function Navbar() {
@@ -41,17 +42,35 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
-              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              const isExternal = item.href.startsWith("http");
+              const isActive = !isExternal && (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href));
               const Icon = item.icon;
+              const linkClassName = `flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                isActive
+                  ? "bg-blue-500/15 text-blue-400"
+                  : "text-gray-400 hover:text-blue-300 hover:bg-blue-500/10"
+              }`;
+
+              if (isExternal) {
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkClassName}
+                  >
+                    <Icon size={15} />
+                    <span>{item.label}</span>
+                  </a>
+                );
+              }
+
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    isActive
-                      ? "bg-blue-500/15 text-blue-400"
-                      : "text-gray-400 hover:text-blue-300 hover:bg-blue-500/10"
-                  }`}
+                  className={linkClassName}
                 >
                   <Icon size={15} />
                   <span>{item.label}</span>
@@ -73,18 +92,37 @@ export default function Navbar() {
         {mobileOpen && (
           <div className="lg:hidden pb-4 border-t border-blue-500/10 mt-1">
             {navItems.map((item) => {
-              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              const isExternal = item.href.startsWith("http");
+              const isActive = !isExternal && (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href));
               const Icon = item.icon;
+              const linkClassName = `flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                isActive
+                  ? "bg-blue-500/15 text-blue-400"
+                  : "text-gray-400 hover:text-blue-300"
+              }`;
+
+              if (isExternal) {
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkClassName}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <Icon size={16} />
+                    <span>{item.label}</span>
+                  </a>
+                );
+              }
+
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                    isActive
-                      ? "bg-blue-500/15 text-blue-400"
-                      : "text-gray-400 hover:text-blue-300"
-                  }`}
+                  className={linkClassName}
                 >
                   <Icon size={16} />
                   <span>{item.label}</span>
