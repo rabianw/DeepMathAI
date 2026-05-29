@@ -14,11 +14,11 @@ const activities = [
       "DeepMathAI research group participated in the Annual Meeting in Mathematics 2026 (AMM 2026) and Conference in Number Theory and Applications 2026 (CNA 2026), held in conjunction with The International Session on Nonlinear and Convex Analysis.",
     type: "Conference",
     images: [
-      getImageUrl("/Activity/Conference/IMG_2362_to9psx.jpg"),
-      getImageUrl("/Activity/Conference/IMG_2383_qhtlqo.jpg"),
-      getImageUrl("/Activity/Conference/IMG_2369_fd2crg.jpg"),
-      getImageUrl("/Activity/Conference/IMG_0889_lccso5.jpg"),
-      getImageUrl("/Activity/Conference/IMG_0882_e3u50u.jpg"),
+      getImageUrl("/IMG_2362_to9psx.jpg"),
+      getImageUrl("/IMG_2383_qhtlqo.jpg"),
+      getImageUrl("/IMG_2369_fd2crg.jpg"),
+      getImageUrl("/IMG_0889_lccso5.jpg"),
+      getImageUrl("/IMG_0882_e3u50u.jpg"),
     ],
   },
   {
