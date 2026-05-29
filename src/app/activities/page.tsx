@@ -6,6 +6,22 @@ import { getImageUrl } from "../../lib/cloudinary";
 
 const activities = [
   {
+    id: "act-amm-cna-2026",
+    title: "Annual Meeting in Mathematics 2026 (AMM 2026) & Conference in Number Theory and Applications 2026 (CNA 2026)",
+    date: "May 28 - 30, 2026",
+    location: "Avani Khon Kaen Hotel & Convention Centre",
+    description:
+      "DeepMathAI research group participated in the Annual Meeting in Mathematics 2026 (AMM 2026) and Conference in Number Theory and Applications 2026 (CNA 2026), held in conjunction with The International Session on Nonlinear and Convex Analysis.",
+    type: "Conference",
+    images: [
+      getImageUrl("/Activity/Conference/IMG_2362_to9psx.jpg"),
+      getImageUrl("/Activity/Conference/IMG_2383_qhtlqo.jpg"),
+      getImageUrl("/Activity/Conference/IMG_2369_fd2crg.jpg"),
+      getImageUrl("/Activity/Conference/IMG_0889_lccso5.jpg"),
+      getImageUrl("/Activity/Conference/IMG_0882_e3u50u.jpg"),
+    ],
+  },
+  {
     id: "act-voices-2026",
     title: "Workshop/Seminar: Voices from the Global Research Community — Inspiration and Experience",
     date: "May 13, 2026",
