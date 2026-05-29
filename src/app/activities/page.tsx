@@ -19,6 +19,12 @@ const activities = [
       getImageUrl("/IMG_2369_fd2crg.jpg"),
       getImageUrl("/IMG_0889_lccso5.jpg"),
       getImageUrl("/IMG_0882_e3u50u.jpg"),
+      getImageUrl("/IMG_2415_ztps5y.jpg"),
+      getImageUrl("/IMG_2408_rzwpjb.jpg"),
+      getImageUrl("/IMG_2414_kef9ji.jpg"),
+      getImageUrl("/IMG_2417_fa7vjc.jpg"),
+      getImageUrl("/IMG_2431_fnjcyg.jpg"),
+      getImageUrl("/IMG_2422_b94mvt.jpg"),
     ],
   },
   {
