@@ -133,38 +133,7 @@ export default function RoadmapPage() {
         </div>
       </section>
 
-      {/* ── Budget Summary ───────────────────────────── */}
-      <section className="py-20 bg-[#0c1a30]">
-        <div className="mx-auto max-w-4xl px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-amber-400 mb-3">Budget</p>
-            <h2 className="text-3xl font-extrabold text-white mb-4">Annual Budget: ฿500,000</h2>
-            <p className="text-gray-400">3-Year Total: ฿1,500,000 (Frontier Research and Innovation Cluster Grant)</p>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { label: "Publication & Registration Fees", amount: "฿90,000", pct: "18%" },
-              { label: "Travel, Accommodation & Per Diem", amount: "฿220,000", pct: "44%" },
-              { label: "AI Commercial Services (GPT, Claude, Gemini)", amount: "฿80,000", pct: "16%" },
-              { label: "International Conference Co-hosting", amount: "฿50,000", pct: "10%" },
-              { label: "Speaker Fees & Workshop Catering", amount: "฿28,000", pct: "6%" },
-              { label: "Student Assistants, OT & Materials", amount: "฿32,000", pct: "6%" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-4 flex items-center justify-between"
-              >
-                <div>
-                  <p className="text-sm text-gray-300">{item.label}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{item.pct} of annual budget</p>
-                </div>
-                <span className="text-sm font-bold text-amber-400">{item.amount}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── Goal ─────────────────────────────────────── */}
       <section className="py-20 bg-[#0a1628]">
