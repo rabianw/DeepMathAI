@@ -6,6 +6,17 @@ import { getImageUrl } from "../../lib/cloudinary";
 
 const activities = [
   {
+    id: "act-poom-kumam-june-2026",
+    title: "Academic Seminar: Research changes knowledge. Networks change the world.",
+    date: "June 16, 2026",
+    location: "Room SC2-112, Department of Mathematics, Faculty of Science, Naresuan University",
+    description: "Academic Seminar by Prof. Dr. Poom Kumam from King Mongkut's University of Technology Thonburi (KMUTT). Students, researchers, and academics are warmly welcome.",
+    speaker: "Prof. Dr. Poom Kumam",
+    type: "Seminar",
+    images: [],
+    posterImage: getImageUrl("/poster_seminar_poom_kumam_t474ky.jpg"),
+  },
+  {
     id: "act-amm-cna-2026",
     title: "Annual Meeting in Mathematics 2026 (AMM 2026) & Conference in Number Theory and Applications 2026 (CNA 2026)",
     date: "May 28 - 30, 2026",
