@@ -131,25 +131,6 @@ export default function DeepMathAIPage() {
           </div>
         </div>
       </section>
-      {/* ── Inspirational Quote Section ───────────────────────────── */}
-      <section className="py-20 bg-[#0a1628] border-t border-b border-white/[0.05]">
-        <div className="mx-auto max-w-5xl px-4 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center p-4 rounded-full bg-blue-500/10 text-blue-400 mb-8 ring-1 ring-blue-500/30 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
-            <Globe size={28} />
-          </div>
-          <h2 className="text-2xl lg:text-3xl font-light text-gray-200 leading-relaxed italic">
-            "Why do we research? <strong className="text-blue-400 font-semibold">Research changes knowledge.</strong> Every equation you solve and every model you train adds a new piece to the puzzle of human understanding. You are making the unknown, known."
-          </h2>
-          <h2 className="text-2xl lg:text-3xl font-light text-gray-200 leading-relaxed italic mt-6">
-            "But to truly make an impact, you must connect. <strong className="text-teal-400 font-semibold">Networks change the world.</strong> Your ideas need a voice, and they need allies. By stepping out, sharing your work, and collaborating with global minds, your single discovery can spark a global revolution."
-          </h2>
-          <div className="mt-12 inline-block px-8 py-3 bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 rounded-full backdrop-blur-sm">
-            <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-teal-300 font-bold tracking-widest uppercase text-sm lg:text-base">
-              Don't just build models; build networks.
-            </p>
-          </div>
-        </div>
-      </section>
       {/* ── Vision Section ───────────────────────────── */}
       <section className="py-20 bg-[#0c1a30]">
         <div className="mx-auto max-w-4xl px-4 lg:px-8">

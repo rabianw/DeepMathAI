@@ -10,7 +10,7 @@ const activities = [
     title: "Academic Seminar: Research changes knowledge. Networks change the world.",
     date: "June 16, 2026",
     location: "Room SC2-112, Department of Mathematics, Faculty of Science, Naresuan University",
-    description: "Academic Seminar by Prof. Dr. Poom Kumam from King Mongkut's University of Technology Thonburi (KMUTT). Students, researchers, and academics are warmly welcome.",
+    description: "Why do we research? Research changes knowledge. Every equation you solve and every model you train adds a new piece to the puzzle of human understanding. You are making the unknown, known. But to truly make an impact, you must connect. Networks change the world. Your ideas need a voice, and they need allies. By stepping out, sharing your work, and collaborating with global minds, your single discovery can spark a global revolution. Don't just build models; build networks.",
     speaker: "Prof. Dr. Poom Kumam",
     type: "Seminar",
     images: [],
