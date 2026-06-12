@@ -153,43 +153,67 @@ export default function ActivitiesPage() {
                   key={activity.id}
                   className="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-blue-500/20 transition-colors"
                 >
-                  {/* Activity Content */}
-                  <div className="p-6 lg:p-8">
-                    <div className="flex flex-wrap items-center gap-3 mb-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${getTypeBadge(activity.type)}`}>
-                        {activity.type}
-                      </span>
-                      {activity.date.includes("Planned") && (
-                        <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-500/10 text-gray-400 border border-gray-500/20">
-                          Upcoming
-                        </span>
-                      )}
+                  {/* Activity Content — 2-col when poster exists */}
+                  <div className={"posterImage" in activity && activity.posterImage
+                    ? "grid grid-cols-1 lg:grid-cols-2 gap-0"
+                    : ""
+                  }>
+                    {/* Left Column: Text Info */}
+                    <div className="p-6 lg:p-8 flex flex-col justify-between">
+                      <div>
+                        <div className="flex flex-wrap items-center gap-3 mb-4">
+                          <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${getTypeBadge(activity.type)}`}>
+                            {activity.type}
+                          </span>
+                          {activity.date.includes("Planned") && (
+                            <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-500/10 text-gray-400 border border-gray-500/20">
+                              Upcoming
+                            </span>
+                          )}
+                        </div>
+
+                        <h3 className="text-xl font-bold text-white mb-3 leading-snug">{activity.title}</h3>
+
+                        {"speaker" in activity && activity.speaker && (
+                          <p className="text-blue-400 font-medium mb-3 flex items-center gap-2">
+                            <Users size={14} />
+                            Speaker: {activity.speaker}
+                          </p>
+                        )}
+
+                        <p className="text-gray-400 leading-relaxed mb-4">{activity.description}</p>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar size={14} />
+                          <span>{activity.date}</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <MapPin size={14} />
+                          <span>{activity.location}</span>
+                        </div>
+                      </div>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-3 leading-snug">{activity.title}</h3>
-
-                    {"speaker" in activity && activity.speaker && (
-                      <p className="text-blue-400 font-medium mb-3 flex items-center gap-2">
-                        <Users size={14} />
-                        Speaker: {activity.speaker}
-                      </p>
+                    {/* Right Column: Poster (only when posterImage exists) */}
+                    {"posterImage" in activity && activity.posterImage && (
+                      <div className="lg:border-l border-t lg:border-t-0 border-white/[0.06] p-4 flex items-center justify-center bg-white/[0.01]">
+                        <button
+                          onClick={() => openLightbox(allImages, activity.images.length)}
+                          className="w-full max-w-xs rounded-xl overflow-hidden cursor-zoom-in group"
+                        >
+                          <img
+                            src={activity.posterImage}
+                            alt={`${activity.title} - Poster`}
+                            className="w-full h-auto rounded-xl group-hover:scale-[1.02] transition-transform duration-300"
+                          />
+                        </button>
+                      </div>
                     )}
-
-                    <p className="text-gray-400 leading-relaxed mb-4">{activity.description}</p>
-
-                    <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
-                      <div className="flex items-center gap-1.5">
-                        <Calendar size={14} />
-                        <span>{activity.date}</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <MapPin size={14} />
-                        <span>{activity.location}</span>
-                      </div>
-                    </div>
                   </div>
 
-                  {/* Photo Gallery */}
+                  {/* Photo Gallery — below 2-col grid */}
                   {activity.images.length > 0 && (
                     <div className="border-t border-white/[0.06] p-4">
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -207,22 +231,6 @@ export default function ActivitiesPage() {
                           </button>
                         ))}
                       </div>
-                    </div>
-                  )}
-
-                  {/* Poster */}
-                  {"posterImage" in activity && activity.posterImage && (
-                    <div className="border-t border-white/[0.06] p-4">
-                      <button
-                        onClick={() => openLightbox(allImages, activity.images.length)}
-                        className="max-w-sm mx-auto block rounded-xl overflow-hidden cursor-zoom-in group"
-                      >
-                        <img
-                          src={activity.posterImage}
-                          alt={`${activity.title} - Poster`}
-                          className="w-full h-auto rounded-xl group-hover:scale-[1.02] transition-transform duration-300"
-                        />
-                      </button>
                     </div>
                   )}
                 </div>
