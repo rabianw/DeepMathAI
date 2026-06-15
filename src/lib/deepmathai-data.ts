@@ -99,7 +99,7 @@ export const teamMembers: TeamMember[] = [
     citationScopus: 846,
     role: "PI",
     responsibility: "16%",
-    avatarUrl: getImageUrl("/images/team/rabian.jpg"),
+    avatarUrl: getImageUrl("/images/team/rabian"),
     scopusUrl: "https://www.scopus.com/authid/detail.uri?authorId=9335162000",
   },
   {
@@ -118,7 +118,7 @@ export const teamMembers: TeamMember[] = [
     citationScopus: 587,
     role: "Co-PI",
     responsibility: "14%",
-    avatarUrl: getImageUrl("/images/team/chatchai.jpg"),
+    avatarUrl: getImageUrl("/images/team/chatchai"),
     scopusUrl: "https://www.scopus.com/authid/detail.uri?authorId=56118339100",
   },
   {
@@ -140,7 +140,7 @@ export const teamMembers: TeamMember[] = [
     citationScopus: 123,
     role: "Co-PI",
     responsibility: "14%",
-    avatarUrl: getImageUrl("/images/team/rattanaporn.jpg"),
+    avatarUrl: getImageUrl("/images/team/rattanaporn"),
     scopusUrl: "https://www.scopus.com/authid/detail.uri?authorId=24281874800",
   },
   {
@@ -163,7 +163,7 @@ export const teamMembers: TeamMember[] = [
     citationScopus: 351,
     role: "Co-PI",
     responsibility: "14%",
-    avatarUrl: getImageUrl("/images/team/kasamsuk.jpg"),
+    avatarUrl: getImageUrl("/images/team/kasamsuk"),
   },
   {
     id: "tm-kotchaporn",
@@ -182,7 +182,7 @@ export const teamMembers: TeamMember[] = [
     citationScopus: 66,
     role: "Co-PI",
     responsibility: "14%",
-    avatarUrl: getImageUrl("/images/team/kotchaporn.jpg"),
+    avatarUrl: getImageUrl("/images/team/kotchaporn"),
   },
   {
     id: "tm-limpapat",
@@ -203,7 +203,7 @@ export const teamMembers: TeamMember[] = [
     citationScopus: 105,
     role: "Early-Career",
     responsibility: "14%",
-    avatarUrl: getImageUrl("/images/team/limpapat.jpg"),
+    avatarUrl: getImageUrl("/images/team/limpapat"),
   },
   {
     id: "tm-rataporn",
@@ -221,7 +221,7 @@ export const teamMembers: TeamMember[] = [
     citationScopus: 54,
     role: "Early-Career",
     responsibility: "14%",
-    avatarUrl: getImageUrl("/images/team/rataporn.jpg"),
+    avatarUrl: undefined,
   },
 ];
 
@@ -247,7 +247,7 @@ export const internationalNetwork: TeamMember[] = [
     responsibility: "Advisor",
     country: "Vietnam",
     countryFlag: "🇻🇳",
-    avatarUrl: getImageUrl("/images/team/Lam-Anh-2.jpg"),
+    avatarUrl: getImageUrl("/images/team/Lam-Anh-2"),
   },
   {
     id: "int-bagdasar",
@@ -269,7 +269,7 @@ export const internationalNetwork: TeamMember[] = [
     responsibility: "Advisor",
     country: "United Kingdom",
     countryFlag: "🇬🇧",
-    avatarUrl: getImageUrl("/images/team/ovidue.jpeg"),
+    avatarUrl: getImageUrl("/images/team/ovidue"),
   },
   {
     id: "int-chen",
@@ -291,7 +291,7 @@ export const internationalNetwork: TeamMember[] = [
     responsibility: "Advisor",
     country: "Taiwan",
     countryFlag: "🇹🇼",
-    avatarUrl: getImageUrl("/images/team/chen.jpeg"),
+    avatarUrl: getImageUrl("/images/team/chen"),
   },
   {
     id: "int-lee",
@@ -313,7 +313,7 @@ export const internationalNetwork: TeamMember[] = [
     responsibility: "Advisor",
     country: "South Korea",
     countryFlag: "🇰🇷",
-    avatarUrl: getImageUrl("/images/team/lee.jpg"),
+    avatarUrl: getImageUrl("/images/team/lee"),
   },
   {
     id: "int-nazemi",
@@ -335,7 +335,7 @@ export const internationalNetwork: TeamMember[] = [
     responsibility: "Advisor",
     country: "Iran",
     countryFlag: "🇮🇷",
-    avatarUrl: getImageUrl("/images/team/Alireza.jpg"),
+    avatarUrl: getImageUrl("/images/team/Alireza"),
   },
 ];
 
