@@ -13,8 +13,14 @@ const activities = [
     description: "Why do we research? Research changes knowledge. Every equation you solve and every model you train adds a new piece to the puzzle of human understanding. You are making the unknown, known. But to truly make an impact, you must connect. Networks change the world. Your ideas need a voice, and they need allies. By stepping out, sharing your work, and collaborating with global minds, your single discovery can spark a global revolution. Don't just build models; build networks.",
     speaker: "Prof. Dr. Poom Kumam",
     type: "Seminar",
-    upcoming: true,
-    images: [],
+    images: [
+      getImageUrl("/IMG_2691_ilkyjh.jpg"),
+      getImageUrl("/IMG_2694_sspzqc.jpg"),
+      getImageUrl("/IMG_2697_goyjt2.jpg"),
+      getImageUrl("/IMG_2702_leepuz.jpg"),
+      getImageUrl("/IMG_2723_psiwia.jpg"),
+      getImageUrl("/IMG_2724_wm4bi6.jpg"),
+    ],
     posterImage: getImageUrl("/poster_seminar_poom_kumam_t474ky.jpg"),
   },
   {
