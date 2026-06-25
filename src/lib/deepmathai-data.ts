@@ -626,7 +626,6 @@ export const groupPublications: GroupPublication[] = [
     title: "Compact Gradient-Based Neural Network for Stochastic Support Vector Regression with Probabilistic Constraints",
     authors: "Tananimit, N., Grace, T., Belay, Y. A., & Wangkeeree, R.",
     journal: "Journal of Nonlinear and Variational Analysis",
-    volume: "Vol. 10, Issue 4",
     year: 2026,
     url: "https://jnva.biemdas.com/archives/category/volume-10-issue-4",
     doi: "JNVA-2026042701",
