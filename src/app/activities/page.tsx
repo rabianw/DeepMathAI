@@ -6,6 +6,24 @@ import { getImageUrl } from "../../lib/cloudinary";
 
 const activities = [
   {
+    id: "act-ai-healthcare-summit-2026",
+    title: "AI Healthcare Summit 2026",
+    date: "June 2026",
+    location: "Naresuan University",
+    description: "DeepMathAI Research Group participated in the AI Healthcare Summit 2026, bringing together researchers, clinicians, and AI practitioners to explore cutting-edge applications of artificial intelligence in healthcare. The event featured presentations on deep learning for medical imaging, optimization-based diagnostic tools, and interdisciplinary collaborations bridging mathematics and clinical practice.",
+    type: "Conference",
+    images: [
+      getImageUrl("/IMG_2827_in1l2d"),
+      getImageUrl("/IMG_2823_ann2kj"),
+      getImageUrl("/IMG_2820_e0kroh"),
+      getImageUrl("/IMG_2831_tljkf8"),
+      getImageUrl("/IMG_2818_ervrug"),
+      getImageUrl("/IMG_2834_l6emmi"),
+      getImageUrl("/IMG_2824_anjtug"),
+      getImageUrl("/IMG_2845_aduzye"),
+    ],
+  },
+  {
     id: "act-poom-kumam-june-2026",
     title: "Academic Seminar: Research changes knowledge. Networks change the world.",
     date: "June 16, 2026",
