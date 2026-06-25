@@ -8,7 +8,7 @@ const activities = [
   {
     id: "act-ai-healthcare-summit-2026",
     title: "AI Healthcare Summit 2026",
-    date: "June 2026",
+    date: "June 25, 2026",
     location: "Naresuan University",
     description: "DeepMathAI Research Group participated in the AI Healthcare Summit 2026, bringing together researchers, clinicians, and AI practitioners to explore cutting-edge applications of artificial intelligence in healthcare. The event featured presentations on deep learning for medical imaging, optimization-based diagnostic tools, and interdisciplinary collaborations bridging mathematics and clinical practice.",
     type: "Conference",
