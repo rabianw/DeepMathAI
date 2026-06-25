@@ -16,6 +16,6 @@ export function getImageUrl(path: string): string {
   // Normalize path: remove leading slash if present
   const normalizedPath = path.startsWith('/') ? path.substring(1) : path;
   
-  // Return Cloudinary URL
-  return `https://res.cloudinary.com/${cloudName}/image/upload/${normalizedPath}`;
+  // Return Cloudinary URL with auto format and quality for browser compatibility
+  return `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/${normalizedPath}`;
 }
