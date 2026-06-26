@@ -532,6 +532,8 @@ export interface GroupPublication {
   volume?: string;
   status: "Published" | "Accepted" | "In Press";
   category: "Optimization" | "Deep Learning" | "Medical AI" | "Applied Math";
+  description?: string;
+  graphicalAbstract?: string;
 }
 
 export const groupPublications: GroupPublication[] = [
@@ -545,6 +547,8 @@ export const groupPublications: GroupPublication[] = [
     doi: "10.1016/j.cam.2026.117567",
     status: "Published",
     category: "Optimization",
+    description: "This paper proposes a projection recurrent neural network for solving absolute value equations (AVE) constrained within second-order cones. The network is proven to be globally convergent to the exact solution using Lyapunov stability theory, offering a continuous-time dynamical approach that outperforms classical iterative solvers.",
+    graphicalAbstract: getImageUrl("/publications/pub1_graphical_abstract"),
   },
   {
     id: "pub-2",
@@ -556,6 +560,8 @@ export const groupPublications: GroupPublication[] = [
     doi: "10.1109/ACCESS.2026.3679347",
     status: "Published",
     category: "Optimization",
+    description: "A novel projection neural network incorporating time delays is developed to solve absolute value equations. The delay dynamics capture real-world computational latencies, and the model is combined with optimization techniques to ensure global stability. Experiments demonstrate superior convergence speed compared to delay-free counterparts.",
+    graphicalAbstract: getImageUrl("/publications/pub2_graphical_abstract"),
   },
   {
     id: "pub-3",
@@ -567,6 +573,8 @@ export const groupPublications: GroupPublication[] = [
     doi: "10.1007/s41478-026-01096-8",
     status: "Published",
     category: "Applied Math",
+    description: "This work introduces a relaxed iterative algorithm for solving hierarchical variational inequality problems in infinite-dimensional Hilbert spaces under pseudomonotonicity assumptions. Weak and strong convergence theorems are rigorously established, with numerical experiments validating the theoretical results.",
+    graphicalAbstract: getImageUrl("/publications/pub3_graphical_abstract"),
   },
   {
     id: "pub-4",
@@ -577,6 +585,8 @@ export const groupPublications: GroupPublication[] = [
     year: 2026,
     status: "Accepted",
     category: "Applied Math",
+    description: "This paper investigates the stability of solution maps for approximate weak vector optimization problems. Using a nonlinear scalarization technique, Hölder continuity and Lipschitz properties of the solution maps are derived under parametric perturbations, contributing to the theoretical foundations of robust optimization.",
+    graphicalAbstract: getImageUrl("/publications/pub4_graphical_abstract"),
   },
   {
     id: "pub-5",
@@ -588,6 +598,8 @@ export const groupPublications: GroupPublication[] = [
     doi: "10.3390/app16073158",
     status: "Published",
     category: "Medical AI",
+    description: "An AI-powered glaucoma screening system that combines optic disc localization with multi-view machine learning. The model fuses features from multiple retinal fundus image perspectives to achieve robust classification of glaucoma vs. normal cases, offering a clinically applicable diagnostic tool validated on real patient data.",
+    graphicalAbstract: getImageUrl("/publications/pub5_graphical_abstract"),
   },
   {
     id: "pub-6",
@@ -599,6 +611,8 @@ export const groupPublications: GroupPublication[] = [
     url: "https://bangmodjmcs.com/index.php/bangmodmcs/article/view/209",
     status: "Published",
     category: "Applied Math",
+    description: "A Halpern-type iterative scheme enhanced with double inertial terms and perturbation tolerance is proposed for finding fixed points in Banach spaces. The method achieves accelerated convergence and is applied successfully to signal denoising and image restoration benchmarks, demonstrating practical utility alongside strong theoretical guarantees.",
+    graphicalAbstract: getImageUrl("/publications/pub6_graphical_abstract"),
   },
   {
     id: "pub-7",
@@ -610,6 +624,8 @@ export const groupPublications: GroupPublication[] = [
     doi: "10.3390/sym18050782",
     status: "Published",
     category: "Applied Math",
+    description: "A three-step inertial Forward–Backward–Forward (FBF) splitting algorithm with a moving projection operator is introduced for solving monotone inclusion problems. The inertial extrapolation significantly accelerates convergence. Applications to image restoration under various noise models confirm the method's competitive performance against state-of-the-art algorithms.",
+    graphicalAbstract: getImageUrl("/publications/pub7_graphical_abstract"),
   },
   {
     id: "pub-8",
@@ -620,6 +636,8 @@ export const groupPublications: GroupPublication[] = [
     url: "https://www.carpathian.cunbm.utcluj.ro/all-issues-archive/",
     status: "Accepted",
     category: "Optimization",
+    description: "This paper presents a Multi-view Laplacian Twin SVM that integrates pinball loss for improved robustness to noise and outliers. The Laplacian graph regularization captures geometric structure across multiple data views, while the twin hyperplane formulation reduces computational complexity. The model achieves state-of-the-art classification accuracy on benchmark datasets.",
+    graphicalAbstract: getImageUrl("/publications/pub8_graphical_abstract"),
   },
   {
     id: "pub-9",
@@ -631,5 +649,7 @@ export const groupPublications: GroupPublication[] = [
     doi: "JNVA-2026042701",
     status: "Accepted",
     category: "Optimization",
+    description: "A compact gradient-based neural network is designed to solve stochastic support vector regression (SSVR) with probabilistic constraints. Using a smoothed Fischer–Burmeister function, the nonsmooth KKT conditions are reformulated, yielding a numerically stable gradient flow. The proposed architecture achieves a 25% reduction in network complexity with faster training times while outperforming standard SVR implementations on UCI benchmarks.",
+    graphicalAbstract: getImageUrl("/publications/pub9_graphical_abstract"),
   },
 ];

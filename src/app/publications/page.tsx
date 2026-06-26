@@ -1,5 +1,5 @@
 import { groupPublications } from "@/lib/deepmathai-data";
-import { BookOpen, ExternalLink, CheckCircle, Clock } from "lucide-react";
+import { BookOpen, ExternalLink, CheckCircle, Clock, Image } from "lucide-react";
 
 function getStatusBadge(status: string) {
   switch (status) {
@@ -29,6 +29,82 @@ function getCategoryBadge(category: string) {
   }
 }
 
+function PublicationCard({ pub }: { pub: (typeof groupPublications)[0] }) {
+  const linkHref = pub.doi
+    ? `https://doi.org/${pub.doi}`
+    : pub.url ?? "#";
+
+  return (
+    <article className="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-blue-500/20 transition-all hover:bg-white/[0.045]">
+      {/* Two-column layout when graphical abstract exists */}
+      <div className={`flex flex-col ${pub.graphicalAbstract ? "lg:flex-row" : ""}`}>
+
+        {/* Graphical Abstract */}
+        {pub.graphicalAbstract && (
+          <div className="lg:w-56 xl:w-64 shrink-0 bg-[#060e1c]">
+            <img
+              src={pub.graphicalAbstract}
+              alt={`Graphical abstract for ${pub.title}`}
+              className="w-full h-48 lg:h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        )}
+
+        {/* Content */}
+        <div className="flex-1 p-6">
+          {/* Badges + Year */}
+          <div className="flex flex-wrap items-center gap-2 mb-3">
+            <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getStatusBadge(pub.status)}`}>
+              {pub.status}
+            </span>
+            <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${getCategoryBadge(pub.category)}`}>
+              {pub.category}
+            </span>
+            <span className="text-xs text-gray-500 ml-auto">{pub.year}</span>
+          </div>
+
+          {/* Title */}
+          <h3 className="text-base font-bold text-white leading-snug mb-2">{pub.title}</h3>
+
+          {/* Authors */}
+          <p className="text-sm text-gray-400 mb-3 italic">{pub.authors}</p>
+
+          {/* Description */}
+          {pub.description && (
+            <p className="text-sm text-gray-300 leading-relaxed mb-3 border-l-2 border-blue-500/30 pl-3">
+              {pub.description}
+            </p>
+          )}
+
+          {/* Journal + Volume */}
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+            <div className="flex items-center gap-1.5 text-blue-400">
+              <BookOpen size={13} />
+              <span className="font-medium">{pub.journal}</span>
+            </div>
+            {pub.volume && (
+              <span className="text-gray-500">{pub.volume}</span>
+            )}
+          </div>
+
+          {/* DOI / URL */}
+          {(pub.doi || pub.url) && (
+            <a
+              href={linkHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 mt-3 text-xs text-teal-400 hover:text-teal-300 transition-colors"
+            >
+              <ExternalLink size={12} />
+              {pub.doi ? `DOI: ${pub.doi}` : "View Article"}
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export default function PublicationsPage() {
   const published = groupPublications.filter((p) => p.status === "Published");
   const accepted = groupPublications.filter((p) => p.status === "Accepted" || p.status === "In Press");
@@ -43,7 +119,7 @@ export default function PublicationsPage() {
             Publications
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Peer-reviewed journal articles by DeepMathAI research group members.
+            Peer-reviewed journal articles by DeepMathAI research group members — each with a graphical abstract and summary.
           </p>
 
           {/* Stats */}
@@ -73,58 +149,9 @@ export default function PublicationsPage() {
             <CheckCircle size={20} className="text-emerald-400" />
             Published Articles
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {published.map((pub) => (
-              <article
-                key={pub.id}
-                className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-blue-500/20 transition-colors"
-              >
-                <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getStatusBadge(pub.status)}`}>
-                    {pub.status}
-                  </span>
-                  <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${getCategoryBadge(pub.category)}`}>
-                    {pub.category}
-                  </span>
-                  <span className="text-xs text-gray-500 ml-auto">{pub.year}</span>
-                </div>
-
-                <h3 className="text-base font-bold text-white leading-snug mb-2">{pub.title}</h3>
-                <p className="text-sm text-gray-400 mb-2">{pub.authors}</p>
-
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
-                  <div className="flex items-center gap-1.5 text-blue-400">
-                    <BookOpen size={13} />
-                    <span className="font-medium">{pub.journal}</span>
-                  </div>
-                  {pub.volume && (
-                    <span className="text-gray-500">{pub.volume}</span>
-                  )}
-                </div>
-
-                {pub.doi && (
-                  <a
-                    href={`https://doi.org/${pub.doi}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 mt-3 text-xs text-teal-400 hover:text-teal-300 transition-colors"
-                  >
-                    <ExternalLink size={12} />
-                    DOI: {pub.doi}
-                  </a>
-                )}
-                {!pub.doi && pub.url && (
-                  <a
-                    href={pub.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 mt-3 text-xs text-teal-400 hover:text-teal-300 transition-colors"
-                  >
-                    <ExternalLink size={12} />
-                    View Article
-                  </a>
-                )}
-              </article>
+              <PublicationCard key={pub.id} pub={pub} />
             ))}
           </div>
         </div>
@@ -138,33 +165,9 @@ export default function PublicationsPage() {
               <Clock size={20} className="text-blue-400" />
               Accepted / In Press
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-6">
               {accepted.map((pub) => (
-                <article
-                  key={pub.id}
-                  className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-blue-500/20 transition-colors"
-                >
-                  <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getStatusBadge(pub.status)}`}>
-                      {pub.status}
-                    </span>
-                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${getCategoryBadge(pub.category)}`}>
-                      {pub.category}
-                    </span>
-                    <span className="text-xs text-gray-500 ml-auto">{pub.year}</span>
-                  </div>
-
-                  <h3 className="text-base font-bold text-white leading-snug mb-2">{pub.title}</h3>
-                  <p className="text-sm text-gray-400 mb-2">{pub.authors}</p>
-
-                  <div className="flex items-center gap-1.5 text-sm text-blue-400">
-                    <BookOpen size={13} />
-                    <span className="font-medium">{pub.journal}</span>
-                  </div>
-                  {pub.volume && (
-                    <p className="text-sm text-gray-500 mt-1">{pub.volume}</p>
-                  )}
-                </article>
+                <PublicationCard key={pub.id} pub={pub} />
               ))}
             </div>
           </div>
