@@ -17,7 +17,7 @@ export interface TeamMember {
   hIndexGoogle?: number;
   hIndexScopus?: number;
   citationScopus?: number;
-  role: "PI" | "Co-PI" | "Early-Career" | "International";
+  role: "PI" | "Co-PI" | "Early-Career" | "International" | "National";
   responsibility: string; // percentage
   avatarUrl?: string;
   scopusUrl?: string;
@@ -337,6 +337,100 @@ export const internationalNetwork: TeamMember[] = [
     countryFlag: "🇮🇷",
     avatarUrl: getImageUrl("/images/team/Alireza"),
   },
+  {
+    id: "int-yirga",
+    name: "Dr. Yirga Abebe Belay",
+    nameEn: "Dr. Yirga Abebe Belay",
+    title: "Lecturer",
+    department: "Department of Mathematics",
+    faculty: "",
+    institution: "Aksum University",
+    email: "yirga2006@gmail.com",
+    expertise: ["Mathematics", "Optimization"],
+    role: "International",
+    responsibility: "Collaborator",
+    country: "Ethiopia",
+    countryFlag: "🇪🇹",
+  },
+];
+
+// ─── National Network ───────────────────────────────
+export const nationalNetwork: TeamMember[] = [
+  {
+    id: "nat-pakkapon",
+    name: "รองศาสตราจารย์ ดร.ภัคพล ปรีชาศิลป์",
+    nameEn: "Assoc. Prof. Dr. Pakkapon Preechasilp",
+    title: "Associate Professor",
+    department: "Department of Mathematics",
+    faculty: "Faculty of Science and Technology",
+    institution: "Pibulsongkram Rajabhat University",
+    email: "",
+    expertise: ["Mathematics", "Optimization"],
+    role: "National",
+    responsibility: "Collaborator",
+    country: "Thailand",
+    countryFlag: "🇹🇭",
+  },
+  {
+    id: "nat-vipavee",
+    name: "ดร.วิภาวี ดำมินเศก",
+    nameEn: "Dr. Vipavee Damminsed",
+    title: "Lecturer",
+    department: "Department of Mathematics",
+    faculty: "Faculty of Science",
+    institution: "Kasetsart University, Sriracha Campus",
+    email: "",
+    expertise: ["Mathematics", "Optimization"],
+    role: "National",
+    responsibility: "Collaborator",
+    country: "Thailand",
+    countryFlag: "🇹🇭",
+  },
+  {
+    id: "nat-nutt",
+    name: "ดร.ณัฐ ธนะนิมิตร",
+    nameEn: "Nutt Tananimit",
+    title: "Lecturer",
+    department: "Department of Mathematics Education",
+    faculty: "",
+    institution: "Walailak University",
+    email: "nutt.ta@wu.ac.th",
+    expertise: ["Mathematics", "Optimization"],
+    role: "National",
+    responsibility: "Collaborator",
+    country: "Thailand",
+    countryFlag: "🇹🇭",
+  },
+  {
+    id: "nat-thanatporn",
+    name: "ดร.ธนธรณ์ เกรซ",
+    nameEn: "Thanatporn Grace",
+    title: "Lecturer",
+    department: "Department of Mathematics Education",
+    faculty: "",
+    institution: "Walailak University",
+    email: "thanatporn.gr@wu.ac.th",
+    expertise: ["Mathematics", "Optimization"],
+    role: "National",
+    responsibility: "Collaborator",
+    country: "Thailand",
+    countryFlag: "🇹🇭",
+  },
+  {
+    id: "nat-panatda",
+    name: "ดร.ปนัดดา บุญมั่น",
+    nameEn: "Panatda Boonman",
+    title: "Lecturer",
+    department: "Mathematics",
+    faculty: "Faculty of Science and Technology",
+    institution: "Rajamangala University of Technology Suvarnabhumi",
+    email: "panatdaw@hotmail.com",
+    expertise: ["Mathematics", "Optimization"],
+    role: "National",
+    responsibility: "Collaborator",
+    country: "Thailand",
+    countryFlag: "🇹🇭",
+  }
 ];
 
 

@@ -3,6 +3,7 @@
 import {
   teamMembers,
   internationalNetwork,
+  nationalNetwork,
 } from "@/lib/deepmathai-data";
 import {
   Mail,
@@ -154,8 +155,81 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* ── International Network ────────────────────── */}
+      {/* ── National Network ─────────────────────────── */}
       <section className="py-20 bg-[#0c1a30]">
+        <div className="mx-auto max-w-6xl px-4 lg:px-8">
+          <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-3">
+            <Globe size={24} className="text-teal-400" />
+            National Research Network
+          </h2>
+          <p className="text-gray-400 mb-10 max-w-2xl">
+            Collaborators from leading universities across Thailand, supporting joint publications and research projects.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {nationalNetwork.map((partner) => (
+              <div
+                key={partner.id}
+                className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-teal-500/20 transition-colors"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="shrink-0 relative">
+                    {partner.avatarUrl ? (
+                      <img
+                        src={partner.avatarUrl}
+                        alt={partner.nameEn}
+                        className="w-14 h-14 rounded-xl object-cover border border-teal-500/30"
+                      />
+                    ) : (
+                      <div className="w-14 h-14 rounded-xl bg-teal-500/10 flex items-center justify-center text-2xl">
+                        {partner.countryFlag}
+                      </div>
+                    )}
+                    <span className="absolute -bottom-1 -right-1 text-lg">{partner.countryFlag}</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-white">{partner.nameEn}</h3>
+                    <p className="text-sm text-teal-400 mb-1">{partner.institution}</p>
+                    <p className="text-sm text-gray-500 mb-3">{partner.country}</p>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {partner.expertise.slice(0, 4).map((exp, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.08] text-xs text-gray-400"
+                        >
+                          {exp}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+                      {partner.hIndexScopus && (
+                        <span>h-index: <strong className="text-white">{partner.hIndexScopus}</strong></span>
+                      )}
+                      {partner.citationScopus && (
+                        <span>Citations: <strong className="text-white">{partner.citationScopus.toLocaleString()}</strong></span>
+                      )}
+                      {partner.email && (
+                        <a
+                          href={`mailto:${partner.email}`}
+                          className="flex items-center gap-1 text-teal-400 hover:text-teal-300 transition-colors"
+                        >
+                          <Mail size={12} />
+                          {partner.email}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── International Network ────────────────────── */}
+      <section className="py-20">
         <div className="mx-auto max-w-6xl px-4 lg:px-8">
           <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-3">
             <Globe size={24} className="text-teal-400" />
