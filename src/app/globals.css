@@ -14,6 +14,47 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* ── Featured App animations ─────────────────────── */
+@keyframes app-scan {
+  0% { top: -10%; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { top: 105%; opacity: 0; }
+}
+@keyframes app-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes app-float-delayed {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes app-glow {
+  0%, 100% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.25), 0 0 80px rgba(20, 184, 166, 0.12); }
+  50% { box-shadow: 0 0 55px rgba(59, 130, 246, 0.45), 0 0 110px rgba(20, 184, 166, 0.22); }
+}
+@keyframes app-ping {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(2.1); opacity: 0; }
+}
+@keyframes app-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-app-scan { animation: app-scan 3.2s ease-in-out infinite; }
+  .animate-app-float { animation: app-float 5s ease-in-out infinite; }
+  .animate-app-float-delayed { animation: app-float-delayed 4s ease-in-out 0.8s infinite; }
+  .animate-app-glow { animation: app-glow 4s ease-in-out infinite; }
+  .animate-app-ping { animation: app-ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite; }
+  .animate-app-shimmer {
+    background-size: 200% 200%;
+    animation: app-shimmer 6s ease infinite;
+  }
+}
+
 /* Scrollbar hide utility */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;

@@ -134,6 +134,116 @@ export default function DeepMathAIPage() {
           </div>
         </div>
       </section>
+      {/* ── Featured AI Application ──────────────────── */}
+      <section className="relative py-20 lg:py-24 bg-[#0c1a30] overflow-hidden">
+        {/* ambient glows */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-teal-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+          {aiApplications.map((app) => (
+            <div key={app.id} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* ── Left: copy ── */}
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-teal-500/25 text-teal-300 text-sm font-semibold mb-6 animate-app-shimmer">
+                  <Rocket size={14} />
+                  <span>Featured Application · Try It Now</span>
+                </div>
+
+                <h2 className="text-3xl lg:text-5xl font-black tracking-tight text-white mb-5 leading-tight">
+                  Glaucoma{" "}
+                  <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                    Multi-View
+                  </span>{" "}
+                  Screening
+                </h2>
+
+                <p className="text-lg text-blue-200/80 font-light mb-6 leading-relaxed">
+                  Upload a retinal fundus photograph — our multi-view AI fuses the full image with an
+                  automatically localized optic-disc crop and returns an explainable screening result
+                  in seconds.
+                </p>
+
+                {/* mini feature chips */}
+                <div className="flex flex-wrap gap-2.5 mb-8">
+                  {["EfficientNetV2 ensemble", "Grad-CAM explainability", "Batch screening", "Free to use"].map((chip) => (
+                    <span
+                      key={chip}
+                      className="px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-sm text-gray-300"
+                    >
+                      {chip}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap items-center gap-4 mb-6">
+                  <a
+                    href={app.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl text-white text-lg font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all hover:-translate-y-0.5 animate-app-glow"
+                  >
+                    <Rocket size={20} />
+                    Launch App
+                    <ExternalLink size={15} />
+                  </a>
+                  <Link
+                    href="/applications"
+                    className="inline-flex items-center gap-2 px-6 py-4 bg-white/[0.06] border border-white/[0.1] rounded-xl text-white font-semibold hover:bg-white/[0.1] transition-all"
+                  >
+                    Learn More
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
+
+                <p className="text-xs text-gray-500">
+                  Published in Applied Sciences (MDPI), 2026 · Decision-support tool — not a medical diagnosis
+                </p>
+              </div>
+
+              {/* ── Right: animated fundus visual ── */}
+              <div className="relative animate-app-float">
+                {/* gradient frame */}
+                <div className="relative rounded-3xl p-[2px] bg-gradient-to-br from-blue-500/60 via-teal-400/40 to-blue-500/60 animate-app-shimmer">
+                  <div className="relative rounded-3xl overflow-hidden bg-[#0a1628]">
+                    <img
+                      src={getImageUrl("/publications/pub5_graphical_abstract")}
+                      alt="Glaucoma Multi-View Screening — fundus images with optic disc localization"
+                      className="w-full h-auto block"
+                    />
+                    {/* scanning beam */}
+                    <div className="absolute left-0 w-full h-16 pointer-events-none animate-app-scan bg-gradient-to-b from-transparent via-teal-400/25 to-transparent border-b border-teal-300/60" />
+                    {/* soft vignette to blend with bg */}
+                    <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-3xl" />
+                  </div>
+                </div>
+
+                {/* floating chip: live status */}
+                <div className="absolute -top-4 -right-3 lg:-right-6 animate-app-float-delayed">
+                  <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[#0a1628]/95 border border-emerald-500/30 shadow-xl shadow-emerald-500/10 backdrop-blur">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 animate-app-ping" />
+                      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                    </span>
+                    <span className="text-sm font-bold text-emerald-300">Live · AI Screening</span>
+                  </div>
+                </div>
+
+                {/* floating chip: prediction */}
+                <div className="absolute -bottom-5 -left-3 lg:-left-6 animate-app-float-delayed">
+                  <div className="px-5 py-3 rounded-2xl bg-[#0a1628]/95 border border-blue-500/30 shadow-xl shadow-blue-500/10 backdrop-blur">
+                    <p className="text-[11px] uppercase tracking-wider text-gray-500 mb-0.5">Multi-view prediction</p>
+                    <p className="text-sm font-bold text-white">
+                      Glaucoma suspected · <span className="text-teal-400">Grad-CAM ready</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── Vision Section ───────────────────────────── */}
       <section className="py-20 bg-[#0c1a30]">
         <div className="mx-auto max-w-4xl px-4 lg:px-8">
@@ -197,68 +307,6 @@ export default function DeepMathAIPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── AI Applications Showcase ─────────────────── */}
-      <section className="py-20 bg-[#0c1a30]">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-teal-400 mb-3">From Theory to Deployment</p>
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4">
-              AI Applications
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Our peer-reviewed research powers real, deployed tools — transparent, explainable, and free to try.
-            </p>
-          </div>
-
-          {aiApplications.map((app) => (
-            <div
-              key={app.id}
-              className="bg-white/[0.03] border border-white/[0.06] rounded-3xl p-8 lg:p-10 hover:border-blue-500/30 transition-colors"
-            >
-              <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3 mb-4">
-                    <span
-                      className="px-3 py-1 rounded-full text-xs font-semibold"
-                      style={{ backgroundColor: `${app.color}15`, color: app.color }}
-                    >
-                      {app.category}
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      {app.status}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl font-extrabold text-white mb-2">{app.name}</h3>
-                  <p className="text-gray-400 leading-relaxed max-w-2xl">{app.tagline}. Built on our
-                    multi-view machine learning research published in Applied Sciences (MDPI, 2026),
-                    with Grad-CAM explainability for every prediction.</p>
-                </div>
-                <div className="flex flex-wrap lg:flex-col gap-3 shrink-0">
-                  <a
-                    href={app.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all hover:-translate-y-0.5"
-                  >
-                    <Rocket size={16} />
-                    Launch App
-                    <ExternalLink size={13} />
-                  </a>
-                  <Link
-                    href="/applications"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/[0.06] border border-white/[0.1] rounded-xl text-white font-semibold hover:bg-white/[0.1] transition-all"
-                  >
-                    Learn More
-                    <ArrowRight size={14} />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
