@@ -1,10 +1,46 @@
 "use client";
 
 import { useState } from "react";
-import { Calendar, MapPin, Users, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Users, X, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { getImageUrl } from "../../lib/cloudinary";
 
 const activities = [
+  {
+    id: "act-iccma-2026",
+    title: "The Fourth International Conference: Constructive Mathematical Analysis (ICCMA 2026)",
+    date: "July 01 - 02, 2026",
+    location: "Online (Konya, Türkiye)",
+    description:
+      "Members of the DeepMathAI Research Group actively participated in The Fourth International Conference on Constructive Mathematical Analysis (ICCMA 2026), hosted virtually in Konya, Türkiye. The conference provided a premier international platform for our researchers to present their recent breakthroughs in mathematical analysis, advanced optimization algorithms, and their applications in artificial intelligence. During the sessions, our group contributed to vibrant academic discussions, showcasing innovative approaches in solving complex variational inequalities, fixed-point problems, and advancing deep learning architectures through rigorous mathematical foundations. This engagement further strengthens DeepMathAI's global collaborative network and our commitment to high-impact research.",
+    type: "Conference",
+    upcoming: false,
+    images: [
+      getImageUrl("/IMG_2944_pseqcn"),
+      getImageUrl("/IMG_2949_xhkdag"),
+      getImageUrl("/IMG_2957_jnrygu"),
+      getImageUrl("/IMG_2959_uhjinq"),
+    ],
+    posterImage: getImageUrl("/Screenshot_2569-07-01_at_20.53.25_sjqsmp"),
+  },
+  {
+    id: "act-cmmse-2026",
+    title: "CMMSE 2026 — Computational and Mathematical Methods in Science and Engineering (Online Presentation)",
+    date: "June 28, 2026",
+    location: "Online (International Conference)",
+    description:
+      "Members of the DeepMathAI Research Group presented their latest research at the International Conference on Computational and Mathematical Methods in Science and Engineering (CMMSE 2026) via online platform. The presentations covered recent advances in optimization algorithms, neural network-based solvers, and mathematical AI methods, reaching an international audience of researchers in applied mathematics and computational science.",
+    type: "Conference",
+    upcoming: false,
+    videoUrl: "https://www.youtube.com/@cmmsecomputationalmathemat2132/videos",
+    images: [
+      getImageUrl("/Screenshot_2569-06-28_at_13.57.14_pgoobg"),
+      getImageUrl("/Screenshot_2569-06-28_at_13.57.45_r9pjib"),
+      getImageUrl("/Screenshot_2569-06-28_at_13.58.17_afyct7"),
+      getImageUrl("/Screenshot_2569-06-28_at_13.59.17_aht6zm"),
+      getImageUrl("/Screenshot_2569-06-28_at_14.00.17_knxulr"),
+      getImageUrl("/Screenshot_2569-06-28_at_14.01.03_wm4gu9"),
+    ],
+  },
   {
     id: "act-ai-healthcare-summit-2026",
     title: "AI Healthcare Summit 2026",
@@ -209,16 +245,27 @@ export default function ActivitiesPage() {
                         <p className="text-gray-400 leading-relaxed mb-4">{activity.description}</p>
                       </div>
 
-                      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
-                        <div className="flex items-center gap-1.5">
-                          <Calendar size={14} />
-                          <span>{activity.date}</span>
+                        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
+                          <div className="flex items-center gap-1.5">
+                            <Calendar size={14} />
+                            <span>{activity.date}</span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <MapPin size={14} />
+                            <span>{activity.location}</span>
+                          </div>
+                          {"videoUrl" in activity && activity.videoUrl && (
+                            <a
+                              href={activity.videoUrl as string}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600/20 border border-red-500/30 text-red-400 hover:bg-red-600/30 hover:text-red-300 transition-all text-xs font-semibold"
+                            >
+                              <Play size={14} fill="currentColor" />
+                              Watch on YouTube
+                            </a>
+                          )}
                         </div>
-                        <div className="flex items-center gap-1.5">
-                          <MapPin size={14} />
-                          <span>{activity.location}</span>
-                        </div>
-                      </div>
                     </div>
 
                     {/* Right Column: Poster (only when posterImage exists) */}

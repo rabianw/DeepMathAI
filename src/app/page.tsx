@@ -5,6 +5,7 @@ import {
   researchPillars,
   teamMembers,
   internationalNetwork,
+  aiApplications,
 } from "@/lib/deepmathai-data";
 import { getImageUrl } from "@/lib/cloudinary";
 
@@ -22,6 +23,8 @@ import {
   Award,
   Banknote,
   ChevronRight,
+  Rocket,
+  ExternalLink,
 } from "lucide-react";
 
 function getPillarIcon(iconName: string, size: number = 28) {
@@ -194,6 +197,68 @@ export default function DeepMathAIPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── AI Applications Showcase ─────────────────── */}
+      <section className="py-20 bg-[#0c1a30]">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-teal-400 mb-3">From Theory to Deployment</p>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-4">
+              AI Applications
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Our peer-reviewed research powers real, deployed tools — transparent, explainable, and free to try.
+            </p>
+          </div>
+
+          {aiApplications.map((app) => (
+            <div
+              key={app.id}
+              className="bg-white/[0.03] border border-white/[0.06] rounded-3xl p-8 lg:p-10 hover:border-blue-500/30 transition-colors"
+            >
+              <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span
+                      className="px-3 py-1 rounded-full text-xs font-semibold"
+                      style={{ backgroundColor: `${app.color}15`, color: app.color }}
+                    >
+                      {app.category}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      {app.status}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-extrabold text-white mb-2">{app.name}</h3>
+                  <p className="text-gray-400 leading-relaxed max-w-2xl">{app.tagline}. Built on our
+                    multi-view machine learning research published in Applied Sciences (MDPI, 2026),
+                    with Grad-CAM explainability for every prediction.</p>
+                </div>
+                <div className="flex flex-wrap lg:flex-col gap-3 shrink-0">
+                  <a
+                    href={app.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all hover:-translate-y-0.5"
+                  >
+                    <Rocket size={16} />
+                    Launch App
+                    <ExternalLink size={13} />
+                  </a>
+                  <Link
+                    href="/applications"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/[0.06] border border-white/[0.1] rounded-xl text-white font-semibold hover:bg-white/[0.1] transition-all"
+                  >
+                    Learn More
+                    <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

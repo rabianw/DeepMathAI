@@ -221,7 +221,7 @@ export const teamMembers: TeamMember[] = [
     citationScopus: 54,
     role: "Early-Career",
     responsibility: "14%",
-    avatarUrl: undefined,
+    avatarUrl: getImageUrl("RATTAPORN_agxyps"),
   },
 ];
 
@@ -340,8 +340,8 @@ export const internationalNetwork: TeamMember[] = [
   {
     id: "int-yirga",
     name: "Dr. Yirga Abebe Belay",
-    nameEn: "Dr. Yirga Abebe Belay",
-    title: "Lecturer",
+    nameEn: "Asst. Dr. Yirga Abebe Belay",
+    title: "Assistant Lecturer (Dr.)",
     department: "Department of Mathematics",
     faculty: "",
     institution: "Aksum University",
@@ -351,6 +351,23 @@ export const internationalNetwork: TeamMember[] = [
     responsibility: "Collaborator",
     country: "Ethiopia",
     countryFlag: "🇪🇹",
+    avatarUrl: getImageUrl("YIRGA_ABEBE_BELAY_vazvrm"),
+  },
+  {
+    id: "int-pham",
+    name: "Dr. Pham Thi Vui",
+    nameEn: "Dr. Pham Thi Vui",
+    title: "Lecturer",
+    department: "Department of Mathematics Education",
+    faculty: "School of Education",
+    institution: "Can Tho University",
+    email: "",
+    expertise: ["Mathematics", "Mathematics Education"],
+    role: "International",
+    responsibility: "Collaborator",
+    country: "Vietnam",
+    countryFlag: "🇻🇳",
+    avatarUrl: getImageUrl("Dr._Pham_Thi_Vui_lid594"),
   },
 ];
 
@@ -364,12 +381,13 @@ export const nationalNetwork: TeamMember[] = [
     department: "Department of Mathematics",
     faculty: "Faculty of Science and Technology",
     institution: "Pibulsongkram Rajabhat University",
-    email: "",
+    email: "akkapon.p@psru.ac.th",
     expertise: ["Mathematics", "Optimization"],
     role: "National",
     responsibility: "Collaborator",
     country: "Thailand",
     countryFlag: "🇹🇭",
+    avatarUrl: getImageUrl("Pakkapon_v4oj7i"),
   },
   {
     id: "nat-vipavee",
@@ -379,18 +397,19 @@ export const nationalNetwork: TeamMember[] = [
     department: "Department of Mathematics",
     faculty: "Faculty of Science",
     institution: "Kasetsart University, Sriracha Campus",
-    email: "",
+    email: "vipavee.d@live.ku.th",
     expertise: ["Mathematics", "Optimization"],
     role: "National",
     responsibility: "Collaborator",
     country: "Thailand",
     countryFlag: "🇹🇭",
+    avatarUrl: getImageUrl("Vipavee_nj9s5u"),
   },
   {
     id: "nat-nutt",
     name: "ดร.ณัฐ ธนะนิมิตร",
-    nameEn: "Nutt Tananimit",
-    title: "Lecturer",
+    nameEn: "Dr. Nutt Tananimit",
+    title: "Lecturer (Dr.)",
     department: "Department of Mathematics Education",
     faculty: "",
     institution: "Walailak University",
@@ -400,12 +419,13 @@ export const nationalNetwork: TeamMember[] = [
     responsibility: "Collaborator",
     country: "Thailand",
     countryFlag: "🇹🇭",
+    avatarUrl: getImageUrl("NUTT_jphasd"),
   },
   {
     id: "nat-thanatporn",
     name: "ดร.ธนธรณ์ เกรซ",
-    nameEn: "Thanatporn Grace",
-    title: "Lecturer",
+    nameEn: "Asst. Dr. Thanatporn Grace",
+    title: "Assistant Lecturer (Dr.)",
     department: "Department of Mathematics Education",
     faculty: "",
     institution: "Walailak University",
@@ -415,6 +435,7 @@ export const nationalNetwork: TeamMember[] = [
     responsibility: "Collaborator",
     country: "Thailand",
     countryFlag: "🇹🇭",
+    avatarUrl: getImageUrl("THANATPORN_hvqhze"),
   },
   {
     id: "nat-panatda",
@@ -430,6 +451,7 @@ export const nationalNetwork: TeamMember[] = [
     responsibility: "Collaborator",
     country: "Thailand",
     countryFlag: "🇹🇭",
+    avatarUrl: getImageUrl("Panatda_a6kixb"),
   }
 ];
 
@@ -745,5 +767,66 @@ export const groupPublications: GroupPublication[] = [
     category: "Optimization",
     description: "A compact gradient-based neural network is designed to solve stochastic support vector regression (SSVR) with probabilistic constraints. Using a smoothed Fischer–Burmeister function, the nonsmooth KKT conditions are reformulated, yielding a numerically stable gradient flow. The proposed architecture achieves a 25% reduction in network complexity with faster training times while outperforming standard SVR implementations on UCI benchmarks.",
     graphicalAbstract: getImageUrl("/publications/pub9_graphical_abstract"),
+  },
+];
+
+// ─── AI Applications (deployed tools built from group research) ───
+
+export interface AIApplication {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  url: string;
+  status: "Live" | "Beta" | "In Development";
+  category: string;
+  features: { title: string; description: string; iconName: string }[];
+  models: string[];
+  publicationId?: string; // links to publications[] entry
+  paperCitation: string;
+  paperUrl: string;
+  disclaimer?: string;
+  color: string;
+}
+
+export const aiApplications: AIApplication[] = [
+  {
+    id: "app-glaucoma-multiview",
+    name: "Glaucoma Multi-View Screening",
+    tagline: "AI-powered opportunistic glaucoma screening from retinal fundus images",
+    description:
+      "A web-based decision-support system that flags retinal fundus images as \"glaucoma suspected\" by fusing predictions from two complementary views of the same image — the full fundus photograph and an automatically localized crop around the optic disc. The multi-view ensemble weights the disc-focused view more heavily, mirroring how ophthalmologists examine the optic nerve head, and every prediction can be inspected through Grad-CAM attribution maps.",
+    url: "https://glaucoma-multiview.vercel.app",
+    status: "Live",
+    category: "Medical Imaging AI",
+    features: [
+      {
+        title: "Single & Batch Prediction",
+        description: "Screen one image or an entire folder of fundus photographs (JPG, PNG, BMP, TIF) in a single run.",
+        iconName: "upload",
+      },
+      {
+        title: "Multi-View Fusion",
+        description: "Combines a full-image EfficientNetV2-M and a disc-crop EfficientNetV2-S with weighted probability fusion (Original × 0.5 + Crop × 1.5).",
+        iconName: "layers",
+      },
+      {
+        title: "Explainable AI (Grad-CAM)",
+        description: "Heatmaps reveal the retinal regions driving each prediction, supporting clinical trust and error analysis.",
+        iconName: "eye",
+      },
+      {
+        title: "Performance Dashboard",
+        description: "Built-in metrics page reporting the model's validated screening performance.",
+        iconName: "chart",
+      },
+    ],
+    models: ["EfficientNetV2-M (full image)", "EfficientNetV2-S (optic-disc crop)", "Weighted multi-view ensemble"],
+    publicationId: "pub-5",
+    paperCitation: "Siying, P., et al. & Wangkeeree, R. — Applied Sciences (MDPI), Vol. 16, Issue 7, 3158 (2026)",
+    paperUrl: "https://doi.org/10.3390/app16073158",
+    disclaimer:
+      "Decision-support tool for screening only — not a medical diagnosis and not a substitute for examination by an ophthalmologist.",
+    color: "#ef4444",
   },
 ];

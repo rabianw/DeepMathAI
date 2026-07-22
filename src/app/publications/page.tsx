@@ -1,5 +1,5 @@
 import { groupPublications } from "@/lib/deepmathai-data";
-import { BookOpen, ExternalLink, CheckCircle, Clock, Image } from "lucide-react";
+import { BookOpen, ExternalLink, CheckCircle, Clock } from "lucide-react";
 
 function getStatusBadge(status: string) {
   switch (status) {
@@ -30,76 +30,69 @@ function getCategoryBadge(category: string) {
 }
 
 function PublicationCard({ pub }: { pub: (typeof groupPublications)[0] }) {
-  const linkHref = pub.doi
-    ? `https://doi.org/${pub.doi}`
-    : pub.url ?? "#";
+  const linkHref = pub.doi ? `https://doi.org/${pub.doi}` : pub.url ?? "#";
 
   return (
-    <article className="bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-blue-500/20 transition-all hover:bg-white/[0.045]">
-      {/* Two-column layout when graphical abstract exists */}
-      <div className={`flex flex-col ${pub.graphicalAbstract ? "lg:flex-row" : ""}`}>
+    <article className="relative bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-blue-500/20 transition-all hover:bg-white/[0.045]">
+      {/* Graphical Abstract — hidden on mobile, absolute right column on md+ */}
+      {pub.graphicalAbstract && (
+        <div className="hidden md:block absolute top-0 right-0 bottom-0 w-40 lg:w-44 bg-[#060e1c]">
+          <img
+            src={pub.graphicalAbstract}
+            alt=""
+            className="w-full h-full object-cover object-center opacity-90"
+          />
+          <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-[#0d1f3c] to-transparent" />
+        </div>
+      )}
 
-        {/* Graphical Abstract */}
-        {pub.graphicalAbstract && (
-          <div className="lg:w-56 xl:w-64 shrink-0 bg-[#060e1c]">
-            <img
-              src={pub.graphicalAbstract}
-              alt={`Graphical abstract for ${pub.title}`}
-              className="w-full h-48 lg:h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-            />
-          </div>
+      {/* Content — full width on mobile, padded right on md+ to avoid image overlap */}
+      <div className={`p-5 lg:p-6 ${pub.graphicalAbstract ? "md:pr-44 lg:pr-48" : ""}`}>
+        {/* Badges + Year */}
+        <div className="flex flex-wrap items-center gap-2 mb-3">
+          <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getStatusBadge(pub.status)}`}>
+            {pub.status}
+          </span>
+          <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${getCategoryBadge(pub.category)}`}>
+            {pub.category}
+          </span>
+          <span className="text-xs text-gray-500 ml-auto">{pub.year}</span>
+        </div>
+
+        {/* Title */}
+        <h3 className="text-base font-bold text-white leading-snug mb-2">{pub.title}</h3>
+
+        {/* Authors */}
+        <p className="text-sm text-gray-400 mb-3 italic">{pub.authors}</p>
+
+        {/* Description */}
+        {pub.description && (
+          <p className="text-sm text-gray-300 leading-relaxed mb-3 border-l-2 border-blue-500/30 pl-3">
+            {pub.description}
+          </p>
         )}
 
-        {/* Content */}
-        <div className="flex-1 p-6">
-          {/* Badges + Year */}
-          <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getStatusBadge(pub.status)}`}>
-              {pub.status}
-            </span>
-            <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${getCategoryBadge(pub.category)}`}>
-              {pub.category}
-            </span>
-            <span className="text-xs text-gray-500 ml-auto">{pub.year}</span>
+        {/* Journal + Volume */}
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+          <div className="flex items-center gap-1.5 text-blue-400">
+            <BookOpen size={13} />
+            <span className="font-medium">{pub.journal}</span>
           </div>
-
-          {/* Title */}
-          <h3 className="text-base font-bold text-white leading-snug mb-2">{pub.title}</h3>
-
-          {/* Authors */}
-          <p className="text-sm text-gray-400 mb-3 italic">{pub.authors}</p>
-
-          {/* Description */}
-          {pub.description && (
-            <p className="text-sm text-gray-300 leading-relaxed mb-3 border-l-2 border-blue-500/30 pl-3">
-              {pub.description}
-            </p>
-          )}
-
-          {/* Journal + Volume */}
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
-            <div className="flex items-center gap-1.5 text-blue-400">
-              <BookOpen size={13} />
-              <span className="font-medium">{pub.journal}</span>
-            </div>
-            {pub.volume && (
-              <span className="text-gray-500">{pub.volume}</span>
-            )}
-          </div>
-
-          {/* DOI / URL */}
-          {(pub.doi || pub.url) && (
-            <a
-              href={linkHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 mt-3 text-xs text-teal-400 hover:text-teal-300 transition-colors"
-            >
-              <ExternalLink size={12} />
-              {pub.doi ? `DOI: ${pub.doi}` : "View Article"}
-            </a>
-          )}
+          {pub.volume && <span className="text-gray-500">{pub.volume}</span>}
         </div>
+
+        {/* DOI / URL */}
+        {(pub.doi || pub.url) && (
+          <a
+            href={linkHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 mt-3 text-xs text-teal-400 hover:text-teal-300 transition-colors"
+          >
+            <ExternalLink size={12} />
+            {pub.doi ? `DOI: ${pub.doi}` : "View Article"}
+          </a>
+        )}
       </div>
     </article>
   );
@@ -107,14 +100,18 @@ function PublicationCard({ pub }: { pub: (typeof groupPublications)[0] }) {
 
 export default function PublicationsPage() {
   const published = groupPublications.filter((p) => p.status === "Published");
-  const accepted = groupPublications.filter((p) => p.status === "Accepted" || p.status === "In Press");
+  const accepted = groupPublications.filter(
+    (p) => p.status === "Accepted" || p.status === "In Press"
+  );
 
   return (
     <div className="min-h-screen bg-[#0a1628] text-white">
       {/* Header */}
       <section className="py-16 lg:py-20 text-center">
         <div className="mx-auto max-w-4xl px-4 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-blue-400 mb-3">Research Output</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-400 mb-3">
+            Research Output
+          </p>
           <h1 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             Publications
           </h1>

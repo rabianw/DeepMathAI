@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Brain, Users, Microscope, BookOpen, Newspaper, Map as MapIcon, Menu, X, User } from "lucide-react";
+import { Brain, Users, Microscope, BookOpen, Newspaper, Map as MapIcon, Menu, X, User, Rocket } from "lucide-react";
 import { useState } from "react";
 import { getImageUrl } from "../lib/cloudinary";
 
@@ -11,6 +11,7 @@ const navItems = [
   { href: "/team", label: "Team", icon: Users },
   { href: "/research", label: "Research", icon: Microscope },
   { href: "/publications", label: "Publications", icon: BookOpen },
+  { href: "/applications", label: "Applications", icon: Rocket },
   { href: "/activities", label: "Activities", icon: Newspaper },
   { href: "/roadmap", label: "Roadmap", icon: MapIcon },
   { href: "https://rabian-wangkeeree.vercel.app", label: "Prof. Rabian", icon: User },
