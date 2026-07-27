@@ -200,9 +200,9 @@ export default function ApplicationsPage() {
             <Brain size={32} className="text-blue-400/60 mx-auto mb-4" />
             <h3 className="text-xl font-bold text-white mb-2">More Applications in Development</h3>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Upcoming tools from our research pipeline include opportunistic osteoporosis assessment
-              from lumbar spine MRI, diabetic retinopathy screening, and renewable-energy optimization
-              systems. Follow our{" "}
+              Upcoming tools from our research pipeline include diabetic retinopathy screening,
+              vertebral fracture risk stratification, and renewable-energy optimization systems.
+              Follow our{" "}
               <Link href="/publications" className="text-blue-400 hover:text-blue-300 font-semibold">
                 publications
               </Link>{" "}

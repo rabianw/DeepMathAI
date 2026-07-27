@@ -141,7 +141,7 @@ export default function DeepMathAIPage() {
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
-          {aiApplications.map((app) => (
+          {aiApplications.slice(0, 1).map((app) => (
             <div key={app.id} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* ── Left: copy ── */}
               <div>
@@ -241,6 +241,63 @@ export default function DeepMathAIPage() {
               </div>
             </div>
           ))}
+
+          {/* ── More applications (compact) ── */}
+          {aiApplications.length > 1 && (
+            <div className="mt-16">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-bold text-white">More from our lab</h3>
+                <Link
+                  href="/applications"
+                  className="inline-flex items-center gap-1.5 text-sm text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+                >
+                  View all applications
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {aiApplications.slice(1).map((app) => (
+                  <div
+                    key={app.id}
+                    className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-blue-500/30 hover:bg-white/[0.05] transition-all"
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <span
+                        className="px-2.5 py-1 rounded-full text-xs font-semibold"
+                        style={{ backgroundColor: `${app.color}15`, color: app.color }}
+                      >
+                        {app.category}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        {app.status}
+                      </span>
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-2">{app.name}</h4>
+                    <p className="text-sm text-gray-400 leading-relaxed mb-5">{app.tagline}.</p>
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href={app.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg text-white text-sm font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all"
+                      >
+                        <Rocket size={14} />
+                        Launch App
+                        <ExternalLink size={12} />
+                      </a>
+                      <Link
+                        href="/applications"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.06] border border-white/[0.1] rounded-lg text-white text-sm font-semibold hover:bg-white/[0.1] transition-all"
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

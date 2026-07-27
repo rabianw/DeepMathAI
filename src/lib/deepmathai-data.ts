@@ -654,6 +654,19 @@ export interface GroupPublication {
 
 export const groupPublications: GroupPublication[] = [
   {
+    id: "pub-osteoporosis-diag",
+    title: "An Anatomically Guided and Optimization-Refined Radiomics Framework for Opportunistic Osteoporosis Assessment from Lumbar Spine MRI",
+    authors: "Mahatthanatrakul, A., Klinsuwan, T., Wangkeeree, R., & Laoruengthana, A.",
+    journal: "Diagnostics (MDPI)",
+    volume: "Vol. 16, Issue 14, 2241, 2026",
+    year: 2026,
+    doi: "10.3390/diagnostics16142241",
+    url: "https://doi.org/10.3390/diagnostics16142241",
+    status: "Published",
+    category: "Medical AI",
+    description: "An anatomically guided radiomics pipeline that opportunistically screens for osteoporosis from routine sagittal lumbar-spine MRI. The framework automatically localizes and segments the L1–L4 vertebral bodies, extracts a 546-column radiomic feature vector (GLCM, LBP, wavelet, Gabor, Hu moments, and first-order statistics), and applies optimization-refined SVM classification and SVR regression to estimate bone mineral density and T-score — enabling early osteoporosis detection from scans acquired for other clinical reasons.",
+  },
+  {
     id: "pub-1",
     title: "A Projection Recurrent Neural Network Method for Solving Absolute Value Equations Associated with Second-Order Cones",
     authors: "Wangkeeree, R., Wangkeeree, R., Nazemi, A., Belay, Y.A., & Ungchittrakool, K.",
@@ -828,5 +841,48 @@ export const aiApplications: AIApplication[] = [
     disclaimer:
       "Decision-support tool for screening only — not a medical diagnosis and not a substitute for examination by an ophthalmologist.",
     color: "#ef4444",
+  },
+  {
+    id: "app-vcf-mri2bmd",
+    name: "VCF MRI2BMD — Osteoporosis Screening",
+    tagline: "Opportunistic osteoporosis screening from routine lumbar-spine MRI",
+    description:
+      "Upload a sagittal lumbar-spine MRI slice and the system automatically detects the L1–L4 vertebrae, segments each vertebral body, extracts the study's 546-column radiomic feature vector, and runs it through validated classification and regression models to flag possible osteoporosis and estimate bone mineral density (BMD) and T-score. Because it works on scans acquired for other clinical reasons, it enables early, opportunistic detection at no additional cost to the patient.",
+    url: "https://vcf-mri2bmd.vercel.app",
+    status: "Live",
+    category: "Medical Imaging AI",
+    features: [
+      {
+        title: "Anatomically Guided Pipeline",
+        description: "Multi-stage SSIM localization plus mutual-information detection isolates L1–L4, with differential-evolution segmentation of each vertebral body.",
+        iconName: "layers",
+      },
+      {
+        title: "546 Radiomic Features",
+        description: "Extracts GLCM, LBP, wavelet, Gabor, Hu-moment, and first-order statistical features per vertebra for a rich, interpretable descriptor.",
+        iconName: "chart",
+      },
+      {
+        title: "Single & Batch Prediction",
+        description: "Screen an individual case or queue a batch; each prediction runs as a background job in roughly 10–35 seconds.",
+        iconName: "upload",
+      },
+      {
+        title: "Explainable Results",
+        description: "A dedicated explainability view surfaces the features and model reasoning behind each screening decision.",
+        iconName: "eye",
+      },
+    ],
+    models: [
+      "Optimization-refined SVM classifier (BMD status)",
+      "Support Vector Regression for BMD / T-score",
+      "Neurodynamic-SVM (RBF, tanh) — 85.2% published accuracy",
+    ],
+    publicationId: "pub-osteoporosis-diag",
+    paperCitation: "Mahatthanatrakul, A., Klinsuwan, T., Wangkeeree, R., & Laoruengthana, A. — Diagnostics (MDPI), Vol. 16, 2241 (2026)",
+    paperUrl: "https://doi.org/10.3390/diagnostics16142241",
+    disclaimer:
+      "Research decision-support demo — not a diagnostic device. Every output must be confirmed by a radiologist or qualified clinician, and identifiable patient images should never be uploaded.",
+    color: "#3b82f6",
   },
 ];
