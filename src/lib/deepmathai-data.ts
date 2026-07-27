@@ -800,6 +800,8 @@ export interface AIApplication {
   paperUrl: string;
   disclaimer?: string;
   color: string;
+  image?: string;        // hero / graphical-abstract image
+  imageCaption?: string; // small overlay caption shown on the visual
 }
 
 export const aiApplications: AIApplication[] = [
@@ -841,6 +843,8 @@ export const aiApplications: AIApplication[] = [
     disclaimer:
       "Decision-support tool for screening only — not a medical diagnosis and not a substitute for examination by an ophthalmologist.",
     color: "#ef4444",
+    image: getImageUrl("/publications/pub5_graphical_abstract"),
+    imageCaption: "Glaucoma suspected · Grad-CAM ready",
   },
   {
     id: "app-vcf-mri2bmd",
@@ -884,5 +888,7 @@ export const aiApplications: AIApplication[] = [
     disclaimer:
       "Research decision-support demo — not a diagnostic device. Every output must be confirmed by a radiologist or qualified clinician, and identifiable patient images should never be uploaded.",
     color: "#3b82f6",
+    image: "https://pub.mdpi-res.com/diagnostics/diagnostics-16-02241/article_deploy/html/images/diagnostics-16-02241-ag.png",
+    imageCaption: "L1–L4 localization → radiomics → BMD assessment",
   },
 ];

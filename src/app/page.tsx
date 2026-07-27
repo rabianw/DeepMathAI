@@ -259,8 +259,26 @@ export default function DeepMathAIPage() {
                 {aiApplications.slice(1).map((app) => (
                   <div
                     key={app.id}
-                    className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-blue-500/30 hover:bg-white/[0.05] transition-all"
+                    className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-blue-500/30 hover:bg-white/[0.05] transition-all"
                   >
+                    {app.image && (
+                      <div className="relative overflow-hidden border-b border-white/[0.06]">
+                        <img
+                          src={app.image}
+                          alt={app.name}
+                          className="w-full h-44 object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                        />
+                        {/* scanning beam */}
+                        <div className="absolute left-0 w-full h-12 pointer-events-none animate-app-scan bg-gradient-to-b from-transparent via-blue-400/25 to-transparent border-b border-blue-300/50" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0c1a30] via-transparent to-transparent pointer-events-none" />
+                        {app.imageCaption && (
+                          <div className="absolute bottom-3 left-3 px-3 py-1.5 rounded-lg bg-[#0a1628]/90 border border-blue-500/30 backdrop-blur text-xs font-semibold text-blue-200">
+                            {app.imageCaption}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
                       <span
                         className="px-2.5 py-1 rounded-full text-xs font-semibold"
@@ -292,6 +310,7 @@ export default function DeepMathAIPage() {
                       >
                         Learn More
                       </Link>
+                    </div>
                     </div>
                   </div>
                 ))}

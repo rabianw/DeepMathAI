@@ -103,6 +103,27 @@ export default function ApplicationsPage() {
                   </div>
                 </div>
 
+                {/* Graphical abstract */}
+                {app.image && (
+                  <div className="px-8 lg:px-12 pt-8 lg:pt-10">
+                    <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-blue-500/40 via-teal-400/30 to-blue-500/40 overflow-hidden">
+                      <div className="relative rounded-2xl overflow-hidden bg-[#0a1628]">
+                        <img
+                          src={app.image}
+                          alt={`${app.name} — research pipeline`}
+                          className="w-full h-auto block"
+                        />
+                        <div className="absolute left-0 w-full h-16 pointer-events-none animate-app-scan bg-gradient-to-b from-transparent via-teal-400/20 to-transparent border-b border-teal-300/50" />
+                        {app.imageCaption && (
+                          <div className="absolute bottom-4 left-4 px-3.5 py-2 rounded-xl bg-[#0a1628]/90 border border-white/15 backdrop-blur text-xs font-semibold text-gray-200">
+                            {app.imageCaption}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Body */}
                 <div className="p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
                   {/* Description + models */}
