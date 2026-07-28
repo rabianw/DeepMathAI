@@ -6,6 +6,24 @@ import { getImageUrl } from "../../lib/cloudinary";
 
 const activities = [
   {
+    id: "act-icoml-2026-taiwan",
+    title: "ICOML 2026 — International Conference on Optimization and Machine Learning",
+    date: "July 27 - 29, 2026",
+    location: "National Taiwan Normal University (NTNU), Taipei, Taiwan",
+    description:
+      "The DeepMathAI Research Group took part in the International Conference on Optimization and Machine Learning (ICOML 2026), hosted at National Taiwan Normal University (NTNU) in Taipei, Taiwan, with Prof. Rabian Wangkeeree joining as an Invited Speaker. The conference brought together leading researchers in optimization theory and machine learning, and our group presented recent advances in optimization-based AI methods — from neurodynamic solvers to radiomic frameworks for medical imaging. Beyond the technical sessions, the visit deepened DeepMathAI's collaborations across the East-Asian research community and reinforced our commitment to bridging rigorous mathematics with real-world AI applications.",
+    speaker: "Prof. Dr. Rabian Wangkeeree (Invited Speaker)",
+    type: "Conference",
+    upcoming: false,
+    link: "https://www.math.ntnu.edu.tw/workshop/icoml2026/index.php?menu=speakers",
+    images: [
+      getImageUrl("/IMG_3474_agkbrb"),
+      getImageUrl("/IMG_3476_wbglaz"),
+      getImageUrl("/IMG_3475_boxrip"),
+      getImageUrl("/IMG_3470_vm6o7b"),
+    ],
+  },
+  {
     id: "act-iccma-2026",
     title: "The Fourth International Conference: Constructive Mathematical Analysis (ICCMA 2026)",
     date: "July 01 - 02, 2026",
