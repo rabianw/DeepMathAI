@@ -811,7 +811,7 @@ export const aiApplications: AIApplication[] = [
     tagline: "AI-powered opportunistic glaucoma screening from retinal fundus images",
     description:
       "A web-based decision-support system that flags retinal fundus images as \"glaucoma suspected\" by fusing predictions from two complementary views of the same image — the full fundus photograph and an automatically localized crop around the optic disc. The multi-view ensemble weights the disc-focused view more heavily, mirroring how ophthalmologists examine the optic nerve head, and every prediction can be inspected through Grad-CAM attribution maps.",
-    url: "https://glaucoma-multiview.vercel.app",
+    url: "https://glaucoma.deepmathai.ai",
     status: "Live",
     category: "Medical Imaging AI",
     features: [
@@ -852,7 +852,7 @@ export const aiApplications: AIApplication[] = [
     tagline: "Opportunistic osteoporosis screening from routine lumbar-spine MRI",
     description:
       "Upload a sagittal lumbar-spine MRI slice and the system automatically detects the L1–L4 vertebrae, segments each vertebral body, extracts the study's 546-column radiomic feature vector, and runs it through validated classification and regression models to flag possible osteoporosis and estimate bone mineral density (BMD) and T-score. Because it works on scans acquired for other clinical reasons, it enables early, opportunistic detection at no additional cost to the patient.",
-    url: "https://vcf-mri2bmd.vercel.app",
+    url: "https://osteoporosis.deepmathai.ai",
     status: "Live",
     category: "Medical Imaging AI",
     features: [
