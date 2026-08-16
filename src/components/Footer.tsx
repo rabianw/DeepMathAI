@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#060e1a] border-t border-white/[0.06]">
       <div className="mx-auto max-w-7xl px-4 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -58,6 +58,17 @@ export default function Footer() {
               <a href="/applications" className="block hover:text-blue-400 transition-colors">AI Applications</a>
               <a href="/roadmap" className="block hover:text-blue-400 transition-colors">3-Year Roadmap</a>
               <a href="/activities" className="block hover:text-blue-400 transition-colors">Activities</a>
+            </div>
+          </div>
+
+          {/* DeepMathAI Network */}
+          <div>
+            <h4 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Our Network</h4>
+            <div className="space-y-2 text-sm text-gray-400">
+              <a href="https://deepmathai.ai" className="block hover:text-teal-400 transition-colors">DeepMathAI Group</a>
+              <a href="https://rabian.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Prof. Rabian Wangkeeree</a>
+              <a href="https://glaucoma.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Glaucoma Screening App</a>
+              <a href="https://osteoporosis.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Osteoporosis Screening App</a>
             </div>
           </div>
         </div>
