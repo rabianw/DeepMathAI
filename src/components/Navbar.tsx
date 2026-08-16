@@ -14,7 +14,7 @@ const navItems = [
   { href: "/applications", label: "Applications", icon: Rocket },
   { href: "/activities", label: "Activities", icon: Newspaper },
   { href: "/roadmap", label: "Roadmap", icon: MapIcon },
-  { href: "https://rabian-wangkeeree.vercel.app", label: "Prof. Rabian", icon: User },
+  { href: "https://rabian.deepmathai.ai", label: "Prof. Rabian", icon: User },
 ];
 
 export default function Navbar() {
