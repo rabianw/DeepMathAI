@@ -62,71 +62,111 @@ export default function ApplicationsPage() {
       {/* ── Application Showcase ─────────────────────── */}
       <section className="py-16 bg-[#0c1a30]">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          {aiApplications.map((app) => {
+          <div className="space-y-16">
+          {aiApplications.map((app, idx) => {
             const paper = groupPublications.find((p) => p.id === app.publicationId);
+            const imageRight = idx % 2 === 0;
             return (
               <div
                 key={app.id}
-                className="bg-white/[0.03] border border-white/[0.06] rounded-3xl overflow-hidden"
+                className="bg-white/[0.03] border border-white/[0.06] rounded-3xl p-8 lg:p-12"
               >
-                {/* Header */}
-                <div className="p-8 lg:p-12 border-b border-white/[0.06]">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-                    <div>
-                      <div className="flex flex-wrap items-center gap-3 mb-4">
-                        <span
-                          className="px-3 py-1 rounded-full text-xs font-semibold"
-                          style={{ backgroundColor: `${app.color}15`, color: app.color }}
-                        >
-                          {app.category}
-                        </span>
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                          {app.status}
-                        </span>
-                      </div>
-                      <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-3">
-                        {app.name}
-                      </h2>
-                      <p className="text-blue-200/80 text-lg font-light max-w-2xl">{app.tagline}</p>
+                {/* ── Hero row (matches homepage style) ── */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                  {/* Copy */}
+                  <div className={imageRight ? "" : "lg:order-2"}>
+                    <div className="flex flex-wrap items-center gap-3 mb-5">
+                      <span
+                        className="px-3 py-1 rounded-full text-xs font-semibold"
+                        style={{ backgroundColor: `${app.color}15`, color: app.color }}
+                      >
+                        {app.category}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        {app.status}
+                      </span>
                     </div>
-                    <a
-                      href={app.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all hover:-translate-y-0.5"
-                    >
-                      <Rocket size={18} />
-                      Launch App
-                      <ExternalLink size={14} />
-                    </a>
+                    <h2 className="text-3xl lg:text-4xl font-black tracking-tight text-white mb-4 leading-tight">
+                      {app.name}
+                    </h2>
+                    <p className="text-lg text-blue-200/80 font-light mb-6 leading-relaxed">
+                      {app.tagline}.
+                    </p>
+                    <div className="flex flex-wrap gap-2.5 mb-8">
+                      {app.features.map((f) => (
+                        <span
+                          key={f.title}
+                          className="px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-sm text-gray-300"
+                        >
+                          {f.title}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex flex-wrap items-center gap-4 mb-4">
+                      <a
+                        href={app.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl text-white text-lg font-bold hover:shadow-lg hover:shadow-teal-500/30 transition-all hover:-translate-y-0.5 animate-app-glow"
+                      >
+                        <Rocket size={20} />
+                        Launch App
+                        <ExternalLink size={15} />
+                      </a>
+                      <a
+                        href={app.paperUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3.5 bg-white/[0.06] border border-white/[0.1] rounded-xl text-white font-semibold hover:bg-white/[0.1] transition-all"
+                      >
+                        <FileText size={16} />
+                        Read Paper
+                      </a>
+                    </div>
+                    <p className="text-xs text-gray-500">{app.paperCitation}</p>
+                  </div>
+
+                  {/* Animated image */}
+                  <div className={`relative animate-app-float ${imageRight ? "" : "lg:order-1"}`}>
+                    <div className="relative rounded-3xl p-[2px] bg-gradient-to-br from-blue-500/60 via-teal-400/40 to-blue-500/60 animate-app-shimmer">
+                      <div className="relative rounded-3xl overflow-hidden bg-[#0a1628]">
+                        {app.image && (
+                          <img
+                            src={app.image}
+                            alt={`${app.name} — research pipeline`}
+                            className="w-full h-auto block"
+                          />
+                        )}
+                        <div className="absolute left-0 w-full h-16 pointer-events-none animate-app-scan bg-gradient-to-b from-transparent via-teal-400/25 to-transparent border-b border-teal-300/60" />
+                        <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-3xl" />
+                      </div>
+                    </div>
+                    {/* floating status chip */}
+                    <div className="absolute -top-4 -right-3 lg:-right-6 animate-app-float-delayed">
+                      <div className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[#0a1628]/95 border border-emerald-500/30 shadow-xl shadow-emerald-500/10 backdrop-blur">
+                        <span className="relative flex h-2.5 w-2.5">
+                          <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 animate-app-ping" />
+                          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                        </span>
+                        <span className="text-sm font-bold text-emerald-300">{app.status} · AI</span>
+                      </div>
+                    </div>
+                    {/* floating caption chip */}
+                    {app.imageCaption && (
+                      <div className="absolute -bottom-5 -left-3 lg:-left-6 animate-app-float-delayed">
+                        <div className="px-5 py-3 rounded-2xl bg-[#0a1628]/95 border border-blue-500/30 shadow-xl shadow-blue-500/10 backdrop-blur">
+                          <p className="text-[11px] uppercase tracking-wider text-gray-500 mb-0.5">Pipeline</p>
+                          <p className="text-sm font-bold text-white">{app.imageCaption}</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Graphical abstract */}
-                {app.image && (
-                  <div className="px-8 lg:px-12 pt-8 lg:pt-10">
-                    <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-blue-500/40 via-teal-400/30 to-blue-500/40 overflow-hidden">
-                      <div className="relative rounded-2xl overflow-hidden bg-[#0a1628]">
-                        <img
-                          src={app.image}
-                          alt={`${app.name} — research pipeline`}
-                          className="w-full h-auto block"
-                        />
-                        <div className="absolute left-0 w-full h-16 pointer-events-none animate-app-scan bg-gradient-to-b from-transparent via-teal-400/20 to-transparent border-b border-teal-300/50" />
-                        {app.imageCaption && (
-                          <div className="absolute bottom-4 left-4 px-3.5 py-2 rounded-xl bg-[#0a1628]/90 border border-white/15 backdrop-blur text-xs font-semibold text-gray-200">
-                            {app.imageCaption}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Body */}
-                <div className="p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
-                  {/* Description + models */}
+                {/* ── Details ── */}
+                <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-10">
+                  {/* Models + How it works */}
                   <div className="lg:col-span-1">
                     <h3 className="text-sm font-semibold uppercase tracking-widest text-blue-400 mb-4">
                       How It Works
@@ -137,7 +177,7 @@ export default function ApplicationsPage() {
                       <Cpu size={14} />
                       Models
                     </h4>
-                    <ul className="space-y-2 mb-8">
+                    <ul className="space-y-2">
                       {app.models.map((model, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
                           <CheckCircle size={14} className="shrink-0 mt-0.5 text-teal-400" />
@@ -147,7 +187,7 @@ export default function ApplicationsPage() {
                     </ul>
                   </div>
 
-                  {/* Features */}
+                  {/* Features + paper + disclaimer */}
                   <div className="lg:col-span-2">
                     <h3 className="text-sm font-semibold uppercase tracking-widest text-blue-400 mb-4">
                       Key Features
@@ -215,6 +255,7 @@ export default function ApplicationsPage() {
               </div>
             );
           })}
+          </div>
 
           {/* More coming */}
           <div className="mt-10 bg-white/[0.02] border border-dashed border-white/[0.1] rounded-3xl p-10 text-center">
