@@ -29,6 +29,7 @@ const activities = [
     upcoming: false,
     link: "https://viasm.edu.vn/en/hdkh/seams2026",
     images: [
+      getImageUrl("/S__25051142_zmjooi"),
       getImageUrl("/S__25051145_mje8vk"),
       getImageUrl("/S__25395232_tecuqb"),
       getImageUrl("/S__18333705_aurhuy"),
