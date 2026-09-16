@@ -19,6 +19,25 @@ const activities = [
     posterImage: getImageUrl("/1_v87c2g"),
   },
   {
+    id: "act-seams-school-2026",
+    title: "SEAMS School 2026: Applying Mathematics to Real-World Problems",
+    date: "September 4 - 11, 2026",
+    location: "University of Science, Vietnam National University Ho Chi Minh City (HCMUS), Vietnam",
+    description:
+      "Young researchers from the DeepMathAI Research Group joined the first SEAMS School on Applying Mathematics to Real-World Problems, organized by the Vietnam Institute for Advanced Study in Mathematics (VIASM) and HCMUS with the support of the Southeast Asian Mathematical Society (SEAMS) and CIMPA. The week-long school brought together more than fifty students from Vietnam, Cambodia, Thailand, Korea, the Philippines and Indonesia. Starting from concrete industrial problems, the courses worked outward through modelling, theory, numerical methods and simulation — hands-on training that strengthens our next generation of researchers in bridging rigorous mathematics with real-world applications and builds new connections across the Southeast Asian mathematics community.",
+    type: "Training",
+    upcoming: false,
+    link: "https://viasm.edu.vn/en/hdkh/seams2026",
+    images: [
+      getImageUrl("/S__25051145_mje8vk"),
+      getImageUrl("/S__25395232_tecuqb"),
+      getImageUrl("/S__18333705_aurhuy"),
+      getImageUrl("/S__54591490_rzye0z"),
+      getImageUrl("/S__54591491_opexzu"),
+      getImageUrl("/S__54591493_fmyiua"),
+    ],
+  },
+  {
     id: "act-icoml-2026-taiwan",
     title: "ICOML 2026 — International Conference on Optimization and Machine Learning",
     date: "July 27 - 29, 2026",
