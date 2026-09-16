@@ -6,6 +6,19 @@ import { getImageUrl } from "../../lib/cloudinary";
 
 const activities = [
   {
+    id: "act-walailak-workshop-2026",
+    title: "Workshop: Neurodynamic Perspectives on Optimization and Machine Learning — Walailak University",
+    date: "October 2, 2026 | 9:00 AM – 16:30 PM",
+    location: "Khao Luang Meeting Room, Cooperative Education Building (ห้องประชุมเขาหลวง อาคารสหกิจศึกษา), Walailak University, Nakhon Si Thammarat",
+    description:
+      "The Mathematics Education Program, School of Science, Walailak University proudly invites you to a two-day workshop series. On 1 October 2026, Prof. Dr. Jein-Shan Chen (National Taiwan Normal University) presents 'Novel Constructions of Closed Convex Cones and Their Dual Cones'. On 2 October 2026, Prof. Dr. Rabian Wangkeeree (Naresuan University, DeepMathAI) leads a hands-on workshop on 'Neurodynamic Perspectives on Optimization and Machine Learning' — exploring new perspectives in optimization and machine learning with national and international experts. Contact: Dr. Talha Anwar (anwartalha80@gmail.com).",
+    speaker: "Prof. Dr. Rabian Wangkeeree (Guest Speaker)",
+    type: "Workshop",
+    upcoming: true,
+    images: [] as string[],
+    posterImage: getImageUrl("/1_v87c2g"),
+  },
+  {
     id: "act-icoml-2026-taiwan",
     title: "ICOML 2026 — International Conference on Optimization and Machine Learning",
     date: "July 27 - 29, 2026",
