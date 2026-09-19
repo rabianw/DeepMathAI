@@ -114,15 +114,17 @@ export default function ApplicationsPage() {
                         Launch App
                         <ExternalLink size={15} />
                       </a>
-                      <a
-                        href={app.paperUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3.5 bg-white/[0.06] border border-white/[0.1] rounded-xl text-white font-semibold hover:bg-white/[0.1] transition-all"
-                      >
-                        <FileText size={16} />
-                        Read Paper
-                      </a>
+                      {app.paperUrl && (
+                        <a
+                          href={app.paperUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-6 py-3.5 bg-white/[0.06] border border-white/[0.1] rounded-xl text-white font-semibold hover:bg-white/[0.1] transition-all"
+                        >
+                          <FileText size={16} />
+                          Read Paper
+                        </a>
+                      )}
                     </div>
                     <p className="text-xs text-gray-500">{app.paperCitation}</p>
                   </div>
@@ -214,22 +216,24 @@ export default function ApplicationsPage() {
                     <div className="bg-blue-500/[0.06] border border-blue-500/20 rounded-2xl p-6 mb-6">
                       <h4 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-blue-400 mb-3">
                         <FileText size={14} />
-                        Published Research
+                        {app.paperUrl ? "Published Research" : "Research Manuscript"}
                       </h4>
                       <p className="text-white font-semibold mb-1">
-                        {paper ? paper.title : app.name}
+                        {paper ? paper.title : app.paperTitle ?? app.name}
                       </p>
                       <p className="text-sm text-gray-400 mb-4">{app.paperCitation}</p>
                       <div className="flex flex-wrap gap-3">
-                        <a
-                          href={app.paperUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-semibold transition-colors"
-                        >
-                          Read the Paper (DOI)
-                          <ExternalLink size={13} />
-                        </a>
+                        {app.paperUrl && (
+                          <a
+                            href={app.paperUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+                          >
+                            Read the Paper (DOI)
+                            <ExternalLink size={13} />
+                          </a>
+                        )}
                         <Link
                           href="/publications"
                           className="inline-flex items-center gap-2 text-sm text-teal-400 hover:text-teal-300 font-semibold transition-colors"

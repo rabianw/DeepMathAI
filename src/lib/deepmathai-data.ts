@@ -796,8 +796,9 @@ export interface AIApplication {
   features: { title: string; description: string; iconName: string }[];
   models: string[];
   publicationId?: string; // links to publications[] entry
+  paperTitle?: string;   // shown when there is no publications[] entry yet
   paperCitation: string;
-  paperUrl: string;
+  paperUrl?: string;     // omit while the paper is under review (no DOI yet)
   disclaimer?: string;
   color: string;
   image?: string;        // hero / graphical-abstract image
@@ -890,5 +891,51 @@ export const aiApplications: AIApplication[] = [
     color: "#3b82f6",
     image: "https://pub.mdpi-res.com/diagnostics/diagnostics-16-02241/article_deploy/html/images/diagnostics-16-02241-ag.png",
     imageCaption: "L1–L4 localization → radiomics → BMD assessment",
+  },
+  {
+    id: "app-qmg-rid-explorer",
+    name: "QMG-RID Explorer — Fundus Image Enhancement",
+    tagline: "Compare fundus-image enhancement methods live in your browser and watch QMG-RID optimize iteration by iteration",
+    description:
+      "Upload a retinal fundus photograph (or pick an example) and compare enhancement methods side by side: our QMG-RID decomposition, gray-world correction, CLAHE, non-local-means denoising, and the total-variation method of Wang et al. (2021) are all computed live in JavaScript on your device, alongside a precomputed reference from the GAN-based Cofe-Net. QMG-RID splits the image into a base and a detail layer and optimizes them toward a closed-form, color-preserving illumination target and a denoised detail target with per-pixel Adam descent — and the explorer lets you scrub through that optimization step by step.",
+    url: "https://qmg-rid-explorer.vercel.app",
+    status: "Live",
+    category: "Medical Imaging AI",
+    features: [
+      {
+        title: "Runs Entirely In-Browser",
+        description: "Every live method is plain JavaScript running on your own device — uploaded photographs are never sent to a server.",
+        iconName: "upload",
+      },
+      {
+        title: "Side-by-Side Method Comparison",
+        description: "Switch between QMG-RID, gray-world, CLAHE, NLM denoising, Wang et al. (2021), and a precomputed Cofe-Net reference, with per-channel (RGB, HSV, CIE L*) before/after views.",
+        iconName: "layers",
+      },
+      {
+        title: "Watch the Optimization Unfold",
+        description: "Play or scrub QMG-RID's iterations, inspect its base and detail layers, and toggle each loss term off with ablation presets to see what it contributes.",
+        iconName: "eye",
+      },
+      {
+        title: "Diagnosis & Quality Panel",
+        description: "For the example images, real precomputed DR-class predictions and image-quality metrics from the paper's Python pipeline, original vs. enhanced.",
+        iconName: "chart",
+      },
+    ],
+    models: [
+      "QMG-RID — illumination-flattening + detail-preservation decomposition (per-pixel Adam)",
+      "Baselines: gray-world, CLAHE, non-local means, Wang et al. (2021) TV decomposition",
+      "Cofe-Net (Shen et al., 2021) — precomputed reference only",
+      "Frozen DINOv2 ViT-B/14 + 3-class SVM DR classifier — 71.2% 5-fold CV accuracy",
+    ],
+    paperTitle:
+      "Image Quality and Enhancement in Diabetic Retinopathy Screening: A Matched-Domain, Cross-Validated Evaluation with Self-Supervised Representations",
+    paperCitation: "Wangkeeree, R., Klinsuwan, T., & Luangsawang, K. — manuscript under review (2026)",
+    disclaimer:
+      "Research demo accompanying a manuscript under review — not a diagnostic device. The in-browser methods are disclosed, simplified reimplementations at a 160×160 working resolution, so on-screen metrics are illustrative rather than the paper's reported results.",
+    color: "#14b8a6",
+    image: "/images/apps/qmg-rid-explorer.png",
+    imageCaption: "Input → QMG-RID → enhanced output",
   },
 ];
