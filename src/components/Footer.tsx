@@ -69,7 +69,7 @@ export default function Footer() {
               <a href="https://rabian.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Prof. Rabian Wangkeeree</a>
               <a href="https://glaucoma.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Glaucoma Screening App</a>
               <a href="https://osteoporosis.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Osteoporosis Screening App</a>
-              <a href="https://qmg-rid-explorer.vercel.app" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Fundus Enhancement Explorer</a>
+              <a href="https://qmgrid.deepmathai.ai"target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Fundus Enhancement Explorer</a>
             </div>
           </div>
         </div>

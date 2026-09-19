@@ -898,7 +898,7 @@ export const aiApplications: AIApplication[] = [
     tagline: "Compare fundus-image enhancement methods live in your browser and watch QMG-RID optimize iteration by iteration",
     description:
       "Upload a retinal fundus photograph (or pick an example) and compare enhancement methods side by side: our QMG-RID decomposition, gray-world correction, CLAHE, non-local-means denoising, and the total-variation method of Wang et al. (2021) are all computed live in JavaScript on your device, alongside a precomputed reference from the GAN-based Cofe-Net. QMG-RID splits the image into a base and a detail layer and optimizes them toward a closed-form, color-preserving illumination target and a denoised detail target with per-pixel Adam descent — and the explorer lets you scrub through that optimization step by step.",
-    url: "https://qmg-rid-explorer.vercel.app",
+    url: "https://qmgrid.deepmathai.ai",
     status: "Live",
     category: "Medical Imaging AI",
     features: [
