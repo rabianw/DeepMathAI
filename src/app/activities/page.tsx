@@ -8,14 +8,22 @@ const activities = [
   {
     id: "act-walailak-workshop-2026",
     title: "Workshop: Neurodynamic Perspectives on Optimization and Machine Learning — Walailak University",
-    date: "October 2, 2026 | 9:00 AM – 16:30 PM",
+    date: "October 1 - 2, 2026",
     location: "Khao Luang Meeting Room, Cooperative Education Building (ห้องประชุมเขาหลวง อาคารสหกิจศึกษา), Walailak University, Nakhon Si Thammarat",
     description:
-      "The Mathematics Education Program, School of Science, Walailak University proudly invites you to a two-day workshop series. On 1 October 2026, Prof. Dr. Jein-Shan Chen (National Taiwan Normal University) presents 'Novel Constructions of Closed Convex Cones and Their Dual Cones'. On 2 October 2026, Prof. Dr. Rabian Wangkeeree (Naresuan University, DeepMathAI) leads a hands-on workshop on 'Neurodynamic Perspectives on Optimization and Machine Learning' — exploring new perspectives in optimization and machine learning with national and international experts. Contact: Dr. Talha Anwar (anwartalha80@gmail.com).",
+      "The DeepMathAI Research Group took part in a two-day workshop series hosted by the Mathematics Education Program, School of Science, Walailak University. On 1 October 2026, Prof. Dr. Jein-Shan Chen (National Taiwan Normal University) presented 'Novel Constructions of Closed Convex Cones and Their Dual Cones'. On 2 October 2026, Prof. Dr. Rabian Wangkeeree (Naresuan University, DeepMathAI) led a hands-on workshop on 'Neurodynamic Perspectives on Optimization and Machine Learning', where participants worked through new perspectives linking optimization and machine learning alongside national and international experts. The visit strengthened the ties between DeepMathAI, Walailak University and our international collaborators.",
     speaker: "Prof. Dr. Rabian Wangkeeree (Guest Speaker)",
     type: "Workshop",
-    upcoming: true,
-    images: [] as string[],
+    upcoming: false,
+    images: [
+      getImageUrl("/582E0C09-E549-4457-BD6F-4ADCC19447DA_wdosj2"),
+      getImageUrl("/IMG_4439_a3txfw"),
+      getImageUrl("/IMG_4441_cwubhw"),
+      getImageUrl("/IMG_4434_druxya"),
+      getImageUrl("/IMG_4432_wfnlui"),
+      getImageUrl("/IMG_4443_d4umzf"),
+      getImageUrl("/4E865FFB-FDDC-45E6-A6C4-5D7FE0DBD4EE_yblziv"),
+    ],
     posterImage: getImageUrl("/1_v87c2g"),
   },
   {
