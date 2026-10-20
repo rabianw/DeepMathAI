@@ -145,6 +145,25 @@ export default function PublicationsPage() {
               <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">Total</div>
             </div>
           </div>
+
+          {/* Papers per academic year */}
+          <div className="flex flex-wrap items-stretch justify-center gap-4 mt-8">
+            {periods.map((period) => {
+              const count = groupPublications.filter((p) => p.period === period.key).length;
+              if (count === 0) return null;
+              return (
+                <a
+                  key={period.key}
+                  href={`#period-${period.key}`}
+                  className="min-w-[10rem] rounded-2xl border border-blue-500/20 bg-blue-500/[0.06] px-6 py-4 hover:border-blue-500/40 transition-colors"
+                >
+                  <div className="text-3xl font-extrabold text-white">{count}</div>
+                  <div className="text-sm font-semibold text-blue-400 mt-1">{period.label}</div>
+                  <div className="text-xs text-gray-500 mt-0.5">{period.range}</div>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -156,7 +175,7 @@ export default function PublicationsPage() {
             .sort((x, y) => statusOrder[x.status] - statusOrder[y.status]);
           if (pubs.length === 0) return null;
           return (
-            <section key={period.key} className="pb-12">
+            <section key={period.key} id={`period-${period.key}`} className="pb-12 scroll-mt-24">
               <div className="mx-auto max-w-5xl px-4 lg:px-8">
                 <h2 className="text-xl font-bold text-white mb-1 flex items-center gap-2">
                   <CalendarRange size={20} className="text-blue-400" />
