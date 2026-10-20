@@ -1,5 +1,14 @@
 import { groupPublications } from "@/lib/deepmathai-data";
-import { BookOpen, ExternalLink, CheckCircle, Clock } from "lucide-react";
+import { BookOpen, ExternalLink, CalendarRange } from "lucide-react";
+
+// Academic years run October – September, newest first
+const periods = [
+  { key: "2026-2027", label: "2026 – 2027", range: "October 2026 – September 2027" },
+  { key: "2025-2026", label: "2025 – 2026", range: "October 2025 – September 2026" },
+  { key: "Earlier", label: "Earlier", range: "Before October 2025" },
+];
+
+const statusOrder: Record<string, number> = { Published: 0, "In Press": 1, Accepted: 2 };
 
 function getStatusBadge(status: string) {
   switch (status) {
@@ -139,37 +148,34 @@ export default function PublicationsPage() {
         </div>
       </section>
 
-      {/* ── Published ─────────────────────────────────── */}
-      <section className="pb-12">
-        <div className="mx-auto max-w-5xl px-4 lg:px-8">
-          <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-            <CheckCircle size={20} className="text-emerald-400" />
-            Published Articles
-          </h2>
-          <div className="space-y-6">
-            {published.map((pub) => (
-              <PublicationCard key={pub.id} pub={pub} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Accepted / In Press ────────────────────────── */}
-      {accepted.length > 0 && (
-        <section className="pb-20">
-          <div className="mx-auto max-w-5xl px-4 lg:px-8">
-            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <Clock size={20} className="text-blue-400" />
-              Accepted / In Press
-            </h2>
-            <div className="space-y-6">
-              {accepted.map((pub) => (
-                <PublicationCard key={pub.id} pub={pub} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      {/* ── Publications by academic year ─────────────── */}
+      <div className="pb-20">
+        {periods.map((period) => {
+          const pubs = groupPublications
+            .filter((p) => p.period === period.key)
+            .sort((x, y) => statusOrder[x.status] - statusOrder[y.status]);
+          if (pubs.length === 0) return null;
+          return (
+            <section key={period.key} className="pb-12">
+              <div className="mx-auto max-w-5xl px-4 lg:px-8">
+                <h2 className="text-xl font-bold text-white mb-1 flex items-center gap-2">
+                  <CalendarRange size={20} className="text-blue-400" />
+                  {period.label}
+                  <span className="ml-auto text-sm font-medium text-gray-500">
+                    {pubs.length} article{pubs.length > 1 ? "s" : ""}
+                  </span>
+                </h2>
+                <p className="text-sm text-gray-500 mb-6 pl-7">{period.range}</p>
+                <div className="space-y-6">
+                  {pubs.map((pub) => (
+                    <PublicationCard key={pub.id} pub={pub} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        })}
+      </div>
     </div>
   );
 }

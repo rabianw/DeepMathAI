@@ -650,11 +650,14 @@ export interface GroupPublication {
   category: "Optimization" | "Deep Learning" | "Medical AI" | "Applied Math";
   description?: string;
   graphicalAbstract?: string;
+  // Academic year: October – September (e.g. "2025-2026" = Oct 2025 – Sep 2026)
+  period: string;
 }
 
 export const groupPublications: GroupPublication[] = [
   {
     id: "pub-10",
+    period: "2026-2027",
     title: "Fixed-Time Stability and Noise Robustness of a Polynomial-Gain Gradient Neural Network for Absolute Value Equations",
     authors: "Grace, T., Tananimit, N., Belay, Y. A., & Wangkeeree, R.",
     journal: "Carpathian Journal of Mathematics",
@@ -666,6 +669,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-osteoporosis-diag",
+    period: "2025-2026",
     title: "An Anatomically Guided and Optimization-Refined Radiomics Framework for Opportunistic Osteoporosis Assessment from Lumbar Spine MRI",
     authors: "Mahatthanatrakul, A., Klinsuwan, T., Wangkeeree, R., & Laoruengthana, A.",
     journal: "Diagnostics (MDPI)",
@@ -679,6 +683,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-1",
+    period: "2026-2027",
     title: "A Projection Recurrent Neural Network Method for Solving Absolute Value Equations Associated with Second-Order Cones",
     authors: "Wangkeeree, R., Wangkeeree, R., Nazemi, A., Belay, Y.A., & Ungchittrakool, K.",
     journal: "Journal of Computational and Applied Mathematics (Elsevier)",
@@ -692,6 +697,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-2",
+    period: "2025-2026",
     title: "A Projection Neural Network With Delays and Optimization Approaches for Solving Absolute Value Equations",
     authors: "Prathom, K., Wangkeeree, R., Belay, Y.A., & Hongsri, A.",
     journal: "IEEE Access",
@@ -705,6 +711,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-3",
+    period: "2025-2026",
     title: "A relaxed iterative method for approximating solutions of pseudomonotone hierarchical variational inequality problems in Hilbert spaces",
     authors: "Gebremeskel, K.G., Tewele, T.G., Wangkeeree, R., Belay, Y.A., & Meche, T.H.",
     journal: "The Journal of Analysis (Springer)",
@@ -718,6 +725,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-4",
+    period: "2025-2026",
     title: "Continuity and Lipschitz Properties of Approximate Weak Solution Maps via Nonlinear Scalarization",
     authors: "Preechasilp, P., & Wangkeeree, R.",
     journal: "Carpathian Journal of Mathematics",
@@ -730,6 +738,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-5",
+    period: "2025-2026",
     title: "Multi-view machine learning with an optic disc localization for glaucoma diagnosis",
     authors: "Siying, P., Muangphara, T., Photun, A., Suppalap, S., Klinsuwan, T., Phruancharoen, C., Treeyawedkul, S., Chira-adisai, T., Supattanawong, Y., & Wangkeeree, R.",
     journal: "Applied Sciences (MDPI)",
@@ -743,6 +752,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-6",
+    period: "Earlier",
     title: "A Halpern Method for Solving Perturbed Double Inertial Krasnoselskii-Mann Iterations with Applications to Image Restoration Problems",
     authors: "Rattanaporn Wangkeeree, Rabian Wangkeeree, Yirga Abebe Belay, Kasamsuk Ungchittrakool, Purit Thammasiri, and Pakkaporn Preechasilp",
     journal: "Bangmod International Journal of Mathematical & Computational Science",
@@ -756,6 +766,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-7",
+    period: "2025-2026",
     title: "Inertial Forward–Backward–Forward Algorithm with Moving Point Projection for Monotone Inclusions and Image Restoration",
     authors: "Thammasiri, P., Berinde, V., Plubtieng, S., Ungchittrakool, K., & Wangkeeree, R.",
     journal: "Symmetry (MDPI)",
@@ -769,6 +780,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-8",
+    period: "2025-2026",
     title: "Multi-view Laplacian twin support vector machine with pinball loss function",
     authors: "Damminsed, V., & Wangkeeree, R.",
     journal: "Carpathian Journal of Mathematics",
@@ -781,6 +793,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-9",
+    period: "2025-2026",
     title: "Compact Gradient-Based Neural Network for Stochastic Support Vector Regression with Probabilistic Constraints",
     authors: "Tananimit, N., Grace, T., Belay, Y. A., & Wangkeeree, R.",
     journal: "Journal of Nonlinear and Variational Analysis",
