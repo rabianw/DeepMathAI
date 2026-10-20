@@ -650,7 +650,7 @@ export interface GroupPublication {
   category: "Optimization" | "Deep Learning" | "Medical AI" | "Applied Math";
   description?: string;
   graphicalAbstract?: string;
-  // Academic year: October – September (e.g. "2025-2026" = Oct 2025 – Sep 2026)
+  // Academic year: October – September, counted by acceptance date (e.g. "2025-2026" = accepted Oct 2025 – Sep 2026)
   period: string;
 }
 
@@ -683,7 +683,7 @@ export const groupPublications: GroupPublication[] = [
   },
   {
     id: "pub-1",
-    period: "2026-2027",
+    period: "2025-2026",
     title: "A Projection Recurrent Neural Network Method for Solving Absolute Value Equations Associated with Second-Order Cones",
     authors: "Wangkeeree, R., Wangkeeree, R., Nazemi, A., Belay, Y.A., & Ungchittrakool, K.",
     journal: "Journal of Computational and Applied Mathematics (Elsevier)",
