@@ -654,6 +654,17 @@ export interface GroupPublication {
 
 export const groupPublications: GroupPublication[] = [
   {
+    id: "pub-10",
+    title: "Fixed-Time Stability and Noise Robustness of a Polynomial-Gain Gradient Neural Network for Absolute Value Equations",
+    authors: "Grace, T., Tananimit, N., Belay, Y. A., & Wangkeeree, R.",
+    journal: "Carpathian Journal of Mathematics",
+    year: 2027,
+    url: "https://www.carpathian.cunbm.utcluj.ro/accepted-papers/",
+    status: "Accepted",
+    category: "Optimization",
+    description: "A gradient neural network with a polynomial gain is proposed for solving absolute value equations. The paper establishes fixed-time stability, guaranteeing convergence within a time bound independent of the initial state, and analyzes the robustness of the network dynamics under noise.",
+  },
+  {
     id: "pub-osteoporosis-diag",
     title: "An Anatomically Guided and Optimization-Refined Radiomics Framework for Opportunistic Osteoporosis Assessment from Lumbar Spine MRI",
     authors: "Mahatthanatrakul, A., Klinsuwan, T., Wangkeeree, R., & Laoruengthana, A.",
