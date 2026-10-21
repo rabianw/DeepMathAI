@@ -1004,5 +1004,7 @@ export const aiApplications: AIApplication[] = [
     disclaimer:
       "Research prototype — not a medical device. Every result must be confirmed by a clinician. Thresholds were set on Naresuan validation images and should be re-set on locally graded images before use with another camera. Login required: access is limited to the research team and approved collaborators.",
     color: "#0ea5e9",
+    image: "/images/apps/fundus-screening-assistant.jpg",
+    imageCaption: "Fundus → 13-class lesion map → glaucoma & DR",
   },
 ];
