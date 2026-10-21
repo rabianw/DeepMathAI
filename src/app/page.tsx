@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   deepMathAIInfo,
@@ -26,6 +27,11 @@ import {
   Rocket,
   ExternalLink,
 } from "lucide-react";
+
+// Canonical URL on www.deepmathai.ai so search engines don't pick a duplicate host.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 function getPillarIcon(iconName: string, size: number = 28) {
   switch (iconName) {
