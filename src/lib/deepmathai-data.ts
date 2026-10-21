@@ -961,4 +961,48 @@ export const aiApplications: AIApplication[] = [
     image: "/images/apps/qmg-rid-explorer.png",
     imageCaption: "Input → QMG-RID → enhanced output",
   },
+  {
+    id: "app-fundus-screening-assistant",
+    name: "Fundus Screening Assistant",
+    tagline: "Lesion map, glaucoma and diabetic retinopathy assessment for each eye from a fundus photograph or EIDON report",
+    description:
+      "A clinician-facing decision-support tool built on models trained by pooling public and Naresuan University Hospital fundus datasets. For every eye found in an uploaded EIDON report (PDF or screenshot) or fundus photograph, it segments 13 structures and lesions with a partial-label U-Net, measures cup-to-disc ratios and neuroretinal rim widths against Naresuan reference ranges, and scores glaucoma suspect, any diabetic retinopathy, severe DR and diabetic macular oedema — each placed against validated rule-out and refer thresholds. Access is restricted to the research team and approved collaborators.",
+    url: "https://fundus-screening-261074434238.asia-southeast1.run.app",
+    status: "Beta",
+    category: "Medical Imaging AI",
+    features: [
+      {
+        title: "Reports or Photographs",
+        description: "Upload EIDON report PDFs, screenshots of report pages, or plain fundus photographs from any camera; each fundus is located and analysed separately. Patient text on the report is never read.",
+        iconName: "upload",
+      },
+      {
+        title: "13-Class Lesion Map",
+        description: "Optic disc, cup, DR lesions (microaneurysms, haemorrhages, exudates) and glaucoma-related signs (RNFL defects, notching, disc haemorrhage) shown as an interactive overlay.",
+        iconName: "layers",
+      },
+      {
+        title: "Glaucoma & DR Assessment",
+        description: "Glaucoma suspect (fine-tuned DINOv2-B plus a structure-based model), any DR, severe DR and DME, each reported as Low / Review / Refer against Naresuan-validated operating points.",
+        iconName: "eye",
+      },
+      {
+        title: "Structural Measurements",
+        description: "Vertical, horizontal and area cup-to-disc ratios, ISNT rim widths and the ISNT rule, with percentiles against Naresuan normal eyes.",
+        iconName: "chart",
+      },
+    ],
+    models: [
+      "Partial-label U-Net — 13-class segmentation of disc, cup and lesions",
+      "Glaucoma suspect: DINOv2-B fine-tuned at 448 px — AUROC 0.959 internal, 0.791 on SMDG-19",
+      "Any DR: lesion features + DINOv2-L hybrid — AUROC 0.972 internal, 0.930 on IDRiD",
+      "Severe DR: gradient-boosted trees on lesion features — AUROC 0.956 internal, 0.929 on IDRiD",
+      "DME: EfficientNet-B0 — AUROC 0.987 internal, 0.945 on IDRiD",
+    ],
+    paperTitle: "Pooling Fundus Datasets for Lesion Segmentation, Glaucoma and Diabetic Retinopathy Screening",
+    paperCitation: "DeepMathAI research group — manuscript in preparation (2026)",
+    disclaimer:
+      "Research prototype — not a medical device. Every result must be confirmed by a clinician. Thresholds were set on Naresuan validation images and should be re-set on locally graded images before use with another camera. Login required: access is limited to the research team and approved collaborators.",
+    color: "#0ea5e9",
+  },
 ];
