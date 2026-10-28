@@ -656,6 +656,20 @@ export interface GroupPublication {
 
 export const groupPublications: GroupPublication[] = [
   {
+    id: "pub-2026-sym-1793",
+    period: "2026-2027",
+    title: "A Parallel Moving Point Projection Algorithm for Generalized Split Convex Feasibility Problems with Applications to Image Restoration",
+    authors: "Thammasiri, P., Ungchittrakool, K., Plubtieng, S., & Wangkeeree, R.",
+    journal: "Symmetry (MDPI)",
+    volume: "Vol. 18, Issue 11, 1793",
+    year: 2026,
+    doi: "10.3390/sym18111793",
+    url: "https://www.mdpi.com/2073-8994/18/11/1793",
+    status: "Published",
+    category: "Applied Math",
+    description: "A parallel moving point projection algorithm is developed for generalized split convex feasibility problems in real Hilbert spaces. Closed-form projections onto two adaptive half-spaces avoid solving constrained quadratic subproblems at each iteration. The method is proved to converge strongly and is evaluated on synthetic problems and color image restoration with blur and Gaussian noise.",
+  },
+  {
     id: "pub-10",
     period: "2026-2027",
     title: "Fixed-Time Stability and Noise Robustness of a Polynomial-Gain Gradient Neural Network for Absolute Value Equations",
