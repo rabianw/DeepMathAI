@@ -19,7 +19,7 @@ export interface LiteraturePaper {
   deepmathai?: boolean;     // on the DeepMathAI Publications page
   added?: string;           // date added by the weekly update (YYYY-MM-DD)
   summary?: string;         // one-sentence TLDR, or the opening sentences of the abstract
-  summarySource?: "tldr" | "abstract";
+  summarySource?: "tldr" | "abstract" | "overview";   // overview: written for this site from the title
 }
 
 export const literatureUpdated = "2026-11-08";
@@ -41,7 +41,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "11",
   "added": "2026-11-08",
-  "source": "S39612629"
+  "source": "S39612629",
+  "summary": "Designs an adaptive zeroing neural network that stays accurate under noise when solving time-varying linear systems, and applies it to example problems.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.engappai.2026.113966",
@@ -58,7 +60,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "11",
-  "source": "S900972176"
+  "source": "S900972176",
+  "summary": "Introduces a discrete-time gradient neural network built on error orthogonalization, a new paradigm for tracking the solutions of time-varying linear equations.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.eswa.2026.134820",
@@ -75,7 +79,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "11",
   "added": "2026-11-08",
-  "source": "S13144211"
+  "source": "S13144211",
+  "summary": "Combines multicriteria model predictive control with a discrete zeroing neural network that uses null-space active screening and a predictor–corrector scheme to control redundant robot manipulators.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neucom.2025.131072",
@@ -90,7 +96,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "11",
-  "source": "S45693802"
+  "source": "S45693802",
+  "summary": "Proposes first- and second-order gradient neural networks driven by norm-based error functions for solving dynamic (time-varying) linear matrix equations.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.jfranklin.2025.108238",
@@ -107,7 +115,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "11",
-  "source": "S183498172"
+  "source": "S183498172",
+  "summary": "Develops gradient neural network solvers for periodic coupled Sylvester matrix equations, which arise in the analysis and control of periodic systems.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.amc.2024.128930",
@@ -122,7 +132,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "11",
-  "source": "S50372074"
+  "source": "S50372074",
+  "summary": "Constructs a gradient neural network model that solves a system of two linear matrix equations simultaneously, and presents applications of the model.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.eswa.2024.124546",
@@ -138,7 +150,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "11",
-  "source": "S13144211"
+  "source": "S13144211",
+  "summary": "Presents an adaptive gradient neural network that is robust to disturbances and converges within a predefined time when solving linear time-varying equations, with applications.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10957-026-02963-x",
@@ -191,7 +205,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "12",
-  "source": "S45693802"
+  "source": "S45693802",
+  "summary": "Formulates repetitive motion planning of robot manipulators as a linear variational inequality and solves it with a noniterative primal–dual neural network.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.eswa.2025.126780",
@@ -228,7 +244,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "12",
-  "source": "S183498172"
+  "source": "S183498172",
+  "summary": "Integrates guidance and control through nonlinear model predictive control, solving the underlying optimization online with a simplified primal–dual neural network.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s13160-025-00758-7",
@@ -281,7 +299,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "13",
   "added": "2026-11-08",
-  "source": "S39612629"
+  "source": "S39612629",
+  "summary": "Proposes proximal neurodynamics with a time-varying, momentum-like term that converge in fixed time to Nash equilibria of non-smooth games.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neunet.2024.106323",
@@ -314,7 +334,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "13",
   "source": "S45693802",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Develops a projection neural network with varying parameters for sparse signal reconstruction, designed for efficient and robust recovery.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s12559-024-10252-w",
@@ -350,7 +372,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "14",
   "added": "2026-11-08",
-  "source": "S165473669"
+  "source": "S165473669",
+  "summary": "Designs a zeroing neural network that converges within a predefined time to solutions of the Yang–Baxter-like matrix equation AXA = XAX.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neucom.2026.135036",
@@ -366,7 +390,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "14",
   "source": "S45693802",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Introduces neural networks with second-order dynamics that converge within a predefined time for sparse recovery problems.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.ins.2025.121899",
@@ -383,7 +409,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "14",
-  "source": "S192650101"
+  "source": "S192650101",
+  "summary": "Proposes a matrix-valued neural network with predefined-time convergence for optimization over quaternions, applied to colour images.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.chaos.2025.116792",
@@ -400,7 +428,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "14",
-  "source": "S70718007"
+  "source": "S70718007",
+  "summary": "Develops neurodynamic approaches with time-varying coefficients that solve composite optimization problems within a predefined time.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neunet.2024.106247",
@@ -455,7 +485,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "15",
   "added": "2026-11-08",
-  "source": "S39612629"
+  "source": "S39612629",
+  "summary": "Proposes a distributed double-layer neurodynamic scheme for constrained optimization of dynamic systems that also rejects external disturbances.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neucom.2026.135539",
@@ -471,7 +503,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "15",
   "added": "2026-11-08",
-  "source": "S45693802"
+  "source": "S45693802",
+  "summary": "Applies distributed neurodynamic optimization to task allocation among multiple UAVs under communication constraints, with convergence guarantees.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neucom.2025.130023",
@@ -488,7 +522,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "15",
   "source": "S45693802",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Presents a neurodynamic algorithm based on reformulating the problem, for distributed nonconvex optimization over networks of agents.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.ins.2025.122138",
@@ -505,7 +541,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "15",
-  "source": "S192650101"
+  "source": "S192650101",
+  "summary": "Uses distributed neurodynamic optimization to allocate resources optimally across multiple clusters subject to cardinality constraints.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s40747-024-01436-w",
@@ -541,7 +579,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "15",
-  "source": "S39612629"
+  "source": "S39612629",
+  "summary": "Proposes a p-power neurodynamic approach for distributed nonconvex optimization over networked agents.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neunet.2024.107027",
@@ -670,7 +710,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "16",
-  "source": "S13144211"
+  "source": "S13144211",
+  "summary": "Builds a delayed neural network on a new complementarity function to solve the nonlinear complementarity problem (NCP).",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s11590-024-02139-4",
@@ -685,7 +727,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "10",
   "topic": "16",
-  "source": "S12647387"
+  "source": "S12647387",
+  "summary": "The weighted linear complementarity problem (wLCP) can be used for modelling a large class of problems from science and economics. In this paper, we introduce a new class of weighted complementarity functions and show that it is continuously differentiable everywhere.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.engappai.2026.114649",
@@ -702,7 +746,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "17",
-  "source": "S900972176"
+  "source": "S900972176",
+  "summary": "Designs fixed-time neurodynamic algorithms with element-wise normalization for recovering sparse signals.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.cam.2026.117754",
@@ -719,7 +765,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "17",
-  "source": "S165473669"
+  "source": "S165473669",
+  "summary": "Rewrites support vector machines with the generalized pinball loss in epigraph form and solves them with a neurodynamical neural network, a continuous-time solver for robust SVM classification.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.cnsns.2025.108822",
@@ -736,7 +784,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "17",
-  "source": "S39612629"
+  "source": "S39612629",
+  "summary": "Proposes a neurodynamic optimization algorithm for split equality problems and applies it to sparse signal recovery.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.asoc.2024.112044",
@@ -752,7 +802,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "17",
-  "source": "S140556538"
+  "source": "S140556538",
+  "summary": "Develops a second-order projection neurodynamic approach with exponential convergence for sparse signal reconstruction.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neucom.2024.128031",
@@ -769,7 +821,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "17",
-  "source": "S45693802"
+  "source": "S45693802",
+  "summary": "Presents time-varying neurodynamic optimization approaches that reconstruct sparse signals with fixed-time convergence.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neucom.2026.135091",
@@ -787,7 +841,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Collaborative neurodynamic optimization in machine learning",
-  "source": "S45693802"
+  "source": "S45693802",
+  "summary": "A survey of collaborative neurodynamic optimization, in which several neurodynamic models work together to search for global optima of nonconvex and combinatorial problems.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neucom.2026.134041",
@@ -806,7 +862,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "17",
   "group": "Collaborative neurodynamic optimization in machine learning",
   "source": "S45693802",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A survey that views deep-learning architectures and their training algorithms through neurodynamics, offering a unified perspective on both.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neunet.2024.106348",
@@ -843,7 +901,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "17",
   "group": "Collaborative neurodynamic optimization in machine learning",
   "source": "S32114090",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Solves constrained pseudoconvex optimization problems by combining neurodynamic optimization with deep learning.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.knosys.2022.109026",
@@ -860,7 +920,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Collaborative neurodynamic optimization in machine learning",
-  "source": "S10169007"
+  "source": "S10169007",
+  "summary": "Formulates balanced clustering as an optimization problem and solves it with collaborative neurodynamic optimization.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neunet.2022.06.006",
@@ -1009,7 +1071,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "18",
   "added": "2026-11-08",
   "source": "S39612629",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Starts from inertial dynamics with implicit Hessian damping and derives accelerated forward–backward algorithms from them.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s00245-026-10406-2",
@@ -1046,7 +1110,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "18",
-  "source": "S52430896"
+  "source": "S52430896",
+  "summary": "This paper studies a second-order inertial dynamical system combining asymptotically vanishing viscous damping with Hessian-driven damping for linearly constrained convex optimization.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1080/02331934.2024.2359540",
@@ -1117,7 +1183,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "21",
   "source": "S165473669",
-  "deepmathai": true
+  "deepmathai": true,
+  "summary": "Proposes a projection recurrent neural network for absolute value equations associated with second-order cones and proves its global convergence to the exact solution using Lyapunov stability theory.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.cam.2026.118089",
@@ -1135,7 +1203,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "21",
   "added": "2026-11-08",
-  "source": "S165473669"
+  "source": "S165473669",
+  "summary": "Develops a spatial global optimization algorithm for generalized fractional programming problems, built on second-order cone relaxation.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.cam.2026.117513",
@@ -1151,7 +1221,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "21",
-  "source": "S165473669"
+  "source": "S165473669",
+  "summary": "Proposes a smooth-like lower-order penalty approach for solving second-order cone mixed complementarity problems.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10898-026-01615-8",
@@ -1168,7 +1240,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "21",
-  "source": "S115925768"
+  "source": "S115925768",
+  "summary": "This paper studies mathematical programs with second-order cone complementarity constraints (SOCMPCCs), which generalize classical mathematical programs with complementarity constraints by incorporating second-order cone structures.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s10957-026-03092-1",
@@ -1185,7 +1259,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "21",
-  "source": "S52430896"
+  "source": "S52430896",
+  "summary": "This paper studies mathematical programs with second-order cone complementarity constraints (SOCMPCCs), which generalize classical mathematical programs with complementarity constraints.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1186/s13660-025-03339-x",
@@ -1220,7 +1296,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "22",
   "added": "2026-11-08",
-  "source": "S12647387"
+  "source": "S12647387",
+  "summary": "This paper investigates a new class of stochastic absolute value equations (SAVE), which is equivalent to the stochastic vertical linear complementarity problem. Due to the existence of random variables, the SAVE may not have a common solution for almost every realization.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.cam.2026.118291",
@@ -1236,7 +1314,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "22",
   "added": "2026-11-08",
-  "source": "S165473669"
+  "source": "S165473669",
+  "summary": "Studies a Kaczmarz-type iterative method with a maximal-residual selection rule for solving systems of absolute value equations.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s11590-025-02251-z",
@@ -1268,7 +1348,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "20",
   "topic": "22",
-  "source": "S65753830"
+  "source": "S65753830",
+  "summary": "We consider the (generalized) absolute value equations with uncertain entries. In particular, we assume that the entries come from given intervals. For such interval-valued problem, we study the fundamental properties regarding solutions and solvability.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s44198-025-00270-z",
@@ -1319,7 +1401,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "20",
   "topic": "22",
-  "source": "S2764888454"
+  "source": "S2764888454",
+  "summary": "Sparse optimization problems have drawn wide attention in recent years, which have been extensively applied to compressed sensing, signal and image processings. As a kind of important optimization problem, absolute value equations have been extensively studied.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s10589-026-00842-9",
@@ -1397,7 +1481,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "23",
-  "source": "S165473669"
+  "source": "S165473669",
+  "summary": "Improves the proximal alternating linearized minimization (PALM) algorithm and extends it with inertial and Bregman terms for structured nonconvex, nonsmooth optimization on Riemannian manifolds.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10589-024-00643-y",
@@ -1491,7 +1577,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "25",
-  "source": "S57667410"
+  "source": "S57667410",
+  "summary": "The aim of this article is to investigate approximate solutions in an interval-valued multiobjective optimization problem with inequality constraints involving quasidifferentiable functions, which is denoted by QIVMOP.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.fss.2025.109416",
@@ -1527,7 +1615,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "25",
-  "source": "S57667410"
+  "source": "S57667410",
+  "summary": "In this paper, we consider a multiobjective optimization problem, where its feasibility set is unbounded and the related functions are nonsmooth and nonconvex.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s10957-024-02397-3",
@@ -1578,7 +1668,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "26",
-  "source": "S165473669"
+  "source": "S165473669",
+  "summary": "Proposes a smoothing gradient method for solving semidefinite programs.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10107-025-02198-0",
@@ -1635,7 +1727,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "20",
   "topic": "26",
-  "source": "S27769002"
+  "source": "S27769002",
+  "summary": "Develops an augmented Lagrangian-type stochastic approximation method for convex stochastic semidefinite programs whose data are defined by expectations.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10589-024-00558-8",
@@ -1651,7 +1745,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "26",
-  "source": "S39243548"
+  "source": "S39243548",
+  "summary": "We propose an efficient primal-dual interior-point relaxation algorithm based on a smoothing barrier augmented Lagrangian, called IPRSDP, for solving semidefinite programming problems in this paper. The IPRSDP algorithm has three advantages over classical interior-point methods.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1080/01630563.2026.2643726",
@@ -1683,7 +1779,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "27",
-  "source": "S52430896"
+  "source": "S52430896",
+  "summary": "In this paper, we deal with the generalized Fritz-John (FJ) and Karush-Kuhn-Tucker (KKT) optimality conditions defined by Flores-Bazan and Mastroeni for a nonsmooth nonconvex mathematical programming problem in the face of data uncertainty under the robust counterpart.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s10957-025-02652-1",
@@ -1754,7 +1852,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "30",
   "topic": "31",
-  "source": "S100702818"
+  "source": "S100702818",
+  "summary": "Conventional machine learning algorithms are primarily designed for vector-based data and hence often fail to exploit the inherent continuity and smoothness that characterize functional data.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s13042-026-03059-8",
@@ -1812,7 +1912,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "31",
   "source": "S151820558",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Extends twin support vector machines to Kreĭn spaces, which accommodate indefinite kernels, to classify imbalanced data.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.engappai.2024.107951",
@@ -1831,7 +1933,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S900972176",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2206.10978",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "Multi-task learning (MTL) has emerged as a promising topic of machine learning in recent years, aiming to enhance the performance of numerous related learning tasks by exploiting beneficial information.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.neunet.2026.108937",
@@ -1867,7 +1971,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "32",
   "added": "2026-11-08",
-  "source": "S414566"
+  "source": "S414566",
+  "summary": "Proposes multi-view contrastive graph convolutional networks that fuse the views adaptively for semi-supervised classification.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.asoc.2026.116097",
@@ -1882,7 +1988,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "32",
-  "source": "S140556538"
+  "source": "S140556538",
+  "summary": "Introduces a multi-view twin random vector functional link (RVFL) network for classification problems.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.compeleceng.2026.111453",
@@ -1899,7 +2007,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "32",
-  "source": "S121340289"
+  "source": "S121340289",
+  "summary": "Proposes a multi-view ensemble of deep generalized-eigenvalue random vector functional link networks.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.patcog.2026.115094",
@@ -1917,7 +2027,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "32",
   "added": "2026-11-08",
-  "source": "S414566"
+  "source": "S414566",
+  "summary": "Formulates semi-supervised multi-view classification as a convex problem and extends the formulation to multiple kernels.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.engappai.2025.113451",
@@ -1932,7 +2044,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "32",
-  "source": "S900972176"
+  "source": "S900972176",
+  "summary": "Develops an entropy-based fuzzy multi-view twin random vector functional link network for class-imbalanced data.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neunet.2025.107180",
@@ -1986,7 +2100,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "33",
-  "source": "S121340289"
+  "source": "S121340289",
+  "summary": "Proposes a fuzzy twin random vector functional link classifier whose fuzzy memberships are based on affinity.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.eswa.2026.133112",
@@ -2003,7 +2119,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "33",
-  "source": "S13144211"
+  "source": "S13144211",
+  "summary": "Applies a deep random vector functional link network to anomaly detection.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.asoc.2024.112005",
@@ -2019,7 +2137,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "33",
-  "source": "S140556538"
+  "source": "S140556538",
+  "summary": "Introduces an efficient angle-based twin random vector functional link classifier.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.patcog.2024.110430",
@@ -2036,7 +2156,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "33",
-  "source": "S414566"
+  "source": "S414566",
+  "summary": "Uses random vector functional link networks for domain-incremental learning that does not forget earlier domains.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10994-026-07040-y",
@@ -2144,7 +2266,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "Bilevel optimization and hyperparameter selection",
   "source": "S414566",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Support vector machine (SVM) has achieved many successes in machine learning, especially for a small sample problem. As a famous extension of the traditional SVM, the ν support vector machine (ν-SVM) has shown outstanding performance due to its great model interpretability.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s11425-023-2302-9",
@@ -2205,7 +2329,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "Deep learning for solving optimization problems (AVE, VI)",
   "source": "S40006715",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Solves large-scale variational inequalities with physics-informed neural networks whose initial condition is adjusted dynamically.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10957-025-02892-1",
@@ -2287,7 +2413,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "34",
   "group": "Dynamical systems and gradient flows of deep-learning training",
-  "source": "S148709879"
+  "source": "S148709879",
+  "summary": "Develops efficient and stable scalar auxiliary variable (SAV) methods for the gradient flows that arise in training deep-learning models.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s11067-026-09738-x",
@@ -2552,7 +2680,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "SOCP and SDP for SVMs, feature selection and clustering",
   "source": "S10169007",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Proposes a robust multi-view clustering method for large-scale data, based on a continuous relaxation inspired by semidefinite programming.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.patcog.2026.114043",
@@ -2573,7 +2703,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S414566",
   "openAccess": true,
   "openAccessUrl": "https://docta.ucm.es/bitstreams/cee7acfe-6e3e-41e6-b3fc-b3808bc1b08b/download",
-  "openAccessLabel": "Free version"
+  "openAccessLabel": "Free version",
+  "summary": "Performs sparse feature selection with an ℓp quasi-norm model solved through second-order cone programming.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10100-023-00903-y",
@@ -2631,7 +2763,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "SOCP and SDP for SVMs, feature selection and clustering",
   "source": "S103321696",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Proposes a kernel-free quadratic surface support vector machine that is distributionally robust and chance-constrained, to cope with uncertainty in the data distribution.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.cor.2024.106755",
@@ -2650,7 +2784,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "SOCP and SDP for SVMs, feature selection and clustering",
   "source": "S173256270",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Develops a distributionally robust, chance-constrained kernel-based support vector machine for classification under uncertainty in the data distribution.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neucom.2026.133970",
@@ -2708,7 +2844,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "41",
   "added": "2026-11-08",
-  "source": "S8427965"
+  "source": "S8427965",
+  "summary": "Synthesizes CT images from brain MRI with a generative adversarial network that uses attention mechanisms.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1038/s41598-025-95147-y",
@@ -2764,7 +2902,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "40",
   "topic": "41",
-  "source": "S8427965"
+  "source": "S8427965",
+  "summary": "ICycle-GAN improves cycle-consistent generative adversarial networks for generating liver medical images.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s10462-024-10992-z",
@@ -2803,7 +2943,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S38090728",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2501.15128",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "Diffusion models have indeed shown great promise in solving inverse problems in image processing. In this paper, we propose a novel, problem-agnostic diffusion model called the maximum a posteriori (MAP)-based guided term estimation method for inverse problems.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.bspc.2026.111343",
@@ -2821,7 +2963,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "42",
   "added": "2026-11-08",
-  "source": "S8427965"
+  "source": "S8427965",
+  "summary": "Performs zero-shot super-resolution of medical images with denoising diffusion models guided by gradient and frequency priors.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.neunet.2025.108334",
@@ -2840,7 +2984,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S123019304",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2405.10748",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "Diffusion models have become a successful approach for solving various image inverse problems by providing a powerful diffusion prior.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.mri.2025.110551",
@@ -2877,7 +3023,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "42",
   "source": "S40006715",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Diffusion models have emerged as powerful generative tools with applications in computer vision and scientific machine learning (SciML), where they have been used to solve large-scale probabilistic inverse problems.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.mri.2024.03.017",
@@ -2914,7 +3062,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "43",
   "added": "2026-11-08",
   "source": "S45693802",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A review of diffusion models for image restoration, organised by the paradigms the methods follow.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.eswa.2026.131152",
@@ -2931,7 +3081,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "43",
   "source": "S13144211",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "MSdiff is a multi-scale diffusion model for image deblurring.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.mri.2026.110833",
@@ -2967,7 +3119,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "40",
   "topic": "43",
-  "source": "S13144211"
+  "source": "S13144211",
+  "summary": "CDRM is a controllable diffusion restoration model for deblurring real-world images.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1007/s11263-025-02570-9",
@@ -3023,7 +3177,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "40",
   "topic": "43",
-  "source": "S73060445"
+  "source": "S73060445",
+  "summary": "Image deblurring is a critical preprocessing step in various high-level vision tasks, including facial recognition, medical imaging, and object detection. Blurred artifacts can arise from multiple factors, such as camera shakes and fast-moving objects.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.cam.2026.117991",
@@ -3040,7 +3196,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "40",
   "topic": "44",
-  "source": "S165473669"
+  "source": "S165473669",
+  "summary": "Proposes a preconditioned proximal gradient algorithm for PET image reconstruction with an approximately sparse regularization term.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1186/s40658-026-00954-5",
@@ -3287,7 +3445,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "50",
   "topic": "52",
   "added": "2026-11-08",
-  "source": "S121725775"
+  "source": "S121725775",
+  "summary": "Discusses methodological considerations in opportunistic osteoporosis screening that applies deep learning to chest X-rays.",
+  "summarySource": "overview"
  },
  {
   "doi": "10.1016/j.bone.2026.118082",

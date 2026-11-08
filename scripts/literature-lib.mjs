@@ -88,6 +88,11 @@ function openingSentences(a, max = 320) {
   return out.length > max + 40 ? out.slice(0, max).replace(/\s+\S*$/, "") + "…" : out;
 }
 
+// Opening sentences of an abstract, cleaned — the "From the abstract" summary.
+export function summaryFromAbstract(a) {
+  return openingSentences(cleanAbstract(a));
+}
+
 function fromInverted(inv) {
   if (!inv) return "";
   const words = [];
@@ -172,7 +177,7 @@ export interface LiteraturePaper {
   deepmathai?: boolean;     // on the DeepMathAI Publications page
   added?: string;           // date added by the weekly update (YYYY-MM-DD)
   summary?: string;         // one-sentence TLDR, or the opening sentences of the abstract
-  summarySource?: "tldr" | "abstract";
+  summarySource?: "tldr" | "abstract" | "overview";   // overview: written for this site from the title
 }
 
 export const literatureUpdated = "${updated}";
