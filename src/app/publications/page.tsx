@@ -33,6 +33,8 @@ function getCategoryBadge(category: string) {
       return "bg-rose-500/10 text-rose-400 border-rose-500/20";
     case "Applied Math":
       return "bg-teal-500/10 text-teal-400 border-teal-500/20";
+    case "Renewable Energy":
+      return "bg-amber-500/10 text-amber-400 border-amber-500/20";
     default:
       return "bg-gray-500/10 text-gray-400 border-gray-500/20";
   }
