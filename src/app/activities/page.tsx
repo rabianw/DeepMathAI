@@ -6,6 +6,24 @@ import { getImageUrl } from "../../lib/cloudinary";
 
 const activities = [
   {
+    id: "act-ai-expo-thailand-2026",
+    title: "AI Expo Thailand 2026 — มหกรรมรวมพลคน AI",
+    date: "November 5 - 8, 2026",
+    location: "Challenger Hall 1, IMPACT Muang Thong Thani, Nonthaburi",
+    description:
+      "Members of the DeepMathAI Research Group visited AI Expo Thailand 2026, a four-day exhibition of the latest AI technology with international speakers, masterclasses and workshops, supported by national science and innovation agencies including NIA and NSTDA. The team joined sessions at the Business & Builder Stage — including a talk on AI-assisted 'vibe coding' with agentic coding tools such as Antigravity and Claude Code plugins — and toured the exhibition floor, where companies demonstrated humanoid and quadruped robots and AI solutions for industry and healthcare. The visit kept the group close to how AI is being built and deployed in Thailand, and to opportunities for bringing DeepMathAI's research into real-world use.",
+    type: "Conference",
+    upcoming: false,
+    link: "https://aiexpothailand.com/",
+    images: [
+      getImageUrl("/893508507_122302425482073008_7711157646106048526_n_potgcs"),
+      getImageUrl("/854406755_122302425494073008_8047060759274600196_n_sdclck"),
+      getImageUrl("/IMG_5243_hahx7u"),
+      getImageUrl("/IMG_5239_vyyxcr"),
+      getImageUrl("/888282585_122302425512073008_1884088602296756457_n_kyijco"),
+    ],
+  },
+  {
     id: "act-walailak-workshop-2026",
     title: "Workshop: Neurodynamic Perspectives on Optimization and Machine Learning — Walailak University",
     date: "October 1 - 2, 2026",
