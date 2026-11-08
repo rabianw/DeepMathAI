@@ -8,7 +8,7 @@
 // Authors, journal ids and open-access links come from OpenAlex. Lists are merged into the existing file by DOI.
 import fs from "node:fs";
 import path from "node:path";
-import { openAlex, readPapers, writePapers, enrich, groupDois, WORK_FIELDS } from "./literature-lib.mjs";
+import { openAlex, readPapers, writePapers, enrich, groupDois, fillSummaries, WORK_FIELDS } from "./literature-lib.mjs";
 
 // "### ..." group headings in the lists are written in Thai; show them in English on the site.
 const GROUP_LABELS = {
@@ -76,8 +76,10 @@ for (let i = 0; i < dois.length; i += 40) {
 }
 
 const papers = [...byDoi.values()];
+const summarized = await fillSummaries(papers);
 const dates = files.map(f => path.basename(f).match(/\d{4}-\d{2}-\d{2}/)?.[0]).filter(Boolean);
 const updated = [...dates, prevUpdated].filter(Boolean).sort().at(-1) ?? new Date().toISOString().slice(0, 10);
 writePapers(papers, updated);
 console.log(`papers: ${papers.length} (${papers.length - before} new) · OpenAlex matched ${matched}/${papers.length} · `
-  + `open access ${papers.filter(p => p.openAccess).length} · DeepMathAI ${papers.filter(p => p.deepmathai).length} · updated ${updated}`);
+  + `open access ${papers.filter(p => p.openAccess).length} · DeepMathAI ${papers.filter(p => p.deepmathai).length} · `
+  + `summaries +${summarized} (${papers.filter(p => !p.summary).length} missing) · updated ${updated}`);

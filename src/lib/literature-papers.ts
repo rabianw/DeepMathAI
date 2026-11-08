@@ -16,8 +16,10 @@ export interface LiteraturePaper {
   openAccess?: boolean;
   openAccessUrl?: string;   // free copy outside the publisher (arXiv, PMC, repository)
   openAccessLabel?: string;
-  deepmathai?: boolean;     // authored by the group
+  deepmathai?: boolean;     // on the DeepMathAI Publications page
   added?: string;           // date added by the weekly update (YYYY-MM-DD)
+  summary?: string;         // one-sentence TLDR, or the opening sentences of the abstract
+  summarySource?: "tldr" | "abstract";
 }
 
 export const literatureUpdated = "2026-11-05";
@@ -116,7 +118,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "12",
-  "source": "S52430896"
+  "source": "S52430896",
+  "summary": "It is demonstrated that the neural network converges to an equilibrium point that satisfies the Karush-Kuhn-Tucker conditions of the underlying nonlinear programming problem, guaranteeing the optimality of the obtained solution.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2026.108810",
@@ -133,7 +137,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "12",
   "source": "S123019304",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A learning-based framework, the Kolmogorov-Arnold Network enhanced Primal-Dual Neural Network (KAN-PDNN), which approximates the solution map of parameterized optimization problems that implicitly define such sets.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neucom.2025.131068",
@@ -168,7 +174,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "12",
   "source": "S13144211",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Performing surgical tasks safely and reliably presents significant challenges, including obstacle avoidance, joint limit constraints, and motion smoothness during the tool-target alignment (T-TA) stage, as well as precise tracking of preoperative plans during the execution of the preoperative planning surgery path (EPSP).",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.jfranklin.2024.107195",
@@ -201,7 +209,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "10",
   "topic": "13",
-  "source": "S126014849"
+  "source": "S126014849",
+  "summary": "It is shown that the proposed IPNN method can guarantee the uniqueness of the solution to the considered IQVI problem under appropriate conditions and is not only asymptotically stable but also exponentially stable at the equilibrium solution.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2026.109667",
@@ -216,7 +226,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "13",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "We propose a scaled projection neural network for solving quasi-variational inequalities in which the constraint set S(x)=m(x)+S depends on the state through a contraction mapping m that translates a fixed closed convex set S, while the projection is performed with respect to a fixed symmetric positive definite matrix M.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.neunet.2024.106323",
@@ -231,7 +243,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "13",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "The uniqueness of the continuous solution for the PNDM is proved by assuming Lipschitz continuity and the global asymptotic stability of equilibrium points of the PNDM is established, contingent upon Lipschitz continuity and strong monotonicity.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neucom.2024.127939",
@@ -264,7 +278,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "13",
-  "source": "S133078663"
+  "source": "S133078663",
+  "summary": "The newly designed IPNN and MIPNN have an improvement in the convergence rates because of the introduction of impulsive effects and the effectiveness and feasibility of the IPNN and MIPNN are shown.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neucom.2026.135036",
@@ -331,7 +347,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "14",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "This paper proposes a novel neurodynamic approach with predefined-time stability that offers a solution to address mixed variational inequality problems and introduces an adjustable time parameter, thereby enhancing flexibility and applicability compared to conventional fixed-time stability methods.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s12190-024-02072-w",
@@ -347,7 +365,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "10",
   "topic": "14",
-  "source": "S199913245"
+  "source": "S199913245",
+  "summary": "The impulsive gains in this paper not only can be stabilizing but also can be destabilizing, which provides wider application scope for the finite-time and fixed-time stability and synchronization studies of other impulse systems.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neucom.2025.130023",
@@ -398,7 +418,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "15",
   "source": "S3035462843",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "It is analyzed that the convergence of the designed collective neurodynamic approach based on the event-triggered communication does not rely on global information, and it is proved the freeness of the Zeno behavior in the event-triggered scheme.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.cnsns.2024.107999",
@@ -432,7 +454,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "15",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "A recurrent neural network is proposed for distributed nonconvex optimization subject to globally coupled (in)equality constraints and local bound constraints and a collaborative neurodynamic optimization method is established by utilizing multiple proposed recurrent neural networks and a meta-heuristic rule.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10107-025-02219-y",
@@ -451,7 +475,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S193920097",
   "openAccess": true,
   "openAccessUrl": "https://hal.science/hal-02306526",
-  "openAccessLabel": "Free version"
+  "openAccessLabel": "Free version",
+  "summary": "A globally convergent algorithm is proposed using a modification of a semismooth Newton direction that makes it a descent direction of the least-squares function, instead of requiring that the direction satisfies a linear system; it must be a feasible point of a convex polyhedron; hence, it can be computed in polynomial time.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s11075-024-01870-4",
@@ -468,7 +494,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "16",
   "source": "S117494069",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "In this paper, we propose a least-change secant algorithm to solve the generalized complementarity problem indirectly trough its reformulation as a nonsmooth system of nonlinear equations using a one-parametric family of complementarity functions.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1080/01630563.2024.2405469",
@@ -484,7 +512,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "16",
-  "source": "S27114296"
+  "source": "S27114296",
+  "summary": "This paper reformulates the weighted nonlinear complementarity problem as an unconstrained minimization problem and presents the steepest descent-based neural network to solve it, and derives some results related to the asymptotic stability of the neural network.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.eswa.2024.123980",
@@ -653,7 +683,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Collaborative neurodynamic optimization in machine learning",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "This paper presents a collaborative neurodynamic optimization approach to binary matrix factorization based on the original combinatorial optimization problem formulation and quadratic unconstrained binary optimization problem reformulations.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.matcom.2023.12.032",
@@ -704,7 +736,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Collaborative neurodynamic optimization in machine learning",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "This paper presents a collaborative neurodynamic approach to Boolean matrix factorization based on a binary optimization formulation to minimize the Hamming distance between a given data matrix and its low-rank reconstruction.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2021.01.004",
@@ -721,7 +755,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Collaborative neurodynamic optimization in machine learning",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "Experimental results with eight benchmark datasets are discussed to demonstrate the global convergence of the neural networks and superiority of the proposed neurodynamic approach to several existing feature selection methods in terms of classification accuracy, precision, recall, and F-measure.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2021.04.038",
@@ -738,7 +774,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Collaborative neurodynamic optimization in machine learning",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "The fractional programming problem formulation is equivalently reformulated as bilevel and bilinear programming problems without using any fractional function to obviate the fractional complexity.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2025.107274",
@@ -756,7 +794,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Sparse recovery and low-rank problems",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "This paper presents a centralized primal - dual projection neurodynamic approach with time scaling (CPDPNA-TS), built upon the heavy - ball method, which contains a second-order projection ODE with derivative feedback for the primal variables and a first-order ODE for the dual variables.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2024.106128",
@@ -772,7 +812,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Sparse recovery and low-rank problems",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "The effectiveness of the proposed continuous-time neurodynamic approach for solving the rank minimization under affine constraints has been demonstrated, along with its superiority compared to the vector-based approach.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2024.106123",
@@ -788,7 +830,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Sparse recovery and low-rank problems",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "This paper develops two continuous-time distributed accelerated neurodynamic approaches for solving sparse recovery via smooth approximation to L1-norm minimization problem and proves that the two proposed distributed neurodynamic approaches both achieve O(1t2) convergence rate.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2022.09.013",
@@ -805,7 +849,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "17",
   "group": "Sparse recovery and low-rank problems",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "Two neurodynamic approaches for solving the L1-minimization problem with the linear inequality constraints are developed and relevant theories show that each agent globally converges to an optimal solution of the distributed optimization problem.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s00245-026-10406-2",
@@ -823,7 +869,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "18",
   "source": "S104354797",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A second-order dynamical system with Hessian-driven damping tailored for a class of nonconvex functions called strongly quasiconvex is investigated, and two discrete-time gradient-based algorithms are derived through time discretizations to enhance stability and convergence performance.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10957-026-03124-w",
@@ -855,7 +903,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "18",
-  "source": "S158016561"
+  "source": "S158016561",
+  "summary": "This study focuses on the rapid optimization properties of inertial dynamics, which combine asymptotically vanishing viscous damping with Hessian-driven damping, and examines the case where the limit dynamic corresponds to the Levenberg-Marquardt regularization of Newton's continuous method.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10957-024-02462-x",
@@ -872,7 +922,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "18",
-  "source": "S52430896"
+  "source": "S52430896",
+  "summary": "By constructing proper energy function, it is proved that the trajectory strongly converges to a minimizer of the objective function of minimum norm, and a gradient-based optimization algorithm based on numerical discretization is proposed, and demonstrated its effectiveness in numerical experiments.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10589-024-00620-5",
@@ -887,7 +939,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "18",
   "source": "S39243548",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "This paper deals with a second order dynamical system with a Tikhonov regularization term in connection to the minimization problem of a convex Fréchet differentiable function.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.cam.2026.117567",
@@ -972,7 +1026,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "21",
   "source": "S51920167",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "In this paper, we introduce a new class of CHKS smoothing functions and show that the new smoothing functions possess a system of desirable properties. Based on the new smoothing functions, we obtain a smoothing homotopy method for solving the second-order cone complementarity problem.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s11590-025-02251-z",
@@ -987,7 +1043,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "22",
   "source": "S12647387",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "An absolute value equation system is an algebraic problem that involves solving the n-by-n system Ax+|x|=b . This problem is known to be NP-hard, and its solution set can have a complicated structure. So far, the research has primarily focused on the unique solvability cases.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s00500-025-10655-3",
@@ -1018,7 +1076,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "22",
   "source": "S113416816",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "In this paper, an application of the generalized absolute value equation is exploited. Concretely, by using the generalized absolute value equation, we provide a new approach to efficiently obtain the hull of the solution set to interval linear equations with certain inverse positive coefficient interval matrix.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s11590-025-02245-x",
@@ -1033,7 +1093,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "22",
   "source": "S12647387",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "We introduce the fractional absolute value equation (FAVE), which is an absolute value equation containing fractional terms of the unknown variables. For simplicity, we first consider a simple 1-dimensional FAVE and then generalize the results to problems of arbitrary dimension n.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s40305-025-00605-z",
@@ -1066,7 +1128,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "23",
   "source": "S123019304",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A smooth gradient approximation neural network is presented for nonconvex optimization problems, in which a smooth approximation technique with time-varying control parameter is introduced for handling nonsmooth nonregular objective functions.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.cam.2025.116886",
@@ -1102,7 +1166,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S39243548",
   "openAccess": true,
   "openAccessUrl": "https://repository.lsu.edu/mathematics_pubs/1898",
-  "openAccessLabel": "Free version"
+  "openAccessLabel": "Free version",
+  "summary": "Numerical experiments on solving nonconvex quadratic programming problems and sparse optimization problems from statistical learning show that the proposed I-ADMM is very effective compared with other state-of-the-art algorithms in the literature.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1080/02331934.2024.2394612",
@@ -1120,7 +1186,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S158016561",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2308.07734",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This paper reformulates the hyperparameter selection for SVC with logistic loss as a bilevel optimization problem in which the upper-level problem and the lower-level problem are both based on logistic loss and shows that the smoothing Newton method has a superlinear convergence rate.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1186/s13660-024-03206-1",
@@ -1136,7 +1204,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "23",
   "source": "S51920167",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "An enhanced inertial proximal minimization algorithm tailored for a category of structured nonconvex and nonsmooth optimization problems and establishes the global and strong convergence of the algorithmic sequence, contingent upon the assumption that the principal function adheres to the Kurdyka–Łojasiewicz (KL) property.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10479-025-06627-3",
@@ -1170,7 +1240,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "25",
   "source": "S169411308",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "In this paper, a class of preinvex vector interval optimization problems (VIOP) with gH -subdifferential is considered, and the optimality conditions and dual results are gained.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s10479-025-06994-x",
@@ -1202,7 +1274,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "25",
   "source": "S52430896",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "The concept of L-stationarity is defined and its relationships with other existing conditions and Pareto optimality concepts are analyzed and two novel algorithmic approaches are proposed for solving multi-objective optimization problems with a sparsity constraint on the vector of variables.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10898-023-01357-x",
@@ -1219,7 +1293,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "25",
-  "source": "S115925768"
+  "source": "S115925768",
+  "summary": "The first-order necessary conditions for local weakly Pareto efficient solution of SMOP are established under some suitable conditions and the equivalence between basic feasible point and stationary point defined by the Fréchet normal cone of SMOP is obtained.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.cam.2026.118176",
@@ -1252,7 +1328,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S193920097",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2402.13814",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "We introduce a quadratically convergent semismooth Newton method for nonlinear semidefinite programming that eliminates the need for the generalized Jacobian regularity, a common yet stringent requirement in existing approaches.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s10915-025-02952-8",
@@ -1270,7 +1348,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S151550017",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2303.01722",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "A manifold optimization approach to solve linear semidefinite programs (SDP) with low-rank solutions, with an emphasis on SDP relaxations for polynomial optimization problems, and establishes global convergence of the inexact ALM, despite the non-convexity brought by the Burer-Monteiro factorization.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.orl.2024.107221",
@@ -1317,7 +1397,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "27",
-  "source": "S27114296"
+  "source": "S27114296",
+  "summary": "We study robust optimization problems which are counterparts of semi-infinite multiobjective nonsmooth and nonconvex optimization problems with data uncertainty.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s10957-025-02722-4",
@@ -1351,7 +1433,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S52430896",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2405.09869",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This paper is devoted to the study of optimality conditions at infinity in nonsmooth minimax programming problems and their applications.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s40840-024-01676-6",
@@ -1367,7 +1451,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "27",
   "source": "S2488590709",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "In this paper, we study the radial epiderivative notion for nonconvex functions, which extends the (classical) directional derivative concept.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1080/02331934.2024.2401117",
@@ -1382,7 +1468,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "20",
   "topic": "27",
-  "source": "S158016561"
+  "source": "S158016561",
+  "summary": "The generalized Nash equilibrium problem (GNEP) is an extension of the Nash equilibrium problem (NEP), which allows the strategies and the objective function of each player to depend on the decision variables of all other players.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s12597-026-01127-9",
@@ -1415,7 +1503,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "31",
   "source": "S2764999920",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A novel approach to tackle binary classification tasks with imbalanced classes by leveraging Universum points to support the minority class within quadratic twin support vector machine models, demonstrating superior performance compared to conventional classifiers and existing methods for imbalanced classification.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2025.107974",
@@ -1433,7 +1523,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S123019304",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2412.03375",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "The Granular Ball Twin Support Vector Machine with Universum Data (GBU-TSVM) is proposed, which uniquely integrates Universum samples with granular ball computing in the TSVM framework, significantly improving robustness against noise while enhancing computational efficiency.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.patrec.2024.03.017",
@@ -1486,7 +1578,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "32",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "A robust multi-view SVM framework that utilizes the RoBoSS loss function called RoBoSS-MvSVM that explicitly integrates consensus and complementarity information across views, enriching the multi-view data representation and ensuring resilient learning is proposed.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.asoc.2026.116097",
@@ -1550,7 +1644,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "32",
-  "source": "S123019304"
+  "source": "S123019304",
+  "summary": "Two multi-view enhanced multi-weight vector projection support vector machine models are proposed, each of which tries to generate two projection matrices composed of a set of projection vectors for each view to improve classification performance and efficiency.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1080/02331934.2026.2637847",
@@ -1566,7 +1662,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "30",
   "topic": "33",
-  "source": "S158016561"
+  "source": "S158016561",
+  "summary": "This paper proposes a novel twin random vector functional link regression (TRVFLR) model for efficiently addressing regression tasks. TRVFLR extends the classical RVFL framework by incorporating two nonparallel regression functions.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1016/j.compeleceng.2025.110923",
@@ -1652,7 +1750,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "Bilevel optimization and hyperparameter selection",
   "source": "S62148650",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "This work proposes two novel decentralized stochastic bilevel gradient descent algorithms based on simultaneous and alternating update strategies that can achieve faster convergence rates and lower communication costs than existing methods.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s11590-024-02101-4",
@@ -1672,7 +1772,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S12647387",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2206.05670",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This paper designs decentralized algorithms for both deterministic and stochastic bilevel optimization problems and analyzes the convergence rates of the proposed algorithms in difference scenarios including the case where data heterogeneity is observed across agents.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10957-024-02564-6",
@@ -1693,7 +1795,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S52430896",
   "openAccess": true,
   "openAccessUrl": "https://hdl.handle.net/2324/7340467",
-  "openAccessLabel": "Free version"
+  "openAccessLabel": "Free version",
+  "summary": "An adaptive linesearch method is developed that introduces a systematic adaptive scheme enabling large and nonmonotonic stepsize sequences while being insensitive to the choice of hyperparameters and initialization.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10107-024-02113-z",
@@ -1714,7 +1818,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S193920097",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2110.12630",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This work proposes new bilevel KKT conditions, which are new necessary optimality conditions tighter than the ones proposed by Okuno et al, and proposes a unified smoothing approach using smoothing functions that belong to the Chen-Mangasarian class.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.patcog.2024.110644",
@@ -1754,7 +1860,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S18344391",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2406.05455",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This work proposes a gradient-based algorithm for MOBLO, called gMOBA, which has fewer hyperparameters to tune, making it both simple and efficient and demonstrates the theoretical validity by accomplishing the desirable Pareto stationarity.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s40305-025-00670-4",
@@ -1772,7 +1880,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "34",
   "group": "Deep learning for solving optimization problems (AVE, VI)",
-  "source": "S2764888454"
+  "source": "S2764888454",
+  "summary": "This paper proposes the first deep unrolled neural network based on SOR-like iteration to solve the AVE, and proposes a specialized network architecture called SOR-Net, which incorporates learnable parameters and nonlinear activation functions into a deep network, with computational layers unrolled from the SOR-like iterations.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.cma.2024.117156",
@@ -1809,7 +1919,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "Dynamical systems and gradient flows of deep-learning training",
   "source": "S52430896",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "This work shows that dynamical low-rank training, in combination with stochastic gradient and momentum methods, fulfills certain robustness and descent guarantees and proves convergence to stationary points given the assumption that basis updates are omitted after a certain number of iterations.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1080/02331934.2025.2526726",
@@ -1830,7 +1942,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S158016561",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2407.04562",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "Our approach is part of the close link between continuous dissipative dynamical systems and optimization algorithms. Motivated by solving stochastic convex optimization problems in Hilbert spaces, we propose a class of stochastic inertial differential equations driven by the gradient of the objective function.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1038/s41467-024-54451-3",
@@ -1849,7 +1963,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "Dynamical systems and gradient flows of deep-learning training",
   "source": "S64187185",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A framework for optimization called controlled heavy-ball optimizer, employing the proportional-integral-derivative (PID) controller in the optimizer, and developing a deterministic continuous-time optimizer called Proportional-Integral-Derivative Accelerated Optimizer (PIDAO).",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.jcp.2024.112911",
@@ -1885,7 +2001,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "Minimax, saddle points and variational inequalities in adversarial learning",
   "source": "S80684715",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "This study presents an innovative Popov-type iterative method designed to tackle variational inequality problems (VIPs) with a quasimonotone operator in real Hilbert spaces. Unlike conventional techniques, this method eliminates the need for prior knowledge of the Lipschitz constant of the associated operator.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s40305-024-00540-5",
@@ -1901,7 +2019,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "34",
   "group": "Minimax, saddle points and variational inequalities in adversarial learning",
-  "source": "S2764888454"
+  "source": "S2764888454",
+  "summary": "This paper proposes an alternating gradient projection algorithm with momentum (M-AGP), belonging to single-loop algorithms that not only are easier to implement but also require only the computation of gradient projection updates.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s11228-025-00750-w",
@@ -1922,7 +2042,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S114338317",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2306.17443",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "The concept of calm local minimax point is introduced, which is a local minimax point with a calm radius function and it is shown that the calm local minimax optimality and the local minimax optimality coincide under a second-order sufficient condition for the inner maximization problem.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10915-025-02864-7",
@@ -1941,7 +2063,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S151550017",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2404.13021",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "A one-sided projection-free method employing a linear minimization oracle to solve constrained saddle point problems with a bilevel structure, wherein the upper-level objective function is nonconvex-concave and smooth over compact and convex constraint sets, subject to a strongly convex lower-level objective function.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10915-024-02679-y",
@@ -1959,7 +2083,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "Minimax, saddle points and variational inequalities in adversarial learning",
   "source": "S151550017",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "This paper proposes a quasi-Newton subspace trust region (QNSTR) algorithm for the least squares problems defined by the smoothing approximation of nonsmooth equations and proves the global convergence of the QNSTR algorithm to an ϵ-first-order stationary point of the min-max optimization problem.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s11425-023-2392-8",
@@ -1979,7 +2105,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S18344391",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2311.00559",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "A new automatic learning paradigm for optimizing MOO problems is introduced, and a guarded multi-gradient learning to optimize (GML2O) method is proposed, which automatically learns a generator (or mappings) from multiple gradients to update directions.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.mlwa.2025.100625",
@@ -1997,7 +2125,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "Multiobjective optimization in deep learning",
   "source": "S4210201048",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Sparsity is a highly desired feature in deep neural networks (DNNs) since it ensures numerical efficiency, improves the interpretability (due to the smaller number of relevant features), and robustness.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s00521-024-10935-3",
@@ -2015,7 +2145,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "34",
   "group": "Nonsmooth and smoothing methods for training neural networks",
-  "source": "S147897268"
+  "source": "S147897268",
+  "summary": "Experimental results demonstrate that the proposed general smoothed approximation for the maximum function max(xi,αxi) outperforms the existing state-of-the-art activation functions in improved robustness across different training settings, models, datasets and tasks.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s12190-024-02353-4",
@@ -2033,7 +2165,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "34",
   "group": "Nonsmooth and smoothing methods for training neural networks",
-  "source": "S199913245"
+  "source": "S199913245",
+  "summary": "The results of weak convergence for smooth L0 regularization using the adaptive momentum method are presented and it is proven the strong convergence results of the theorems are proven.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10957-025-02749-7",
@@ -2052,7 +2186,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S52430896",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2404.17386",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This paper develops a stochastic Bregman subgradient method that allows the subproblems to be solved inexactly, and introduces a Bregman proximal subgradient method for solving composite optimization problems possibly with constraints, whose convergence can be guaranteed based on the general framework.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10957-024-02408-3",
@@ -2070,7 +2206,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S52430896",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2304.13328",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This approach builds upon semialgebraic (definable) assumptions commonly met in practical situations and combines a nonsmooth calculus with a differential inclusion method to ensure the convergence of the objective function.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10107-024-02175-z",
@@ -2088,7 +2226,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "SOCP and SDP for SVMs, feature selection and clustering",
   "source": "S193920097",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A new branch-and-cut approach for S3VMs using semidefinite programming (SDP) relaxations is presented, applying optimality-based bound tightening to bound the feasible set and defining a local search heuristic exploiting the solution of the SDP relaxation.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.knosys.2026.115646",
@@ -2144,7 +2284,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "34",
   "group": "SOCP and SDP for SVMs, feature selection and clustering",
-  "source": "S161053114"
+  "source": "S161053114",
+  "summary": "The proposed FSOCP algorithm trains features individually on a neural network and generates a probability class distribution and prediction, allowing the second-order conic programming model to determine the most important features for improved classification accuracies.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2025.107544",
@@ -2163,7 +2305,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "34",
   "group": "SOCP and SDP for SVMs, feature selection and clustering",
   "source": "S123019304",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A mathematical model is proposed which prunes the ensemble of Convolutional Neural Networks consisting of different depths and layers that maximizes accuracy and diversity simultaneously with a sparse second order conic optimization model, yielding promising results while reducing model complexity.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.ejor.2024.02.022",
@@ -2219,7 +2363,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "41",
   "source": "S45693802",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "Artificial intelligence (AI) applications in medical imaging have the potential to revolutionize healthcare by improving diagnostic accuracy, reducing errors, and increasing efficiency.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1038/s41598-025-95147-y",
@@ -2237,7 +2383,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "41",
   "source": "S196734849",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A Temporal Decomposition Network (TDN), a novel deep learning architecture that optimizes multimodal medical image fusion through feature-level temporal analysis and adversarial learning mechanisms, indicates significant potential for clinical applications, particularly in radiological diagnosis, surgical planning, and medical image analysis.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s11831-024-10174-8",
@@ -2254,7 +2402,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "40",
   "topic": "41",
-  "source": "S65486112"
+  "source": "S65486112",
+  "summary": "This review rigorously evaluates scholarly publications employing Generative Adversarial Networks (GANs) for the synthesis and generation of medical images, segmentation of medical imaging data, image-to-image translation in medical contexts, and denoising or reconstruction of medical imagery.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.bspc.2024.106100",
@@ -2289,7 +2439,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "41",
   "source": "S122814990",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "A comprehensive review of recent research on GANs and their variants in medical applications, including tasks such as image synthesis, segmentation, classification, detection, denoising, reconstruction, fusion, registration, and prediction, is provided.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.image.2026.117532",
@@ -2344,7 +2496,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "40",
   "topic": "42",
-  "source": "S13619737"
+  "source": "S13619737",
+  "summary": "A novel fast diffusion model for MRI reconstruction, termed FDMR, is proposed, which aims to accelerate the inference process and improve reconstruction quality, and operates 4-10 times faster, enabling the reconstruction within just 8 s.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.cma.2025.118431",
@@ -2379,7 +2533,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "40",
   "topic": "42",
-  "source": "S13619737"
+  "source": "S13619737",
+  "summary": "A Local Vision Transformer based adversarial Diffusion model (Diff-GAN) for accelerating MRI reconstruction that employs a generative adversarial network (GAN) as the reverse diffusion model to enable large diffusion steps and mitigates the gradient vanishing issue in GAN training.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.eswa.2026.131152",
@@ -2433,7 +2589,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S25538012",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2308.09388",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This first to present a comprehensive review of recent diffusion model-based methods on image restoration, encompassing the learning paradigm, conditional strategy, framework design, modeling strategy, and evaluation, and proposes nine potential and challenging directions for the future research of diffusion model-based IR.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10044-024-01346-0",
@@ -2448,7 +2606,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "40",
   "topic": "43",
-  "source": "S45497385"
+  "source": "S45497385",
+  "summary": "A novel perspective for blind denoising is proposed by converting the static image denoising problem into a dynamic process inspired by the diffusion model, which outperforms existing methods and achieves state-of-the-art results in blind additive white Gaussian noise and real-world image denoising.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s00371-024-03631-9",
@@ -2497,7 +2657,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "40",
   "topic": "44",
-  "source": "S12054454"
+  "source": "S12054454",
+  "summary": "This study aims to improve image quality and eliminate residual noise from PET images by applying an efficient Generative Adversarial Network (GAN) model to sinograms before reconstruction using the Ordered Subsets Expectation Maximization (OSEM), an effective method for high-quality data reconstruction.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.compmedimag.2025.102639",
@@ -2514,7 +2676,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "40",
   "topic": "44",
-  "source": "S198823948"
+  "source": "S198823948",
+  "summary": "FastDIP is an efficient approach for unsupervised low-count PET image reconstruction that significantly reduces the network training time and markedly enhances image restoration performance.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.bspc.2024.106294",
@@ -2532,7 +2696,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S8427965",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2306.17652",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "It is proved, experimentally and analytically, that the difference between the best approximations and real crystal-to-crystal response is insignificant.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1186/s40658-024-00710-7",
@@ -2549,7 +2715,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "44",
   "source": "S2737569433",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "The proposed deterministic TBP algorithm achieves a low noise level in a short runtime, thus it can be a promising solution for the back projection of the 3D PET reconstruction.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.spinee.2026.04.010",
@@ -2566,7 +2734,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "50",
   "topic": "51",
-  "source": "S112180307"
+  "source": "S112180307",
+  "summary": "A deep learning-based object detection approach can accurately distinguish malignant metastatic lesions from benign VCFs on routine MRI and may serve as a practical decision-support tool to expedite oncologic referral, improve diagnostic accuracy, and optimize treatment strategies.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.2147/cia.s600030",
@@ -2584,7 +2754,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "50",
   "topic": "51",
   "source": "S68257898",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "The findings demonstrate that radiomics derived from routine non-contrast CT, leveraging deep learning for automated bone compartment segmentation, offers a superior and practical tool for Early identification of high-risk individuals for thoracolumbar OVFs.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.crad.2025.106827",
@@ -2601,7 +2773,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "50",
   "topic": "51",
-  "source": "S180082538"
+  "source": "S180082538",
+  "summary": "A deep learning pipeline was built and shown to accurately detect fractures on CT images of lumbar/thoracolumbar spine images of varying field-of-views.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.wneu.2024.01.035",
@@ -2618,7 +2792,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "50",
   "topic": "51",
-  "source": "S59624048"
+  "source": "S59624048",
+  "summary": "The findings highlighted the potential of AI in diagnosing fresh VFs, offering an accurate and efficient way to aid physicians with diagnosis and treatment decisions.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s00586-024-08623-w",
@@ -2635,7 +2811,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "50",
   "topic": "51",
-  "source": "S100227592"
+  "source": "S100227592",
+  "summary": "The deep learning model can automatically and accurately segment the vertebral bodies with compression fractures and classify them as fresh or old fractures, thereby assisting clinicians in making clinical decisions.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s00774-026-01752-w",
@@ -2652,7 +2830,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q2",
   "theme": "50",
   "topic": "52",
-  "source": "S178027841"
+  "source": "S178027841",
+  "summary": "DL analysis of lumbar radiographs, combined with transfer learning and metaheuristic optimization, may support BMD category classification as a complementary screening tool for osteoporosis screening and diagnosis.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1038/s41598-024-75549-0",
@@ -2670,7 +2850,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "50",
   "topic": "52",
   "source": "S196734849",
-  "openAccess": true
+  "openAccess": true,
+  "summary": "The results indicate that the performance of the pre-trained models, namely AlexNet and ResNet50, was inferior to that of the proposed Superfluity DL architecture, and the Superfluity DL model demonstrated the highest accuracy among all the pre-trained models.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.jhsa.2024.09.008",
@@ -2687,7 +2869,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "50",
   "topic": "52",
-  "source": "S2764548376"
+  "source": "S2764548376",
+  "summary": "A deep learning algorithm was developed using the ResNet-50 framework and trained to predict the presence of osteoporosis or osteopenia on hand radiographs using labeled images, representing a possible step toward more accessible, cost-effective, automated diagnosis and therefore earlier treatment of osteoporosis/osteopenia.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s00590-024-04032-3",
@@ -2704,7 +2888,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "50",
   "topic": "52",
-  "source": "S54672533"
+  "source": "S54672533",
+  "summary": "The results suggest that the deep learning model might potentially be used as a screening tool to find patients at risk for osteoporosis to perform further BMD measurement, and the best model was determined by the area under the curves (AUC).",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.bone.2024.117107",
@@ -2721,6 +2907,8 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "50",
   "topic": "52",
-  "source": "S121725775"
+  "source": "S121725775",
+  "summary": "The proposed DeepDXA-KUB, a deep learning model that predicts the BMD values of the left hip and lumbar vertebrae from an input KUB image, is the first to develop a deep learning model based on KUB radiographs to predict lumbar spine and femoral BMD.",
+  "summarySource": "tldr"
  }
 ]/* END DATA */;

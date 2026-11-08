@@ -5,7 +5,7 @@
 // For each topic, OpenAlex is searched by title. Only articles from journals that already appear in the library
 // in the same theme (so their Scopus quartile is known: the group's Q1–Q2 lists) are accepted, newest first, skipping DOIs already
 // listed. Nothing is ever removed. Run by .github/workflows/update-library.yml.
-import { openAlex, readPapers, writePapers, enrich, groupDois, WORK_FIELDS } from "./literature-lib.mjs";
+import { openAlex, readPapers, writePapers, enrich, groupDois, fillSummaries, WORK_FIELDS } from "./literature-lib.mjs";
 
 // Title searches per topic (OpenAlex search syntax: quotes for phrases, AND / OR).
 const TOPIC_QUERIES = {
@@ -78,4 +78,7 @@ for (const [topic, query] of Object.entries(TOPIC_QUERIES)) {
 
 for (const p of added) console.log(`+ [${p.topic}] ${p.title} (${p.authors[0] ?? "?"}, ${p.year}) — ${p.journal}, ${p.quartile} — doi:${p.doi}`);
 console.log(`${added.length} new article(s) since ${since}${DRY ? " (dry run, nothing written)" : ""}`);
-if (added.length && !DRY) writePapers(papers, today > (updated ?? "") ? today : updated);
+if (DRY) process.exit(0);
+const summarized = await fillSummaries(papers);          // new articles, plus any earlier ones still without a summary
+console.log(`${summarized} summary(ies) added · ${papers.filter(p => !p.summary).length} article(s) still without one`);
+if (added.length || summarized) writePapers(papers, added.length && today > (updated ?? "") ? today : updated);

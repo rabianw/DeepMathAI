@@ -63,6 +63,91 @@ export function enrich(p, w, ourDois) {
   return p;
 }
 
+// ─── Short summaries ───────────────────────────────
+// Semantic Scholar's TLDR (one AI-generated sentence) when it exists; otherwise the opening sentences of the
+// article's abstract (Semantic Scholar, Crossref or OpenAlex), so nothing is written that the authors did not say.
+
+function cleanAbstract(a) {
+  a = a.replace(/<[^>]+>/g, " ").replace(/\$\$?([^$]+?)\$\$?/g, "$1").replace(/\s+/g, " ").trim();   // drop LaTeX $…$ markers
+  if (a.startsWith("•")) {                       // Elsevier "highlights" bullets come first: keep the text after the last one
+    const last = a.slice(a.lastIndexOf("•") + 1);
+    const first = last.match(/^[^.!?]*[.!?]\s+/);
+    a = first ? last.slice(first[0].length) : last;
+  }
+  return a.replace(/^\s*(abstract|summary|background|purpose|objectives?|introduction|aims?)\s*[:.]?\s*/i, "").trim();
+}
+
+function openingSentences(a, max = 320) {
+  const sentences = a.match(/[^.!?]+(?:[.!?](?!\d)(?=\s+[A-Z(]|$))?/g) || [a];
+  let out = "";
+  for (const s of sentences) {
+    if (out && (out + s).length > max) break;
+    out += s;
+  }
+  out = out.trim();
+  return out.length > max + 40 ? out.slice(0, max).replace(/\s+\S*$/, "") + "…" : out;
+}
+
+function fromInverted(inv) {
+  if (!inv) return "";
+  const words = [];
+  for (const [w, pos] of Object.entries(inv)) for (const i of pos) words[i] = w;
+  return words.join(" ");
+}
+
+async function semanticScholar(dois) {
+  const out = new Map();
+  for (let i = 0; i < dois.length; i += 400) {
+    const ids = dois.slice(i, i + 400);
+    for (let attempt = 0; attempt < 8; attempt++) {                // shared public rate limit: back off and retry
+      const r = await fetch("https://api.semanticscholar.org/graph/v1/paper/batch?fields=tldr,abstract", {
+        method: "POST", headers: { "Content-Type": "application/json", "User-Agent": "deepmathai-research-library" },
+        body: JSON.stringify({ ids: ids.map(d => "DOI:" + d) }),
+      });
+      if (r.ok) { (await r.json()).forEach((d, j) => d && out.set(ids[j], d)); break; }
+      if (r.status !== 429) break;
+      await new Promise(res => setTimeout(res, 4000 * (attempt + 1)));
+    }
+  }
+  return out;
+}
+
+export async function fillSummaries(papers) {
+  const missing = papers.filter(p => !p.summary);
+  if (!missing.length) return 0;
+  const abstracts = new Map();
+  const s2 = await semanticScholar(missing.map(p => p.doi)).catch(() => new Map());
+  for (const p of missing) {
+    const d = s2.get(p.doi);
+    if (d?.tldr?.text) { p.summary = d.tldr.text.trim(); p.summarySource = "tldr"; }
+    else if (d?.abstract) abstracts.set(p.doi, d.abstract);
+  }
+  let rest = missing.filter(p => !p.summary && !abstracts.has(p.doi));
+  try {                                                             // OpenAlex abstracts (needs the API key)
+    for (let i = 0; i < rest.length; i += 40) {
+      const r = await openAlex(`https://api.openalex.org/works?per-page=50&select=doi,abstract_inverted_index&filter=doi:`
+        + rest.slice(i, i + 40).map(p => encodeURIComponent("https://doi.org/" + p.doi)).join("|"));
+      for (const w of r.results) {
+        const a = fromInverted(w.abstract_inverted_index);
+        if (a) abstracts.set(w.doi.replace("https://doi.org/", "").toLowerCase(), a);
+      }
+    }
+  } catch (e) { console.warn(`! OpenAlex abstracts skipped: ${e.message}`); }
+  rest = rest.filter(p => !abstracts.has(p.doi));
+  for (const p of rest) {                                           // Crossref (Springer, T&F and others deposit abstracts)
+    const r = await fetch(`https://api.crossref.org/works/${encodeURIComponent(p.doi)}`, HEADERS).catch(() => null);
+    const a = r?.ok ? (await r.json()).message.abstract : "";
+    if (a) abstracts.set(p.doi, a);
+  }
+  let n = 0;
+  for (const p of missing) {
+    if (p.summary) { n++; continue; }
+    const a = abstracts.has(p.doi) ? openingSentences(cleanAbstract(abstracts.get(p.doi))) : "";
+    if (a.length > 40) { p.summary = a; p.summarySource = "abstract"; n++; }
+  }
+  return n;
+}
+
 export function writePapers(papers, updated) {
   papers.sort((a, b) => a.topic.localeCompare(b.topic) || (a.group ?? "").localeCompare(b.group ?? "")
     || b.year - a.year || a.title.localeCompare(b.title));
@@ -84,8 +169,10 @@ export interface LiteraturePaper {
   openAccess?: boolean;
   openAccessUrl?: string;   // free copy outside the publisher (arXiv, PMC, repository)
   openAccessLabel?: string;
-  deepmathai?: boolean;     // authored by the group
+  deepmathai?: boolean;     // on the DeepMathAI Publications page
   added?: string;           // date added by the weekly update (YYYY-MM-DD)
+  summary?: string;         // one-sentence TLDR, or the opening sentences of the abstract
+  summarySource?: "tldr" | "abstract";
 }
 
 export const literatureUpdated = "${updated}";
