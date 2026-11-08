@@ -1,0 +1,47 @@
+# Weekly Research Library update: add recent articles on each topic (OpenAlex) and push, which deploys on Vercel.
+# Run it by hand from GitHub: Actions → "Update Research Library" → Run workflow.
+name: Update Research Library
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"   # Mondays 01:00 UTC = 08:00 in Thailand
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-library
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Find new articles
+        env:
+          # Free key from https://openalex.org/settings/api, saved as a repository secret
+          # (Settings → Secrets and variables → Actions → New repository secret).
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: node scripts/update-literature.mjs
+
+      - name: Commit and push
+        run: |
+          if git diff --quiet; then
+            echo "No new articles this week."
+            exit 0
+          fi
+          # Same author as the site's other commits, so Vercel deploys the change.
+          git config user.name "Rabian Wangkeeree"
+          git config user.email "rabianw@nu.ac.th"
+          git add src/lib/literature-papers.ts
+          git commit -m "Research Library: weekly update ($(date -u +%Y-%m-%d))"
+          git pull --rebase
+          git push
