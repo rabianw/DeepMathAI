@@ -249,6 +249,26 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "overview"
  },
  {
+  "doi": "10.1186/s13660-026-03521-9",
+  "title": "A relaxed inertial projection algorithm for solving inverse quasi-variational inequalities and its application to traffic assignment",
+  "authors": [
+   "Konrawut Khammahawong",
+   "Jamilu Abubakar",
+   "Abubakar Adamu"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Journal of Inequalities and Applications",
+  "quartile": "Q2",
+  "theme": "10",
+  "topic": "13",
+  "source": "S51920167",
+  "openAccess": true,
+  "added": "2026-11-08",
+  "summary": "In this article, we propose a relaxed inertial projection algorithm for solving inverse quasi-variational inequality problems (IQVIPs) in real Hilbert spaces. The method integrates inertial extrapolation and relaxation techniques to accelerate the convergence of the classical projection scheme.",
+  "summarySource": "abstract"
+ },
+ {
   "doi": "10.1007/s13160-025-00758-7",
   "title": "An inertial projection neural network for solving inverse quasi-variational inequalities",
   "authors": [
