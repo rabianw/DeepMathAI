@@ -548,8 +548,7 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "quartile": "Q1",
   "theme": "10",
   "topic": "17",
-  "source": "S165473669",
-  "deepmathai": true
+  "source": "S165473669"
  },
  {
   "doi": "10.1016/j.cnsns.2025.108822",

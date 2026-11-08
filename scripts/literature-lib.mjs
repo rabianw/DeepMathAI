@@ -57,8 +57,9 @@ export function enrich(p, w, ourDois) {
       p.openAccessLabel = /arxiv/i.test(where) ? "arXiv" : /pubmed|ncbi/i.test(where) ? "PubMed Central" : "Free version";
     }
   }
+  // DeepMathAI badge only for papers on the Publications page — not every paper by a team member is group output.
   delete p.deepmathai;
-  if (ourDois.has(p.doi) || names.some(n => /wangkeeree/i.test(n))) p.deepmathai = true;
+  if (ourDois.has(p.doi)) p.deepmathai = true;
   return p;
 }
 
