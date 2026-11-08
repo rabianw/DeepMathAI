@@ -15,6 +15,10 @@ function publicationLink(p: { doi?: string; url?: string }) {
   return p.doi?.startsWith("10.") ? `https://doi.org/${p.doi}` : p.url;
 }
 
+// Papers added by the weekly update within 30 days of the last update count as new.
+const NEW_SINCE = new Date(new Date(literatureUpdated + "T00:00:00").getTime() - 30 * 864e5).toISOString().slice(0, 10);
+const isNew = (p: LiteraturePaper) => !!p.added && p.added >= NEW_SINCE;
+
 function authorLine(p: LiteraturePaper) {
   const shown = p.authors.slice(0, 3).join(", ");
   return p.authorCount > 3 ? `${shown} et al.` : shown;
@@ -40,6 +44,9 @@ function PaperItem({ p }: { p: LiteraturePaper }) {
           <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-semibold border bg-amber-500/10 text-amber-300 border-amber-500/25">
             <Unlock size={11} /> Open access
           </span>
+        )}
+        {isNew(p) && (
+          <span className="px-2 py-0.5 rounded-full font-semibold border bg-blue-500/15 text-blue-300 border-blue-400/30">New</span>
         )}
         {p.deepmathai && (
           <span className="px-2 py-0.5 rounded-full font-semibold border bg-teal-500/15 text-teal-300 border-teal-400/30">DeepMathAI</span>
@@ -93,6 +100,7 @@ export default function LibraryView() {
   const [theme, setTheme] = useState("all");
   const [oaOnly, setOaOnly] = useState(false);
   const [q1Only, setQ1Only] = useState(false);
+  const [newOnly, setNewOnly] = useState(false);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -100,14 +108,16 @@ export default function LibraryView() {
       (theme === "all" || p.theme === theme) &&
       (!oaOnly || p.openAccess) &&
       (!q1Only || p.quartile === "Q1") &&
+      (!newOnly || isNew(p)) &&
       (!q || `${p.title} ${p.authors.join(" ")} ${p.journal} ${p.group ?? ""}`.toLowerCase().includes(q)));
-  }, [query, theme, oaOnly, q1Only]);
+  }, [query, theme, oaOnly, q1Only, newOnly]);
 
   const total = literaturePapers.length;
   const openCount = literaturePapers.filter(p => p.openAccess).length;
   const q1Count = literaturePapers.filter(p => p.quartile === "Q1").length;
   const updated = new Date(literatureUpdated + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-  const filtering = query || theme !== "all" || oaOnly || q1Only;
+  const newCount = literaturePapers.filter(isNew).length;
+  const filtering = query || theme !== "all" || oaOnly || q1Only || newOnly;
 
   return (
     <div className="min-h-screen bg-[#0a1628] text-white">
@@ -135,7 +145,10 @@ export default function LibraryView() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 mt-6">Updated {updated}</p>
+          <p className="text-xs text-gray-500 mt-6">
+            Updated {updated} · new articles are added automatically every week
+            {newCount > 0 && <> · <button onClick={() => setNewOnly(true)} className="text-blue-300 hover:text-blue-200 font-semibold">{newCount} new</button></>}
+          </p>
         </div>
       </section>
 
@@ -152,7 +165,7 @@ export default function LibraryView() {
                   className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white"><X size={16} /></button>
               )}
             </label>
-            {[[oaOnly, setOaOnly, "Open access only"], [q1Only, setQ1Only, "Q1 only"]].map(([on, set, label]) => (
+            {([[oaOnly, setOaOnly, "Open access only"], [q1Only, setQ1Only, "Q1 only"], ...(newCount ? [[newOnly, setNewOnly, "New"]] : [])] as const).map(([on, set, label]) => (
               <button key={label as string} onClick={() => (set as (v: boolean) => void)(!on)} aria-pressed={on as boolean}
                 className={`px-3.5 py-2 rounded-xl text-sm font-semibold border transition-colors ${on
                   ? "bg-blue-500/20 border-blue-400/50 text-blue-200"
@@ -182,7 +195,7 @@ export default function LibraryView() {
         {filtering && (
           <p className="text-sm text-gray-400">
             Showing <b className="text-white">{filtered.length}</b> of {total} articles
-            <button onClick={() => { setQuery(""); setTheme("all"); setOaOnly(false); setQ1Only(false); }}
+            <button onClick={() => { setQuery(""); setTheme("all"); setOaOnly(false); setQ1Only(false); setNewOnly(false); }}
               className="ml-3 text-teal-400 hover:text-teal-300 font-semibold">Clear filters</button>
           </p>
         )}
@@ -244,7 +257,8 @@ export default function LibraryView() {
         })}
 
         <p className="pt-6 border-t border-white/[0.06] text-xs text-gray-500 leading-relaxed">
-          Curated by the DeepMathAI Research Group from Scopus Q1–Q2 journals (quartiles from SJR). Bibliographic data and
+          Curated by the DeepMathAI Research Group from Scopus Q1–Q2 journals (quartiles from SJR). Every week, recent articles
+          on each topic from the same journals are added automatically and marked New. Bibliographic data and
           open-access links from <a href="https://openalex.org" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white underline">OpenAlex</a>.
           Links lead to the publishers and to open repositories such as arXiv; this site does not host the articles, and some
           publisher pages require a subscription.
