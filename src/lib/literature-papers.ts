@@ -22,9 +22,27 @@ export interface LiteraturePaper {
   summarySource?: "tldr" | "abstract";
 }
 
-export const literatureUpdated = "2026-11-05";
+export const literatureUpdated = "2026-11-08";
 
 export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
+ {
+  "doi": "10.1016/j.cnsns.2026.110980",
+  "title": "An adaptive anti-noise zeroing neural network for solving time-varying linear systems and its applications",
+  "authors": [
+   "Dongmei Yu",
+   "Hongrui Yin",
+   "Shaowei Lin",
+   "Yanzhe Ji"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Communications in Nonlinear Science and Numerical Simulation",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "11",
+  "added": "2026-11-08",
+  "source": "S39612629"
+ },
  {
   "doi": "10.1016/j.engappai.2026.113966",
   "title": "Error orthogonalization gradient neural network: A novel discrete paradigm for time-varying linear equations",
@@ -41,6 +59,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "11",
   "source": "S900972176"
+ },
+ {
+  "doi": "10.1016/j.eswa.2026.134820",
+  "title": "Multicriteria model predictive control of redundant manipulators using a null-space active-screening predictor-corrector discrete zeroing neural network",
+  "authors": [
+   "Chao Chao Zhong",
+   "Yu Han",
+   "Binbin Qiu"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Expert Systems with Applications",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "11",
+  "added": "2026-11-08",
+  "source": "S13144211"
  },
  {
   "doi": "10.1016/j.neucom.2025.131072",
@@ -231,6 +266,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "abstract"
  },
  {
+  "doi": "10.1016/j.cnsns.2026.110983",
+  "title": "Time-varying momentum-like proximal neurodynamics with fixed-time convergence for non-smooth nash equilibrium seeking",
+  "authors": [
+   "Hao Li",
+   "Abdujelil Abdurahman",
+   "Haijun Jiang",
+   "Keylan Alimhan"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Communications in Nonlinear Science and Numerical Simulation",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "13",
+  "added": "2026-11-08",
+  "source": "S39612629"
+ },
+ {
   "doi": "10.1016/j.neunet.2024.106323",
   "title": "A proximal neurodynamic model for a system of non-linear inverse mixed variational inequalities",
   "authors": [
@@ -281,6 +334,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S133078663",
   "summary": "The newly designed IPNN and MIPNN have an improvement in the convergence rates because of the introduction of impulsive effects and the effectiveness and feasibility of the IPNN and MIPNN are shown.",
   "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1016/j.cam.2026.118243",
+  "title": "Predefined-time zeroing neural network for solving the Yang-Baxter-like matrix equation",
+  "authors": [
+   "Yiqiong Sun",
+   "Qing-Wen Wang",
+   "Duanmei Zhou"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Journal of Computational and Applied Mathematics",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "14",
+  "added": "2026-11-08",
+  "source": "S165473669"
  },
  {
   "doi": "10.1016/j.neucom.2026.135036",
@@ -370,6 +440,40 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1016/j.cnsns.2026.110896",
+  "title": "Distributed double-layer neurodynamic optimization for dynamic constrained system with disturbance rejection",
+  "authors": [
+   "Jingxin Liu",
+   "Lijun Wang",
+   "Jingwen Tu",
+   "Debdas Ghosh"
+  ],
+  "authorCount": 6,
+  "year": 2026,
+  "journal": "Communications in Nonlinear Science and Numerical Simulation",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "15",
+  "added": "2026-11-08",
+  "source": "S39612629"
+ },
+ {
+  "doi": "10.1016/j.neucom.2026.135539",
+  "title": "Distributed neurodynamic optimization for multi-UAV task allocation with communication constraints and convergence guarantees",
+  "authors": [
+   "Wang Xin",
+   "Shuangfeng Ma"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Neurocomputing",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "15",
+  "added": "2026-11-08",
+  "source": "S45693802"
+ },
+ {
   "doi": "10.1016/j.neucom.2025.130023",
   "title": "A reformulation neurodynamic algorithm for distributed nonconvex optimization",
   "authors": [
@@ -456,6 +560,43 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "15",
   "source": "S123019304",
   "summary": "A recurrent neural network is proposed for distributed nonconvex optimization subject to globally coupled (in)equality constraints and local bound constraints and a collaborative neurodynamic optimization method is established by utilizing multiple proposed recurrent neural networks and a meta-heuristic rule.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1080/02331934.2026.2758086",
+  "title": "On the lower and upper bounds of the solution set of the tensor complementarity problem",
+  "authors": [
+   "Jun He",
+   "Shi-Liang Wu",
+   "Yan-Min Liu"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Optimization",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "16",
+  "added": "2026-11-08",
+  "source": "S158016561",
+  "summary": "The tensor complementarity problem (TCP) is to find a vector x∈Rn such that x≥0,q+Axm−1≥0,x⊤(Axm−1+q)=0 with A∈R[m,n] and q∈Rn. In this paper, we further investigate the lower and upper bounds of the solution set of the tensor complementarity problem with q∈R+n.",
+  "summarySource": "abstract"
+ },
+ {
+  "doi": "10.1007/s10957-026-03105-z",
+  "title": "Sparse Solutions to Stochastic Tensor Complementarity Problem",
+  "authors": [
+   "Guangxuan Lin",
+   "Shouqiang Du"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Journal of Optimization Theory and Applications",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "16",
+  "added": "2026-11-08",
+  "source": "S52430896",
+  "summary": "A regularized formulation of the approximate model is presented and the connection between the solutions of the two models is also established, and a gradient projection algorithm is designed for this regularized model and establishing its convergence result.",
   "summarySource": "tldr"
  },
  {
@@ -854,6 +995,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1016/j.cnsns.2026.110972",
+  "title": "From inertial dynamics with implicit Hessian damping to accelerated forward–backward algorithms",
+  "authors": [
+   "Xin He",
+   "Ya-Ping Fang"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Communications in Nonlinear Science and Numerical Simulation",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "18",
+  "added": "2026-11-08",
+  "source": "S39612629",
+  "openAccess": true
+ },
+ {
   "doi": "10.1007/s00245-026-10406-2",
   "title": "Heavy Ball and Nesterov Accelerations with Hessian-Driven Damping for Nonconvex Optimization",
   "authors": [
@@ -962,6 +1120,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "deepmathai": true
  },
  {
+  "doi": "10.1016/j.cam.2026.118089",
+  "title": "A spatial global optimization algorithm for generalized fractional programming problems using second-order cone relaxation",
+  "authors": [
+   "Zhisong Hou",
+   "Zhenwei Zhao",
+   "Deke Guo",
+   "Yupeng Bai"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Journal of Computational and Applied Mathematics",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "21",
+  "added": "2026-11-08",
+  "source": "S165473669"
+ },
+ {
   "doi": "10.1016/j.cam.2026.117513",
   "title": "Smooth-like lower order penalty approach for solving second-order cone mixed complementarity problems",
   "authors": [
@@ -1029,6 +1205,38 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "openAccess": true,
   "summary": "In this paper, we introduce a new class of CHKS smoothing functions and show that the new smoothing functions possess a system of desirable properties. Based on the new smoothing functions, we obtain a smoothing homotopy method for solving the second-order cone complementarity problem.",
   "summarySource": "abstract"
+ },
+ {
+  "doi": "10.1007/s11590-026-02345-2",
+  "title": "A new class of stochastic absolute value equations",
+  "authors": [
+   "Jingyong Tang",
+   "Rongge Chen"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Optimization Letters",
+  "quartile": "Q2",
+  "theme": "20",
+  "topic": "22",
+  "added": "2026-11-08",
+  "source": "S12647387"
+ },
+ {
+  "doi": "10.1016/j.cam.2026.118291",
+  "title": "On the Kaczmarz method with maximal residual rule for system of absolute value equations",
+  "authors": [
+   "Jiayi Wang",
+   "Fang Chen"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Journal of Computational and Applied Mathematics",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "22",
+  "added": "2026-11-08",
+  "source": "S165473669"
  },
  {
   "doi": "10.1007/s11590-025-02251-z",
@@ -1112,6 +1320,48 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "20",
   "topic": "22",
   "source": "S2764888454"
+ },
+ {
+  "doi": "10.1007/s10589-026-00842-9",
+  "title": "Lipschitz-free mirror descent methods for non-smooth optimization problems",
+  "authors": [
+   "Yuan Bowen",
+   "Mohammad Soud Alkousa"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Computational Optimization and Applications",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "23",
+  "added": "2026-11-08",
+  "source": "S39243548",
+  "openAccess": true,
+  "openAccessUrl": "https://arxiv.org/abs/2506.01681",
+  "openAccessLabel": "arXiv",
+  "summary": "A Lipschitz-free mirror descent method that achieves weak ergodic convergence is presented, generalizing the convergence results of the mirror descent method in the absence of the Lipschitz assumption.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1007/s10957-026-03120-0",
+  "title": "Monotone and Nonmonotone Linearized Block Coordinate Descent Methods for Nonsmooth Composite Optimization Problems",
+  "authors": [
+   "Yassine Nabou",
+   "Lahcen El Bourkhissi",
+   "Sebastian U. Stich",
+   "Tuomo Valkonen"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Journal of Optimization Theory and Applications",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "23",
+  "added": "2026-11-08",
+  "source": "S52430896",
+  "openAccess": true,
+  "summary": "This paper introduces both monotone and nonmonotone variants of LiBCoD, a Linearized Block Coordinate Descent method for solving composite optimization problems, and establishes a global sublinear convergence rate to a stationary point under the assumption of bounded iterates.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2024.107121",
@@ -1207,6 +1457,25 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "openAccess": true,
   "summary": "An enhanced inertial proximal minimization algorithm tailored for a category of structured nonconvex and nonsmooth optimization problems and establishes the global and strong convergence of the algorithmic sequence, contingent upon the assumption that the principal function adheres to the Kurdyka–Łojasiewicz (KL) property.",
   "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1080/02331934.2026.2748909",
+  "title": "Optimality conditions in uncertain vector optimization problems with variable domination structures",
+  "authors": [
+   "Yao Lei",
+   "QILIN WANG",
+   "Madhusudan Das"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Optimization",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "25",
+  "added": "2026-11-08",
+  "source": "S158016561",
+  "summary": "This paper introduces two new set less order relations based on the Minkowski difference and proposes two novel nonlinear scalarization functionals.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1007/s10479-025-06627-3",
@@ -1583,6 +1852,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1016/j.patcog.2026.115211",
+  "title": "Multi-View Contrastive Graph Convolutional Networks with Adaptive Fusion for Semi-Supervised Classification",
+  "authors": [
+   "Huaichun Xiao",
+   "Fadi Dornaika",
+   "Jingjun Bi",
+   "Denis Hamad"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Pattern Recognition",
+  "quartile": "Q1",
+  "theme": "30",
+  "topic": "32",
+  "added": "2026-11-08",
+  "source": "S414566"
+ },
+ {
   "doi": "10.1016/j.asoc.2026.116097",
   "title": "Multi-view twin random vector functional link for classification problems",
   "authors": [
@@ -1613,6 +1900,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "30",
   "topic": "32",
   "source": "S121340289"
+ },
+ {
+  "doi": "10.1016/j.patcog.2026.115094",
+  "title": "Semi-supervised multi-view classification: A convex formulation and its multi-kernel extension",
+  "authors": [
+   "Jingyu Wang",
+   "Yidi Wang",
+   "Feiping Nie",
+   "Xuelong Li"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Pattern Recognition",
+  "quartile": "Q1",
+  "theme": "30",
+  "topic": "32",
+  "added": "2026-11-08",
+  "source": "S414566"
  },
  {
   "doi": "10.1016/j.engappai.2025.113451",
@@ -2368,6 +2673,44 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "abstract"
  },
  {
+  "doi": "10.1016/j.compmedimag.2026.102812",
+  "title": "SOM-GAN: A structure-preserving one-to-multiple generative adversarial network for unpaired medical image synthesis",
+  "authors": [
+   "Jinhao Li",
+   "Kai Hu",
+   "Runze Wang",
+   "Guoyan Zheng A"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Computerized Medical Imaging and Graphics",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "41",
+  "added": "2026-11-08",
+  "source": "S198823948",
+  "summary": "SOM-GAN is proposed, a Structure-preserving One-to-Multiple Generative Adversarial Network for efficient and structure-preserving image synthesis from a single source domain to multiple target domains and outperforms state-of-the-art methods in both synthesized-image fidelity and downstream clinical segmentation and diagnostic classification tasks.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1016/j.bspc.2026.111311",
+  "title": "Synthesis CT images based on brain MRI images using generative adversarial network with attention mechanisms",
+  "authors": [
+   "Wenxin Li",
+   "Jichun Yuan",
+   "Bingyang Bao",
+   "Ling Chen"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Biomedical Signal Processing and Control",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "41",
+  "added": "2026-11-08",
+  "source": "S8427965"
+ },
+ {
   "doi": "10.1038/s41598-025-95147-y",
   "title": "Multimodal medical image fusion combining saliency perception and generative adversarial network",
   "authors": [
@@ -2463,6 +2806,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "openAccessLabel": "arXiv"
  },
  {
+  "doi": "10.1016/j.bspc.2026.111343",
+  "title": "Zero-shot medical image super-resolution using denoising diffusion models with gradient-frequency priors",
+  "authors": [
+   "Jiaqi Zhang",
+   "Guo Yang",
+   "Rongrong Gao",
+   "Yang Yang"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Biomedical Signal Processing and Control",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "42",
+  "added": "2026-11-08",
+  "source": "S8427965"
+ },
+ {
   "doi": "10.1016/j.neunet.2025.108334",
   "title": "Deep data consistency: A fast and robust diffusion model-based solver for inverse problems",
   "authors": [
@@ -2538,6 +2899,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1016/j.neucom.2026.135282",
+  "title": "A paradigm-driven review of diffusion models for image restoration",
+  "authors": [
+   "Zican Lin",
+   "Yichi Zhang",
+   "Xinyu Yang"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Neurocomputing",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "43",
+  "added": "2026-11-08",
+  "source": "S45693802",
+  "openAccess": true
+ },
+ {
   "doi": "10.1016/j.eswa.2026.131152",
   "title": "MSdiff: multi-scale diffusion model for image deblurring",
   "authors": [
@@ -2553,6 +2932,25 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "43",
   "source": "S13144211",
   "openAccess": true
+ },
+ {
+  "doi": "10.1016/j.mri.2026.110833",
+  "title": "Retraining-free multi-task MR image restoration using a pretrained diffusion model with Bayesian optimization",
+  "authors": [
+   "N. Fujita",
+   "Yasuhiko Terada"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Magnetic Resonance Imaging",
+  "quartile": "Q2",
+  "theme": "40",
+  "topic": "43",
+  "added": "2026-11-08",
+  "source": "S13619737",
+  "openAccess": true,
+  "summary": "The results suggest the feasibility of adapting a single pretrained diffusion prior across multiple MR image restoration tasks through guidance calibration without task-specific weight retraining, while indicating that robustness to adaptation-case selection and computational cost require further investigation.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.eswa.2025.127009",
@@ -2643,6 +3041,48 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "40",
   "topic": "44",
   "source": "S165473669"
+ },
+ {
+  "doi": "10.1186/s40658-026-00954-5",
+  "title": "Deep learning-based enhancement of ultra-low-dose multi-tracer PET/MR: a technical feasibility study in Alzheimer’s disease",
+  "authors": [
+   "Na Qi",
+   "Boyang Pan",
+   "Zengbei Yuan",
+   "Xing Chen"
+  ],
+  "authorCount": 11,
+  "year": 2026,
+  "journal": "EJNMMI Physics",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "44",
+  "added": "2026-11-08",
+  "source": "S2737569433",
+  "openAccess": true,
+  "summary": "The DDWAN model improved image quality and quantitative consistency of simulated ultra-low-dose multi-tracer PET/MR images compared with full-dose references acquired under the same protocol, which support technical feasibility in Alzheimer’s disease (AD).",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1186/s40658-026-00948-3",
+  "title": "Quantitative accuracy and clinical utility of ultra-low dose CT protocols for attenuation correction in PET/CT",
+  "authors": [
+   "Georgios I. Angelis",
+   "Yaser Hadi Gholami",
+   "Kathy P. Willowson",
+   "Sally Ayesa"
+  ],
+  "authorCount": 8,
+  "year": 2026,
+  "journal": "EJNMMI Physics",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "44",
+  "added": "2026-11-08",
+  "source": "S2737569433",
+  "openAccess": true,
+  "summary": "Tin-filtered ultra-low-dose CT enables genuinely low-dose whole-body PET/CT, achieving total effective doses below 1 mSv while preserving quantitative accuracy, lesion conspicuity, and clinical interpretability.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1080/13682199.2025.2558374",
@@ -2832,6 +3272,42 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "52",
   "source": "S178027841",
   "summary": "DL analysis of lumbar radiographs, combined with transfer learning and metaheuristic optimization, may support BMD category classification as a complementary screening tool for osteoporosis screening and diagnosis.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1016/j.bone.2026.118094",
+  "title": "Methodological considerations on opportunistic screening for osteoporosis using chest X-rays and deep learning",
+  "authors": [
+   "Gde Bagus Susila Pradnyana Nurcahyo Oka"
+  ],
+  "authorCount": 1,
+  "year": 2026,
+  "journal": "Bone",
+  "quartile": "Q1",
+  "theme": "50",
+  "topic": "52",
+  "added": "2026-11-08",
+  "source": "S121725775"
+ },
+ {
+  "doi": "10.1016/j.bone.2026.118082",
+  "title": "Optimizing deep learning-enhanced opportunistic osteoporosis screening from chest X-rays in Australia: Impact of follow-up and treatment adherence on clinical and economic outcomes",
+  "authors": [
+   "Jean‐Yves Reginster",
+   "Peter Robert Ebeling",
+   "Majed Alokail",
+   "Jinho Jung"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Bone",
+  "quartile": "Q1",
+  "theme": "50",
+  "topic": "52",
+  "added": "2026-11-08",
+  "source": "S121725775",
+  "openAccess": true,
+  "summary": "It is highlighted that follow-up and persistence are not merely complementary but essential for realizing the full potential of cost-effective AI-driven osteoporosis screening, and Optimizing follow-up and adherence could amplify clinical benefits by four- to five-fold.",
   "summarySource": "tldr"
  },
  {
