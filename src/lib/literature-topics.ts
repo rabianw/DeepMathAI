@@ -25,7 +25,7 @@ export const literatureThemes: LiteratureTheme[] = [
     description:
       "Recurrent and gradient neural networks whose dynamics solve optimization, equilibrium and matrix-equation problems — with fixed- and predefined-time convergence, distributed and collaborative variants, and applications to machine-learning models.",
     icon: "neuro",
-    ourPublications: ["pub-10", "pub-2026-cam-117754", "pub-2026-rico-100742", "pub-1", "pub-2", "pub-9"],
+    ourPublications: ["pub-10", "pub-1", "pub-2", "pub-9"],
     ourApps: [],
   },
   {
@@ -34,7 +34,7 @@ export const literatureThemes: LiteratureTheme[] = [
     description:
       "Cone programming, absolute value equations, smoothing of nonsmooth problems, multiobjective and semidefinite optimization, and the optimality conditions behind them.",
     icon: "optim",
-    ourPublications: ["pub-3", "pub-4", "pub-2026-math-1143", "pub-2026-bangmod-12-1", "pub-2025-ijaa-23-257", "pub-7"],
+    ourPublications: ["pub-3", "pub-4", "pub-7", "pub-2026-sym-1793"],
     ourApps: [],
   },
   {
@@ -43,7 +43,7 @@ export const literatureThemes: LiteratureTheme[] = [
     description:
       "Support vector machines and twin SVMs with robust losses, multi-view learning, random vector functional link networks, and the optimization methods used to train machine-learning and deep-learning models.",
     icon: "ml",
-    ourPublications: ["pub-8", "pub-2026-cjm-42-2-06", "pub-2026-tomm-3787857", "pub-9", "pub-5"],
+    ourPublications: ["pub-8", "pub-9", "pub-5"],
     ourApps: [],
   },
   {
@@ -52,7 +52,7 @@ export const literatureThemes: LiteratureTheme[] = [
     description:
       "GANs and diffusion models for medical imaging, image restoration and deblurring, and stochastic optimization for PET reconstruction.",
     icon: "generative",
-    ourPublications: ["pub-7", "pub-2026-sym-1793", "pub-2025-ijaa-23-257"],
+    ourPublications: ["pub-7", "pub-2026-sym-1793"],
     ourApps: ["app-qmg-rid-explorer"],
   },
   {
