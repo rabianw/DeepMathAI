@@ -22,7 +22,7 @@ export interface LiteraturePaper {
   summarySource?: "tldr" | "abstract" | "overview";   // overview: written for this site from the title
 }
 
-export const literatureUpdated = "2026-11-08";
+export const literatureUpdated = "2026-11-09";
 
 export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
  {
@@ -44,6 +44,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S39612629",
   "summary": "Designs an adaptive zeroing neural network that stays accurate under noise when solving time-varying linear systems, and applies it to example problems.",
   "summarySource": "overview"
+ },
+ {
+  "doi": "10.1016/j.neucom.2026.135328",
+  "title": "Discrete-time zeroing neural networks: Models, developments, and robotic applications—A survey",
+  "authors": [
+   "Angjin Li",
+   "Zhijun Zhang",
+   "Zhuosong Fu"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Neurocomputing",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "11",
+  "added": "2026-11-09",
+  "source": "S45693802"
  },
  {
   "doi": "10.1016/j.engappai.2026.113966",
@@ -82,6 +99,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S13144211",
   "summary": "Combines multicriteria model predictive control with a discrete zeroing neural network that uses null-space active screening and a predictor–corrector scheme to control redundant robot manipulators.",
   "summarySource": "overview"
+ },
+ {
+  "doi": "10.1016/j.cnsns.2026.110895",
+  "title": "Unifying the Moore-Penrose conditions: A non-singular zeroing neural network with neutrosophic self-adaptive integration",
+  "authors": [
+   "Rubayyi T. Alqahtani",
+   "Nadiyah Hussain Alharthi",
+   "Theodore E. Simos",
+   "Spyridon D. Mourtas"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Communications in Nonlinear Science and Numerical Simulation",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "11",
+  "added": "2026-11-09",
+  "source": "S39612629"
  },
  {
   "doi": "10.1016/j.neucom.2025.131072",
@@ -623,6 +658,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1016/j.cam.2026.118177",
+  "title": "Ellipsoidal cone eigenvalue complementarity problems: Solvability conditions, reformulations and numerical experiments",
+  "authors": [
+   "Yue Lu",
+   "Miao Liu",
+   "Ming Huang",
+   "Dong-Yang Xue"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Journal of Computational and Applied Mathematics",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "16",
+  "added": "2026-11-09",
+  "source": "S165473669"
+ },
+ {
   "doi": "10.1080/02331934.2026.2758086",
   "title": "On the lower and upper bounds of the solution set of the tensor complementarity problem",
   "authors": [
@@ -640,6 +693,22 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S158016561",
   "summary": "The tensor complementarity problem (TCP) is to find a vector x∈Rn such that x≥0,q+Axm−1≥0,x⊤(Axm−1+q)=0 with A∈R[m,n] and q∈Rn. In this paper, we further investigate the lower and upper bounds of the solution set of the tensor complementarity problem with q∈R+n.",
   "summarySource": "abstract"
+ },
+ {
+  "doi": "10.1016/j.cam.2026.118162",
+  "title": "Projected splitting methods for solving the generalized vertical polynomial complementarity problem",
+  "authors": [
+   "Dan Wang",
+   "Ji-Cheng Li"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Journal of Computational and Applied Mathematics",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "16",
+  "added": "2026-11-09",
+  "source": "S165473669"
  },
  {
   "doi": "10.1007/s10957-026-03105-z",
@@ -1303,6 +1372,26 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "abstract"
  },
  {
+  "doi": "10.1080/02331934.2026.2748272",
+  "title": "A globally convergent hybrid-adaptive accelerated Douglas–Rachford splitting method for absolute value equations",
+  "authors": [
+   "Pengjie Liu",
+   "Linhao Li",
+   "Peng Huang",
+   "Zhenjiang You"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Optimization",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "22",
+  "added": "2026-11-09",
+  "source": "S158016561",
+  "summary": "In this paper, we propose a hybrid-adaptive accelerated Douglas–Rachford splitting method (HAA-DRSM) for solving absolute value equations of the form Ex−|x|−p=0.",
+  "summarySource": "abstract"
+ },
+ {
   "doi": "10.1007/s11590-026-02345-2",
   "title": "A new class of stochastic absolute value equations",
   "authors": [
@@ -1319,6 +1408,22 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S12647387",
   "summary": "This paper investigates a new class of stochastic absolute value equations (SAVE), which is equivalent to the stochastic vertical linear complementarity problem. Due to the existence of random variables, the SAVE may not have a common solution for almost every realization.",
   "summarySource": "abstract"
+ },
+ {
+  "doi": "10.1007/s11590-026-02341-6",
+  "title": "More on the properties of solution set of absolute value equations",
+  "authors": [
+   "Shweta Yadav",
+   "Dipti Dubey"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Optimization Letters",
+  "quartile": "Q2",
+  "theme": "20",
+  "topic": "22",
+  "added": "2026-11-09",
+  "source": "S12647387"
  },
  {
   "doi": "10.1016/j.cam.2026.118291",
@@ -1423,6 +1528,43 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "22",
   "source": "S2764888454",
   "summary": "Sparse optimization problems have drawn wide attention in recent years, which have been extensively applied to compressed sensing, signal and image processings. As a kind of important optimization problem, absolute value equations have been extensively studied.",
+  "summarySource": "abstract"
+ },
+ {
+  "doi": "10.1007/s00500-026-11469-7",
+  "title": "A novel modiffication of discrete gradient method for non-smooth optimization",
+  "authors": [
+   "Saeed Banimehri",
+   "Hamid Esmaeili"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Soft Computing",
+  "quartile": "Q2",
+  "theme": "20",
+  "topic": "23",
+  "added": "2026-11-09",
+  "source": "S65753830",
+  "summary": "An innovative approach aimed at tackling unconstrained non-smooth optimization problems by introducing a modified discrete gradient method that effectively minimizes the need for evaluations and computational time, ultimately resulting in enhanced efficiency and performance.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1080/02331934.2026.2736669",
+  "title": "An inexact proximal Newton algorithm with partial Hessian information for nonsmooth separable optimization",
+  "authors": [
+   "Wanyou Cheng",
+   "Liang Song",
+   "Wenze Deng"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Optimization",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "23",
+  "added": "2026-11-09",
+  "source": "S158016561",
+  "summary": "We propose a regularized proximal Newton algorithm with partial Hessian information for minimizing the sum of a twice continuously differentiable function and a separable convex (possibly nonsmooth) function.",
   "summarySource": "abstract"
  },
  {
@@ -1958,6 +2100,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "abstract"
  },
  {
+  "doi": "10.1016/j.patcog.2026.115039",
+  "title": "A dynamic fusion enhanced trajectory distillation framework for multi-view classification",
+  "authors": [
+   "Hongyu Yao",
+   "Binlu Chen",
+   "Xiaobin Hong",
+   "Yanchao Li"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Pattern Recognition",
+  "quartile": "Q1",
+  "theme": "30",
+  "topic": "32",
+  "added": "2026-11-09",
+  "source": "S414566"
+ },
+ {
   "doi": "10.1016/j.neunet.2026.108937",
   "title": "A robust multi-view support vector machine with the RoBoSS loss function",
   "authors": [
@@ -1974,6 +2134,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S123019304",
   "summary": "A robust multi-view SVM framework that utilizes the RoBoSS loss function called RoBoSS-MvSVM that explicitly integrates consensus and complementarity information across views, enriching the multi-view data representation and ensuring resilient learning is proposed.",
   "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1016/j.patcog.2026.114917",
+  "title": "Learning to resolve cross-view conflict for reliable multi-view classification",
+  "authors": [
+   "Yun Liao",
+   "Shuyang Hou",
+   "Haoyu Wang",
+   "Xinjie Yao"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Pattern Recognition",
+  "quartile": "Q1",
+  "theme": "30",
+  "topic": "32",
+  "added": "2026-11-09",
+  "source": "S414566"
  },
  {
   "doi": "10.1016/j.patcog.2026.115211",
@@ -3087,6 +3265,47 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "overview"
  },
  {
+  "doi": "10.1007/s11263-026-03026-4",
+  "title": "BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains with Blur-Decoupled Learning",
+  "authors": [
+   "Junhao Cheng",
+   "Wei-Ting Chen",
+   "Xi Lu",
+   "Ming–Hsuan Yang"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "International Journal of Computer Vision",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "43",
+  "added": "2026-11-09",
+  "source": "S25538012",
+  "openAccess": true,
+  "openAccessUrl": "https://arxiv.org/abs/2502.01522",
+  "openAccessLabel": "arXiv",
+  "summary": "BD-Diff, a generative-diffusion-based model designed to enhance deblurring performance on unknown domains by decoupling structural features and blur patterns through joint training on three specially designed tasks, is proposed.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1016/j.eswa.2026.134512",
+  "title": "DecoupDiff: Spatially decoupled denoising diffusion model for industrial anomaly detection",
+  "authors": [
+   "Liwei Wang",
+   "Jinhai Liu",
+   "Fengyuan Zuo",
+   "Zhen Min Zhao"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Expert Systems with Applications",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "43",
+  "added": "2026-11-09",
+  "source": "S13144211"
+ },
+ {
   "doi": "10.1016/j.eswa.2026.131152",
   "title": "MSdiff: multi-scale diffusion model for image deblurring",
   "authors": [
@@ -3221,6 +3440,27 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "overview"
  },
  {
+  "doi": "10.1038/s41598-026-69751-5",
+  "title": "Deep learning enables quantitative kinetic modeling from low-dose dynamic [$$^{18}$$F]-MK6240 Tau PET",
+  "authors": [
+   "Se‐In Jang",
+   "Yassir Najmaoui",
+   "Yanis Chemli",
+   "Samira Vafay Eslahi"
+  ],
+  "authorCount": 10,
+  "year": 2026,
+  "journal": "Scientific Reports",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "44",
+  "added": "2026-11-09",
+  "source": "S196734849",
+  "openAccess": true,
+  "summary": "The results support that a 90% dose reduction is possible without losing the quantitative accuracy needed for tau burden assessment in clinical and research settings.",
+  "summarySource": "tldr"
+ },
+ {
   "doi": "10.1186/s40658-026-00954-5",
   "title": "Deep learning-based enhancement of ultra-low-dose multi-tracer PET/MR: a technical feasibility study in Alzheimer’s disease",
   "authors": [
@@ -3260,6 +3500,27 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S2737569433",
   "openAccess": true,
   "summary": "Tin-filtered ultra-low-dose CT enables genuinely low-dose whole-body PET/CT, achieving total effective doses below 1 mSv while preserving quantitative accuracy, lesion conspicuity, and clinical interpretability.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1186/s40658-026-00922-z",
+  "title": "Toward an optimized PET reconstruction protocol for spinal cord: superiority of OSEM with TOF and PSF",
+  "authors": [
+   "Jiyuan Wang",
+   "Jing Huang",
+   "Bixiao Cui",
+   "Hongwei Yang"
+  ],
+  "authorCount": 9,
+  "year": 2026,
+  "journal": "EJNMMI Physics",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "44",
+  "added": "2026-11-09",
+  "source": "S2737569433",
+  "openAccess": true,
+  "summary": "The OSEM + PSF + TOF reconstruction method demonstrated significant advantages in both image quality and quantitative assessment of FDG uptake, making it the recommended choice for spinal cord PET image reconstruction.",
   "summarySource": "tldr"
  },
  {
