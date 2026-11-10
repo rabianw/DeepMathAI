@@ -22,7 +22,7 @@ export interface LiteraturePaper {
   summarySource?: "tldr" | "abstract" | "overview";   // overview: written for this site from the title
 }
 
-export const literatureUpdated = "2026-11-09";
+export const literatureUpdated = "2026-11-10";
 
 export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
  {
@@ -410,6 +410,26 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "13",
   "source": "S133078663",
   "summary": "The newly designed IPNN and MIPNN have an improvement in the convergence rates because of the introduction of impulsive effects and the effectiveness and feasibility of the IPNN and MIPNN are shown.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1016/j.ejor.2020.04.035",
+  "title": "The forward–backward–forward method from continuous and discrete perspective for pseudo-monotone variational inequalities in Hilbert spaces",
+  "authors": [
+   "Radu Ioan Boţ",
+   "Ernö Robert Csetnek",
+   "Phan Tu Vuong"
+  ],
+  "authorCount": 3,
+  "year": 2020,
+  "journal": "European Journal of Operational Research",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "13",
+  "added": "2026-11-10",
+  "source": "S103321696",
+  "openAccess": true,
+  "summary": "This paper associates to a pseudo-monotone variational inequality a forward-backward-forward dynamical system and carries out an asymptotic analysis for the generated trajectories and proves that linear convergence is guaranteed under strong pseudo- monotonicity.",
   "summarySource": "tldr"
  },
  {
