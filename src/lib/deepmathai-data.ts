@@ -980,8 +980,8 @@ export const aiApplications: AIApplication[] = [
   },
   {
     id: "app-fundus-screening-assistant",
-    name: "Fundus Screening Assistant",
-    tagline: "Lesion map, glaucoma and diabetic retinopathy assessment for each eye from a fundus photograph or EIDON report",
+    name: "NU-EyeFAST",
+    tagline: "Fundus AI Screening Tool — lesion map, glaucoma and diabetic retinopathy assessment for each eye from a fundus photograph or EIDON report",
     description:
       "A clinician-facing decision-support tool built on models trained by pooling public and Naresuan University Hospital fundus datasets. For every eye found in an uploaded EIDON report (PDF or screenshot) or fundus photograph, it segments 13 structures and lesions with a partial-label U-Net, measures cup-to-disc ratios and neuroretinal rim widths against Naresuan reference ranges, and scores glaucoma suspect, any diabetic retinopathy, severe DR and diabetic macular oedema — each placed against validated rule-out and refer thresholds. Access is restricted to the research team and approved collaborators.",
     url: "https://fundus.deepmathai.ai",
