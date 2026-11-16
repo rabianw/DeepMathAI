@@ -22,9 +22,46 @@ export interface LiteraturePaper {
   summarySource?: "tldr" | "abstract" | "overview";   // overview: written for this site from the title
 }
 
-export const literatureUpdated = "2026-11-10";
+export const literatureUpdated = "2026-11-16";
 
 export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
+ {
+  "doi": "10.1016/j.neucom.2026.135096",
+  "title": "A fully quaternion-valued Adams–Moulton discrete-time integration-enhanced zeroing neural network for solving time-varying quaternion equations",
+  "authors": [
+   "Jun Ma",
+   "Jianle Peng",
+   "Pei Liu",
+   "Lin Xiao"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Neurocomputing",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "11",
+  "added": "2026-11-16",
+  "source": "S45693802"
+ },
+ {
+  "doi": "10.1016/j.neunet.2026.109605",
+  "title": "A modified artificial potential field approach for real-time robot path planning via adaptive gradient neural network",
+  "authors": [
+   "Zisheng Chen",
+   "Ting Li",
+   "Ying Liufu"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Neural Networks",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "11",
+  "added": "2026-11-16",
+  "source": "S123019304",
+  "summary": "A modified artificial potential field approach based on adaptive gradient neural network (AGNN) presented to generate safe and smooth real-time paths and theoretical guarantees of global asymptotic convergence and obstacle impenetrability are rigorously established.",
+  "summarySource": "tldr"
+ },
  {
   "doi": "10.1016/j.cnsns.2026.110980",
   "title": "An adaptive anti-noise zeroing neural network for solving time-varying linear systems and its applications",
@@ -302,6 +339,26 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "added": "2026-11-08",
   "summary": "In this article, we propose a relaxed inertial projection algorithm for solving inverse quasi-variational inequality problems (IQVIPs) in real Hilbert spaces. The method integrates inertial extrapolation and relaxation techniques to accelerate the convergence of the classical projection scheme.",
   "summarySource": "abstract"
+ },
+ {
+  "doi": "10.1016/j.neunet.2026.109856",
+  "title": "An implicit-curvature projection neural network for nonlinear programming",
+  "authors": [
+   "Yang Si",
+   "Zhibin Li",
+   "Kai Zhao",
+   "Shangfeng Du"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Neural Networks",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "13",
+  "added": "2026-11-16",
+  "source": "S123019304",
+  "summary": "This article proposes an implicit-curvature projection neural network (ICPNN) for nonlinear programming (NLP) that contains a slow decision layer and a coordinated fast correction layer that induces a curvature-sensitive structural effect without explicitly computing second-order information.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s13160-025-00758-7",
@@ -728,6 +785,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "theme": "10",
   "topic": "16",
   "added": "2026-11-09",
+  "source": "S165473669"
+ },
+ {
+  "doi": "10.1016/j.cam.2026.118121",
+  "title": "Some modulus-based iteration methods for complex nonlinear complementarity problems",
+  "authors": [
+   "Zhiyuan Tong",
+   "Hua Zheng",
+   "Fan Bu",
+   "Seakweng Vong"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Journal of Computational and Applied Mathematics",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "16",
+  "added": "2026-11-16",
   "source": "S165473669"
  },
  {
@@ -1630,6 +1705,46 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1007/s11590-026-02332-7",
+  "title": "Nonsmooth local optimization via direct search",
+  "authors": [
+   "Christopher John Price",
+   "B. L. Robertson"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Optimization Letters",
+  "quartile": "Q2",
+  "theme": "20",
+  "topic": "23",
+  "added": "2026-11-16",
+  "source": "S12647387",
+  "openAccess": true,
+  "summary": "This paper compares the performance of the Sobol, standard Halton and a scrambled Halton poll sequences with no arbitrary step to show the latter performs similarly to the Sobol sequence and outperforms the standard Halton sequence.",
+  "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1007/s10589-026-00815-y",
+  "title": "ProxSTORM—a stochastic trust-region algorithm for nonsmooth optimization",
+  "authors": [
+   "Robert Baraldi",
+   "Aurya Javeed",
+   "Drew Kouri",
+   "Katya Scheinberg"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Computational Optimization and Applications",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "23",
+  "added": "2026-11-16",
+  "source": "S39243548",
+  "openAccess": true,
+  "openAccessUrl": "https://arxiv.org/abs/2510.03187",
+  "openAccessLabel": "arXiv"
+ },
+ {
   "doi": "10.1016/j.neunet.2024.107121",
   "title": "A smooth gradient approximation neural network for general constrained nonsmooth nonconvex optimization problems",
   "authors": [
@@ -2174,6 +2289,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S414566"
  },
  {
+  "doi": "10.1016/j.asoc.2026.116311",
+  "title": "Multi-type cyberbullying user classification via multi-view feature construction",
+  "authors": [
+   "Tingting Li",
+   "Yanlu Gong",
+   "Ting Chen",
+   "Jingjing Sun"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Applied Soft Computing",
+  "quartile": "Q1",
+  "theme": "30",
+  "topic": "32",
+  "added": "2026-11-16",
+  "source": "S140556538"
+ },
+ {
   "doi": "10.1016/j.patcog.2026.115211",
   "title": "Multi-View Contrastive Graph Convolutional Networks with Adaptive Fusion for Semi-Supervised Classification",
   "authors": [
@@ -2248,6 +2381,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S414566",
   "summary": "Formulates semi-supervised multi-view classification as a convex problem and extends the formulation to multiple kernels.",
   "summarySource": "overview"
+ },
+ {
+  "doi": "10.1016/j.knosys.2026.117035",
+  "title": "Shapeleter: Shapelet enhancer via multiview positional embedding for time series classification and extrinsic regression",
+  "authors": [
+   "Changchun He",
+   "Xin Huo",
+   "Baohan Mi",
+   "Chentao Liu"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Knowledge-Based Systems",
+  "quartile": "Q1",
+  "theme": "30",
+  "topic": "32",
+  "added": "2026-11-16",
+  "source": "S10169007"
  },
  {
   "doi": "10.1016/j.engappai.2025.113451",
@@ -3285,6 +3436,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "overview"
  },
  {
+  "doi": "10.1016/j.neucom.2026.135083",
+  "title": "Anti-denoising profile pollution attacks on diffusion model-based recommender systems",
+  "authors": [
+   "Quanqiang Zhou",
+   "Tongxue Yang",
+   "Keke Wang"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Neurocomputing",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "43",
+  "added": "2026-11-16",
+  "source": "S45693802"
+ },
+ {
   "doi": "10.1007/s11263-026-03026-4",
   "title": "BD-Diff: Generative Diffusion Model for Image Deblurring on Unknown Domains with Blur-Decoupled Learning",
   "authors": [
@@ -3343,6 +3511,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "openAccess": true,
   "summary": "MSdiff is a multi-scale diffusion model for image deblurring.",
   "summarySource": "overview"
+ },
+ {
+  "doi": "10.1016/j.neucom.2026.134979",
+  "title": "Perceptual residual denoising diffusion model for image restoration",
+  "authors": [
+   "Jie Yi",
+   "Yunyun Yang",
+   "Lin Zhang"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Neurocomputing",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "43",
+  "added": "2026-11-16",
+  "source": "S45693802"
  },
  {
   "doi": "10.1016/j.mri.2026.110833",
