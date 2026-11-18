@@ -1024,4 +1024,49 @@ export const aiApplications: AIApplication[] = [
     image: "/images/apps/fundus-screening-assistant.jpg",
     imageCaption: "Fundus → 13-class lesion map → glaucoma & DR",
   },
+  {
+    id: "app-spinebmd-workstation",
+    name: "SpineBMD Workstation",
+    tagline: "Low-BMD triage from routine lumbar-spine MRI — 3D segmentation, level-checked measurements and an explained T-score estimate",
+    description:
+      "A clinician-facing research workstation that flags low bone mineral density (osteopenia or osteoporosis) on routine sagittal lumbar-spine MRI. Doctors upload the DICOM study; the system picks the sagittal T1, T2 and STIR series, segments the vertebrae, discs, spinal canal and paraspinal muscles, checks the vertebral level labels across sequences, measures the L1–L4 vertebral bodies (signal ratios, texture radiomics, morphology and degeneration markers), and returns an estimated T-score with the exact contribution of every model input. Labels can be corrected in a linked 2D/3D viewer and the result exported as a PDF report. Access is restricted to the research team and approved collaborators.",
+    url: "https://spinebmd.deepmathai.ai",
+    status: "Beta",
+    category: "Medical Imaging AI",
+    features: [
+      {
+        title: "Whole-Study DICOM Upload",
+        description: "Drop files, folders or a zip with one or many patients; studies are grouped automatically and the sagittal T1, T2 and STIR series are chosen by the study's selection rule.",
+        iconName: "upload",
+      },
+      {
+        title: "2D + 3D Segmentation Review",
+        description: "Sagittal slice viewer with overlay, linked to a 3D model of vertebrae, discs, canal and muscles. Relabel or exclude a vertebra and the result is recalculated.",
+        iconName: "layers",
+      },
+      {
+        title: "Level-Checked, Degeneration-Aware",
+        description: "Automatic level-labelling QC across sequences, and a warning when degenerative change may make spine DXA read falsely high.",
+        iconName: "eye",
+      },
+      {
+        title: "Explained Result & Report",
+        description: "Estimated T-score with its typical error and the exact (linear SHAP) contribution of each input; export a PDF report and a measurement CSV.",
+        iconName: "chart",
+      },
+    ],
+    models: [
+      "TotalSegmentator (vertebrae_mr + total_mr) — vertebra, disc, canal and muscle segmentation",
+      "Elastic-net model on 24 of 369 signal-ratio, radiomic, morphology and degeneration features",
+      "Site standardisation + Platt scaling — AUC 0.88 (NU) and 0.71 (BHUD); 0.86 / 0.67 when the hospital was unseen in training",
+    ],
+    paperTitle:
+      "Detecting Low Bone Mineral Density on Routine Lumbar Spine MRI: A Three-Centre Study of Interpretable, Degeneration-Aware Models with Leave-One-Site-Out Validation",
+    paperCitation: "Klinsuwan, T., et al. & Wangkeeree, R. — manuscript in preparation (2026)",
+    disclaimer:
+      "Research prototype — not a medical device and not a replacement for DXA. Every result must be confirmed by a clinician, and the threshold must be calibrated on about 50 local examinations with DXA before use at another hospital. Login required: access is limited to the research team and approved collaborators, and the GPU server is started on request.",
+    color: "#8b5cf6",
+    image: "/images/apps/spinebmd-workstation.jpg",
+    imageCaption: "DICOM → 3D segmentation → explained T-score",
+  },
 ];

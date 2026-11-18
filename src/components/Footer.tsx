@@ -71,6 +71,7 @@ export default function Footer() {
               <a href="https://osteoporosis.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Osteoporosis Screening App</a>
               <a href="https://qmgrid.deepmathai.ai"target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">Fundus Enhancement Explorer</a>
               <a href="https://fundus.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">NU-EyeFAST Fundus Screening</a>
+              <a href="https://spinebmd.deepmathai.ai" target="_blank" rel="noopener noreferrer" className="block hover:text-teal-400 transition-colors">SpineBMD Workstation</a>
             </div>
           </div>
         </div>
