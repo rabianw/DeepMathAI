@@ -22,9 +22,27 @@ export interface LiteraturePaper {
   summarySource?: "tldr" | "abstract" | "overview";   // overview: written for this site from the title
 }
 
-export const literatureUpdated = "2026-11-16";
+export const literatureUpdated = "2026-11-23";
 
 export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
+ {
+  "doi": "10.1016/j.neunet.2026.109927",
+  "title": "A Delay-Compensating Predictor Zeroing Neural Network with Predefined-Time Convergence for Chaotic System Synchronization with Communication Delay",
+  "authors": [
+   "Saiming Liu",
+   "Bolin Liao",
+   "Yun Huang"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Neural Networks",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "11",
+  "added": "2026-11-23",
+  "source": "S123019304",
+  "openAccess": true
+ },
  {
   "doi": "10.1016/j.neucom.2026.135096",
   "title": "A fully quaternion-valued Adams–Moulton discrete-time integration-enhanced zeroing neural network for solving time-varying quaternion equations",
@@ -733,6 +751,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S123019304",
   "summary": "A recurrent neural network is proposed for distributed nonconvex optimization subject to globally coupled (in)equality constraints and local bound constraints and a collaborative neurodynamic optimization method is established by utilizing multiple proposed recurrent neural networks and a meta-heuristic rule.",
   "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1016/j.cam.2026.118338",
+  "title": "Accelerated dynamical system for linear complementarity problems via absolute-value reformulation",
+  "authors": [
+   "Kai Chen",
+   "Li Li",
+   "Feiran Wang"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Journal of Computational and Applied Mathematics",
+  "quartile": "Q1",
+  "theme": "10",
+  "topic": "16",
+  "added": "2026-11-23",
+  "source": "S165473669"
  },
  {
   "doi": "10.1016/j.cam.2026.118177",
@@ -1644,6 +1679,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1016/j.cam.2026.118087",
+  "title": "A proximal gradient-based ZH-type nonmonotone trust region method for nonsmooth composite multiobjective optimization",
+  "authors": [
+   "Jiawei Chen",
+   "Shaofang Song",
+   "Weiguang Peng",
+   "Tao Zhang"
+  ],
+  "authorCount": 4,
+  "year": 2026,
+  "journal": "Journal of Computational and Applied Mathematics",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "23",
+  "added": "2026-11-23",
+  "source": "S165473669"
+ },
+ {
   "doi": "10.1080/02331934.2026.2736669",
   "title": "An inexact proximal Newton algorithm with partial Hessian information for nonsmooth separable optimization",
   "authors": [
@@ -1661,6 +1714,28 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S158016561",
   "summary": "We propose a regularized proximal Newton algorithm with partial Hessian information for minimizing the sum of a twice continuously differentiable function and a separable convex (possibly nonsmooth) function.",
   "summarySource": "abstract"
+ },
+ {
+  "doi": "10.1007/s10107-026-02420-7",
+  "title": "Coderivative-Based Newton Methods in Structured Nonconvex and Nonsmooth Optimization",
+  "authors": [
+   "Pham Duy Khanh",
+   "Boris S. Mordukhovich",
+   "Vo Thanh Phat"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Mathematical Programming",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "23",
+  "added": "2026-11-23",
+  "source": "S193920097",
+  "openAccess": true,
+  "openAccessUrl": "https://arxiv.org/abs/2403.04262",
+  "openAccessLabel": "arXiv",
+  "summary": "A novel line search method is developed, which is an extension of the proximal gradient algorithm while allowing us to globalize the proposed coderivative-based Newton methods by incorporating the machinery of forward-backward envelopes.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1007/s10589-026-00842-9",
@@ -1742,7 +1817,9 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S39243548",
   "openAccess": true,
   "openAccessUrl": "https://arxiv.org/abs/2510.03187",
-  "openAccessLabel": "arXiv"
+  "openAccessLabel": "arXiv",
+  "summary": "This work develops a stochastic trust-region algorithm for minimizing the sum of a Lipschitz-smooth but possibly nonconvex function and a convex but possibly nonsmooth function and demonstrates ProxSTORM capabilities on neural network training and topology optimization under uncertainty.",
+  "summarySource": "tldr"
  },
  {
   "doi": "10.1016/j.neunet.2024.107121",
@@ -1840,6 +1917,42 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "openAccess": true,
   "summary": "An enhanced inertial proximal minimization algorithm tailored for a category of structured nonconvex and nonsmooth optimization problems and establishes the global and strong convergence of the algorithmic sequence, contingent upon the assumption that the principal function adheres to the Kurdyka–Łojasiewicz (KL) property.",
   "summarySource": "tldr"
+ },
+ {
+  "doi": "10.1080/02331934.2026.2763460",
+  "title": "Higher-order optimality conditions in multiobjective programming and uncertain optimization",
+  "authors": [
+   "Cuong M. Nguyen",
+   "Nguyễn Minh Tùng"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Optimization",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "25",
+  "added": "2026-11-23",
+  "source": "S158016561",
+  "summary": "In this paper, we study higher-order directional derivatives of order ℓ∈(1,+∞), allowing for non-integer values. We establish their existence and basic calculus rules, including unions, intersections, compositions, and sums.",
+  "summarySource": "abstract"
+ },
+ {
+  "doi": "10.1080/02331934.2026.2763472",
+  "title": "Optimality conditions for weak sharp efficiency via convexificators in multiobjective optimization",
+  "authors": [
+   "Rimpi",
+   "C. S. Lalitha"
+  ],
+  "authorCount": 2,
+  "year": 2026,
+  "journal": "Optimization",
+  "quartile": "Q1",
+  "theme": "20",
+  "topic": "25",
+  "added": "2026-11-23",
+  "source": "S158016561",
+  "summary": "In this paper we derive necessary and sufficient optimality conditions via convexificators for local weak sharp efficient solutions of nonsmooth multiobjective problems.",
+  "summarySource": "abstract"
  },
  {
   "doi": "10.1080/02331934.2026.2748909",
@@ -2253,6 +2366,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S414566"
  },
  {
+  "doi": "10.1016/j.engappai.2026.116688",
+  "title": "A label-aware shared-specific interaction framework for multi-view multi-label prohibited item classification in X-ray security inspection",
+  "authors": [
+   "Yanbo Yu",
+   "Ran Wang",
+   "Xianghua Xu"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Engineering Applications of Artificial Intelligence",
+  "quartile": "Q1",
+  "theme": "30",
+  "topic": "32",
+  "added": "2026-11-23",
+  "source": "S900972176"
+ },
+ {
   "doi": "10.1016/j.neunet.2026.108937",
   "title": "A robust multi-view support vector machine with the RoBoSS loss function",
   "authors": [
@@ -2491,6 +2621,23 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "source": "S13144211",
   "summary": "Applies a deep random vector functional link network to anomaly detection.",
   "summarySource": "overview"
+ },
+ {
+  "doi": "10.1016/j.asoc.2026.116913",
+  "title": "Effect of random parameters in random vector functional link networks for partial differential equations",
+  "authors": [
+   "Bokai Zhu",
+   "Yexin Zhou",
+   "Qinghui Zhang"
+  ],
+  "authorCount": 3,
+  "year": 2026,
+  "journal": "Applied Soft Computing",
+  "quartile": "Q1",
+  "theme": "30",
+  "topic": "33",
+  "added": "2026-11-23",
+  "source": "S140556538"
  },
  {
   "doi": "10.1016/j.asoc.2024.112005",
@@ -3198,6 +3345,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1016/j.bspc.2026.111845",
+  "title": "SSMT-ConED: A semi-supervised student–teacher framework with contrastive learning and generative adversarial network-based augmentation for robust multi-organ segmentation across CT and MRI modalities",
+  "authors": [
+   "Ripon Kumar Debnath",
+   "Mohaimenul Azam Khan Raiaan",
+   "Md Abdur Rahman",
+   "Selvarajah Thuseethan"
+  ],
+  "authorCount": 6,
+  "year": 2026,
+  "journal": "Biomedical Signal Processing and Control",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "41",
+  "added": "2026-11-23",
+  "source": "S8427965"
+ },
+ {
   "doi": "10.1016/j.bspc.2026.111311",
   "title": "Synthesis CT images based on brain MRI images using generative adversarial network with attention mechanisms",
   "authors": [
@@ -3476,6 +3641,24 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "summarySource": "tldr"
  },
  {
+  "doi": "10.1016/j.compmedimag.2026.102841",
+  "title": "CedeDiff: Context-aware and texture-guided diffusion model for low-dose CT denoising",
+  "authors": [
+   "Changshun Wang",
+   "Chong Fu",
+   "Rui Zhang",
+   "Junxin Chen"
+  ],
+  "authorCount": 6,
+  "year": 2026,
+  "journal": "Computerized Medical Imaging and Graphics",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "43",
+  "added": "2026-11-23",
+  "source": "S198823948"
+ },
+ {
   "doi": "10.1016/j.eswa.2026.134512",
   "title": "DecoupDiff: Spatially decoupled denoising diffusion model for industrial anomaly detection",
   "authors": [
@@ -3528,6 +3711,27 @@ export const literaturePapers: LiteraturePaper[] = /* BEGIN DATA */[
   "topic": "43",
   "added": "2026-11-16",
   "source": "S45693802"
+ },
+ {
+  "doi": "10.1016/j.bspc.2026.111815",
+  "title": "PGDiffSeg: Prior-Guided Denoising Diffusion Model with Parameter-Shared Cross-attention for breast cancer Segmentation",
+  "authors": [
+   "Feiyan Feng",
+   "Hong Wang",
+   "Tianyu Liu",
+   "Wei Li"
+  ],
+  "authorCount": 5,
+  "year": 2026,
+  "journal": "Biomedical Signal Processing and Control",
+  "quartile": "Q1",
+  "theme": "40",
+  "topic": "43",
+  "added": "2026-11-23",
+  "source": "S8427965",
+  "openAccess": true,
+  "openAccessUrl": "https://arxiv.org/abs/2410.17812",
+  "openAccessLabel": "arXiv"
  },
  {
   "doi": "10.1016/j.mri.2026.110833",
